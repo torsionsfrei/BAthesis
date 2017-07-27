@@ -1,0 +1,433 @@
+\chapter{Appendix}
+
+% \begin{prop}[Resolventengleichung]\label{Resolventengleichung}
+% Seien $\mu,\lambda\in \varrho(A)$. Dann gilt:
+% \begin{equation}
+% R(\lambda, A)- R(\mu, A)=(\mu-\lambda)R(\lambda, A)R(\mu, A).
+% \end{equation}
+% \end{prop}
+
+% \begin{proof}
+% Es ist $\lambda R(\lambda, A)- AR(\lambda, A)=(\lambda - A)R(\lambda, A)=1$ und analog für $\mu$. Multiplikation der Gleichung mit $R(\mu, A)$ und analog mit $R(\lambda, A)$ sowie anschließende Subtraktion liefert die Behauptung.
+% \end{proof}
+
+\begin{prop}[Hölder-Ungelichung]\label{Hölder-Ungelichung}\cite{}
+
+\end{prop}
+
+% \section{Integralrechnung in Banachräumen}
+
+% \begin{defi}[Riemannsumme]
+% Sei $[a,b]\subseteq \R$ Intervall und $\Delta:=\{a=t_0< \dots <t_N=b\}$ eine Zerlegung. Für eine banachraumwertige Abbildung $x\colon[a,b]\to X$  definiere die \textbf{Riemannsumme} durch 
+% \begin{equation}
+% R(x,\Delta):=\sum_{k=1}^N (t_k-t_{k-1})\cdot x(t_k).
+% \end{equation}
+% \end{defi}
+
+% \begin{konstr}[Riemannintegral]
+% Sei $x\colon[a,b]\to X$ banachraumwertige Abbildung.
+% \begin{enumerate}
+% \item Nenne $x$ (riemann-)\textbf{integrierbar}, falls für jede Zerlegungsfolge $(\Delta_n)_{n\in \N}$ mit 
+% \begin{equation}
+% |\Delta_n|:=\max_{k=1}^N|t_k-t_{k-1}|\to 0
+% \end{equation}
+% die Folge $\big(R(x,\Delta_n)\big)_{n\in\mathbb N}$ in $X$ konvergiert.
+% \item Falls $x$ integrierbar ist, so definiere das \textbf{Riemannintegral} unter Verwendung einer Zerlegungsfolge $(\Delta_n)_{n\in \N}$ mit $|\Delta_n|\to 0$ durch $$\int_a^b x(s)\text ds:=\lim_{n\to\infty}R(x,\Delta_n).$$
+% \end{enumerate}
+% \end{konstr}
+
+% \begin{prop}
+% Sei $x\colon[a,b]\to X$ eine banachraumwertige Abbildung. Ist $x$ stetig, dann ist $x$ integrierbar.
+% \end{prop}
+
+% \begin{prop}
+% Sei $x\colon[a,b]\to \ell^1, t\mapsto (\xi_i(t))_{i\in\mathbb I}$ stetige Abbildung. Dann gilt:
+% \begin{enumerate}
+% \item Die Funktion $[a,b]\ni t\mapsto\|x(t)\|$ ist stetig, also integrierbar. 
+% \item Es gilt $\Big\|\int_a^b x(t)\text dt\Big\| \leq\int_a^b\|x(t)\|\text dt$.
+% \item Für alle $i\in\mathbb I$ ist der $i$-te Eintrag der Folge $\int_a^b x(t)\text dt$ gleich $\int_a^b\xi_i(t)\text dt$.
+%  \end{enumerate}
+% \end{prop}
+
+\section{Operatoren}
+
+\begin{defi}[Operator]
+\par
+Seien $X, Y$ reale bzw. komplexe normierte Banachräume. Ist $D(A)\subseteq X$ ein linearer Unterraum, so bezeichne eine Abbildung $A\colon D(A)\to Y$ auch als (linearer) \textbf{Operator} mit \textbf{Definitionsbereich} $D(A)$, in Zeichen $\big(A, D(A)\big)$. Bezeichne mit $L(X, Y)$ die Menge aller Operatoren von $X$ nach $Y$, sowie $\mathcal L(X,Y)$ die Menge aller beschränkten Operatoren; ist etwa $Y=X$, so schreibe bspw. lediglich $\mathcal L(X)$. Mit den komponentenweisen Verknüpfungen der Addition und Skalarmultiplikation wird $\mathcal L(X,Y)$ (ebenso $L(X,Y)$) zu einem Vektorraum und mithilfe der Norm auf $X$ wird $\mathcal L(X,Y)$ zu einem normierten Vektorraum vermöge der \textbf{Operatornorm}
+\begin{equation}\label{eq:}
+\|A\|=\sup_{\|x\|\leq 1}\|Ax\| = \sup_{\|x\|=1}\|Ax\|.
+\end{equation}
+
+\par 
+Ist $D\subseteq D(A)$ linearer Unterraum, so erhalten wir die \textbf{Einschränkung} von $(A,D(A))$ auf $D$, in Zeichen $A|_D$. Sind $A,B\in L(X,Y)$ Operatoren, so schreibe $A\subseteq B$, falls $D(A)\subseteq D(B)$ und $B|_{D(A)}=A$ gilt. Die Menge $\text{Bild}(A) = \{y\in Y; \text{es gibt } x\in D(A): Ax = y\}$ heißt  \textbf{Bild} und $\text{Kern}(A)=\{x\in D(A); Ax=0\}$ der \textbf{Kern} von $A$.
+
+\par
+\end{defi}
+
+\begin{bem}\label{Eigenschaften der Verknüpfung von Operatoren}
+Sei $(A,D(A))$ Operator. Dann gilt:
+\begin{enumerate}
+\item Für $(B,D(B))$ Operator  ist die \textbf{Hintereinanderausführung} $B\circ A$ ebenfalls ein Operator und es gilt $D(B\circ A)=A^{-1}(D(B))$
+\item Für $(B,D(B))$ Operator  sowie $\alpha, \beta$ Skalare ist die \textbf{Linearkombination} $\alpha A + \beta B$ ebenfalls ein Operator und es gilt $D(\alpha A + \beta B)=D(A)\cap D(B)$.
+\end{enumerate}
+\end{bem}
+
+\begin{defi}[Abgeschlossener Operator]
+Sei $A\in L(X,Y)$ Operator. Dann bezeichne 
+\begin{equation}\label{eq:}
+G(A)=\{(x,y)\in X\times Y; x\in D(A), Ax= y\}
+\end{equation}
+als \textbf{Graph} von $A$. Dabei nenne $A$ \textbf{abgeschlossen}, falls $G(A)\subseteq X\times Y$ abgeschlossene Teilmenge ist, d. h. für jede Folge $(x_n)_{n\in\N}\subseteq D(A)$ mit $\lim_{n\to\infty} x_n = x$ in $X$ und $\lim_{n\to\infty} Ax_n = y$ in $Y$ folgt bereits $x\in D(A)$ und $y= Ax$.
+\end{defi}
+
+\begin{prop}\cite{banasiak_arlotti_2006}\label{Charakterisierung der Abgeschlossenheit von Operatoren}
+Sei $A\in L(X,Y)$. Dann sind äquivalent:
+\begin{enumerate}
+\item $A$ ist abgeschlossen.
+\item $\big(D(A),\|\cdot\|\big)$ ist Banachraum.
+\item $G(A)\subseteq X\times Y$ ist abgeschlossen.
+\end{enumerate}
+\end{prop}
+
+\begin{prop}\cite{}\label{Satz vom abgeschlossenen Graphen}
+Seien $X, Y$ Banachräume, $(A,D(A))$ Operator. Ist $A$ abgeschlossen mit $D(A)=X$, dann ist $A$ stetig.
+\end{prop}
+
+% \begin{proof}
+% Setze $Y:=D(A)$. Da $\text{Bild}(A)\subseteq Y$ linearer Unterraum ist, haben wir $G(A)\subseteq X\times Y$ linearer Unterraum. Da $A$ abgeschlossen,  ist $G(A)$ abgeschlossen und insgesamt ist $G(A)$ Banachraum. Setze \begin{equation}\label{eq:}
+% \pi_X\colon G(A)\to X,\quad \pi_Y\colon G(A)\to Y.
+% \end{equation}
+% Dann sind die Projektionen $\pi_X, \pi_Y$ stetig sowie $\pi_X$ bijektiv mit $D(A)=X$. Mithilfe \textbf{Banachs Homomorphiesatz} erhalten wir die Stetigkeit von $\pi_X^{-1}\colon X\to G(A)$. Dann folgt die Stetigkeit von $A$ wegen $A=\pi_Y\circ \pi_X^{-1}$.
+% \end{proof}
+
+\begin{prop}\cite{}\label{Hinreichende Bedingung für Abgeschlossenheit der Inverse eines Operators}
+Sei $X$ normiert Vektorraum sowie $\big(A, D(A)\big)$ injektiv und abgeschlossener Operator. Dann ist $A^{-1}$ ebenfalls abgeschlossen.
+\end{prop}
+
+% \begin{proof}
+% Sei $y_n\in\text{Bild}(A)$ Folge mit $y_n\to y$ und $D(A)\ni A^{-1}y_n \to x$ mit $x\in X$. Mit $A$ injektiv setze $x_n:=A^{-1} y_n$ und es folgt $Ax_n = y_n\to y$, d. h. $x\in D(A)$ sowie $y = Ax\in\text{Bild}(A)=D(A^{-1})$, also auch $x=A^{-1}y$.
+% \end{proof}
+
+\begin{lem}\cite{}\label{Punktweise Konvergenz von Folgen und Operatoren}
+Sei $X$ Banachraum sowie $(A_n)_{n\in\N}$ Folge in $\mathcal L(X)$. Ist $A_n\to A$ punktweise, dann gilt für jede Folge $(x_n)_{n\in\N}$ in $X$ mit $x_n\to x$, dass $A_n(x_n)\to A(x)$.
+\end{lem}
+
+% \begin{proof}
+% Es ist $(A_n)_{n\in\N}$ punktweise beschränkt und mit dem \textbf{PGB} erhalten wir $(A_n)_{n\in\N}$ gleichmäßig beschränkt. Wegen $\sup_n\|A_n\|<\infty$ gibt es $C\in \R$ mit 
+% \begin{align}
+% \|A_n(x_n)-A(x)\|
+% &\leq\|A_n(x_n)-A_n(x)\|+\|A_n(x)-A(x)\|\\
+% &\leq C\cdot \|x_n-x\| + \|A_n(x)-A(x)\|\to 0.
+% \end{align}
+% \end{proof}
+
+\section{Funktionalanalysis}
+
+\begin{defi}[Banachalgebra]
+Eine Algebra $X$ zusammen mit einer Norm $\|\cdot\|$ heißt \textbf{Banachalgebra}, falls gilt:
+\begin{enumerate}
+\item $\big(X,\|\cdot\|\big)$ ist Banachraum.
+\item Für alle $F,G\in X$ ist $\|F\cdot G\|\leq \|F\|\cdot\|G\|$.
+\end{enumerate}
+\end{defi}
+
+\begin{fsatz}[Neumann'sche Reihe]\cite{banasiak_arlotti_2006}\label{Satz von der Neumann'schen Reihe}
+Sei $\big(X,\|\cdot\|\big)$ Banachalgebra, $F\in X$ mit $\|F\| < 1$. Dann gilt:
+\begin{enumerate}
+    \item $1-F\in X^\times$
+    \item  $(1-F)^{-1}=\sum_{k=0}^\infty F^k$.
+\end{enumerate}
+\end{fsatz}
+
+% \begin{proof}
+% Sei $\epsilon >0$. Dann gibt es $n_0\in \N$ mit $\sum_{k=0}^\infty \|F\|^k< \epsilon$ für alle $n\geq n_0$. Für alle $m\geq n\geq n_0$ gilt dann 
+% \begin{equation}\label{eq:}
+% \Big\|\sum_{k=n}^m F^k\Big\|\leq \sum_{k=0n}^m \|F^k\|\leq\sum_{k=n}^m \|F\|^k\leq  \sum_{k=n}^\infty\|F\|^k< \epsilon,
+% \end{equation} 
+% d. h. $\big(\sum_{k=0}^n F^k\big)_{n\in\N}$ ist Cauchyfolge. Da $\big(A,\|\cdot\|\big)$ vollständig ist, ist $\lim_{n\to\infty}\sum_n F^k$ existent und es gilt
+% \begin{align}
+% (1-F)\cdot\sum_{k=0}^\infty F^k 
+% &= \lim_{n\to\infty}\Big((1-F)\cdot\sum_{k=0}^n F^k\Big)\\
+% &=\lim_{n\to\infty}(1-F^{n+1})\\
+% &=1-\lim_{n\to\infty}F^{n+1}.
+% \end{align}
+% Wegen $\|F^n\|\leq\|F\|^n\to 0$ ist dann $F^n \to 0$.
+% \end{proof}
+
+\begin{defi}[Beschränktheit]
+Sei $B\subseteq \mathcal L(X, Y)$. Dann heißt
+\begin{enumerate}
+\item $B$ \textbf{punktweise beschränkt}, falls $\{\|Ax\};A\in B\}$ für alle $x\in X$ beschränkt ist.
+\item $B$ \textbf{gleichmäßig beschränkt}, falls $\{\|A\|; A\in B\}$ beschränkt ist.
+\end{enumerate}
+\end{defi}
+
+\begin{fsatz}[PGB]\cite{banasiak_arlotti_2006}\label{Satz von PGB}
+Sei $X$ Banachraum sowie $Y$ normiert. Dann sind für jede Teilmenge $B\subseteq\mathcal L(X,Y)$ äquivalent:
+\begin{enumerate}
+\item $B$ ist punktweise beschränkt.
+\item $B$ ist gleichmäßig beschränkt.
+\end{enumerate}
+\end{fsatz}
+
+% \begin{proof}
+
+% \end{proof}
+
+% \begin{prop}\label{Charakterisierung der punktweisen Konvergenz beschränkter Operatoren}
+% Sei $(F_n)_{n\in\N}$ Folge in $\mathcal L(X,Y)$. Dann sind äquivalent:
+% \begin{enumerate}
+% \item $(F_n)_{n\in\N}$ ist punktweise konvergent auf $X$.
+% \item $\{F_n; n\in\N\}$ ist beschränkt und es gibt $W\subseteq X$ dicht mit $F_n$ punktweise konvergent auf $U$.
+% \end{enumerate}
+% \end{prop}
+
+% \begin{proof}
+
+% \end{proof}
+
+\begin{fsatz}[Offene Abbildung]\cite{banasiak_arlotti_2006}\label{Satz von der offenen Abbildung}
+Seien $X$, $Y$ Banachräume sowie $A\in\mathcal L(X,Y)$. Ist $A$ surjektiv, dann ist $F$ bereits offen.
+\end{fsatz}
+
+% \begin{proof}
+
+% \end{proof}
+
+\begin{fsatz}[Banachs Homomorphiesatz]\cite{banasiak_arlotti_2006}\label{Banachs Homomorphiesatz}
+Seien $X$, $Y$ Banachräume. Ist $A\in\mathcal L(X,Y)$ bijektiv, dann gilt bereits $A^{-1}\in \mathcal L(Y,X)$.
+\end{fsatz}
+
+% \begin{proof}
+% Es ist $F\in L(X,Y)$ klar. Dann folgt die Stetigkeit von $F$ mit dem \textbf{Satz der offenen Abbildung}.
+% \end{proof}
+
+\section{Positive Halbgruppen}
+
+\begin{defi}[Ordnung]
+Sei $X$ Menge. Eine (Halb-)\textbf{Ordnung} auf $X$ ist eine (binäre) Relation auf $X\times X$, in Zeichen $\geq$, welche reflexiv, transitiv und anti-symmetrisch ist; d. h. es gilt:
+\begin{enumerate}
+    \item Für alle $x\in X$ ist $x\geq x$.
+    \item Für alle $x, y\in X$ impliziert $x\geq y$ und $y\geq x$, dass $x=y$ gilt.
+    \item Für alle $x,y,z\in X$ impliziert $x\geq y$ und $y\geq z$, dass $x\geq z$ gilt.
+\end{enumerate}
+Eine \textbf{obere Schranke} für eine Teilmenge $S\subseteq X$ ist ein Element $x\in X$ mit $x\geq y$ für alle $y\in S$. Dann heißt $x\in S$ \textbf{maximal}, falls es kein weiteres $S\ni y\neq x$ gibt mit $y\geq x$, und analog für die Begriffe \textbf{untere Schranke} sowie \textbf{minimal}. Ein Element $x\in S$ wird als \textbf{größtes Element} (bzw. \textbf{kleinstes Element}) bezeichnet, falls $x\geq y$ (bzw. $x\leq y$) für alle $y\in S$ ist. Das \textbf{Supremum} einer Menge ist dann die kleinste, obere Schranke und das \textbf{Infimum} die größtes, untere Schranke. Bezeichne $X$ als \text{Verband}, falls für alle Paare $x,y\in X$ sowohl Infimum als auch Supremum existieren.
+\end{defi}
+
+\begin{defi}[Vektorverband]
+Sei $X$ reeller Vektorraum. Dann bezeichne $X$ als \textbf{geordnet}, falls eine  Relation $\geq$ auf $X$ existiert derart, dass gilt:
+\begin{enumerate}
+    \item $x\geq y$ impliziert $x+y\geq y+z$ für alle $x,y,z\in X$.
+    \item $x\geq y$ impliziert $\alpha x\geq \alpha y$ für alle $x,y\in X$ und $\alpha\geq0$.
+\end{enumerate}
+Bezeichne mit $X_+ = \{x\in X; x\geq0\}$ den \textbf{positiven Kegel} in $X$. Ist $X$ zudem Verband, so bezeichne diesen als \textbf{Vektorverband}.
+\end{defi}
+
+\begin{defi}[Banachverband]
+Eine Norm $\|\cdot\|$ eines Vektorverbands $X$ heißt \textbf{Verbandsnorm}, falls $|x|\leq |y|$ die Abschätzung $\|x\|\leq \|y\|$ impliziert. Weiter nenne $X$ einen \textbf{Banachverband}, falls $X$ bzgl. der Verbandsnorm vollständig ist.
+\end{defi}
+
+\begin{defi}[AL-Raum]
+Sei $X$ Banachverband. Dann bezeichne $X$ als \textbf{AL-Raum}, falls \begin{equation}\label{eq:}
+\|x+y\|=\|x\|+\|y\|
+\end{equation}
+für alle $x,y\in X_+$ gilt.
+\end{defi}
+
+\begin{defi}[Positiver Operator]
+Sei $A\colon X\to Y$ Operator von Banachverbänden. Dann heißt $A$ \textbf{positiv}, in Zeichen $A\geq0$, falls $Ax\geq0$ für alle $x\geq0$ gilt.
+\end{defi}
+
+\begin{prop}[Fortsetzbarkeit]\cite{banasiak_arlotti_2006}\label{Fortsetzbarkeit positiver, additiver Operatoren}
+Sei $A\colon X_+\to Y_+$ Operator. Ist $A$ additiv, dann ist $A$ eindeutig fortsetzbar zu einem positiven Operator $A^\prime\colon X\to Y$ mit $A^\prime x = Ax_+ - Ax_-$ für alle $x\in X$.
+\end{prop}
+
+% \begin{proof}
+
+% \end{proof}
+
+\begin{defi}[KB-Raum]
+Ein Banachverband $X$ heißt \textbf{KB-Raum} (Kantorovich-Banachraum), falls jede steigende, normbeschränkte Folge in $X_+$ in $X$ konvergiert.
+\end{defi}
+
+% \begin{fsatz}
+% Es sind äquivalent:
+% \begin{enumerate}
+%     \item $X$ ist $KB$-Raum.
+%     \item $X$ ist 
+% \end{enumerate}
+% \end{fsatz}
+
+% \begin{folg}
+% Ist $X$ $AL$-Raum, dann ist $X$ bereits $KB$-Raum.
+% \end{folg}
+
+\section{Operatorentheorie}
+
+\begin{prop}
+Sei $A$ Generator einer $C_0$-Halbgruppe $(G(t))_{t\geq0}$. Dann gilt für alle $x\in X$:
+\begin{equation}
+G(t)x = \lim_{n\to\infty}\Bigg(I- \frac t n A\Bigg){-n} = \lim_{n\to\infty} \Bigg(\frac n t R\Bigg(\frac n t, A\Bigg)\Bigg)^n x.
+\end{equation}
+Dabei ist für alle $t\in[0, s]$ obiger Ausdruck gleichmäßig konvergent. Weiter zeigt \ref{}, dass mit $R(\lambda, A)\geq0$ für hinreichend großes $\lambda$ die $C_0$-Halbgruppe $(G(t))_{t\geq0}$ positiv ist.
+\end{prop}
+
+\begin{defi}
+Schreibe $A\in\mathcal G(M, \omega)$, falls $A$  Generatoren einer  $C_0$-Halbgruppen $(G(t))_{t\geq0}$ mit $\|G(t)\|\leq M\exp(\omega, t)$ für Konstanten $M\geq0$ und $\omega\in \R$.
+\end{defi}
+
+\begin{fsatz}[Trotter-Kato]\cite{}\label{Trotter-Kato} 
+Sei $A_n\in \mathcal G(M,\omega)$. Angenommen, es gebe $\lambda_0$ mit $\textnormal{Re}(\lambda_0) \omega$ derart, dass gilt:
+\begin{enumerate}
+\item $\lim_{n\to\infty}R(\lambda_0, A_n)x = R(\lambda_0)x$ für alle $x\in X$.
+\item Das Bild von $R(\lambda_0)$ liegt dicht in $X$.
+\end{enumerate}
+Dann existiert ein eindeutig bestimmter Operator $A\in\mathcal G(M, \omega)$ mit $R(\lambda_0)=R(\lambda_0, A)$. Sind $(G_n(t))_{t\geq0}$ die von $A_n$  sowie $(G(t))_{t\geq0}$ die von $A$ erzeugten Halbgruppen, dann ist für alle $x\in X$
+\begin{equation}
+\lim_{n\to\infty}G_n(t)x=G(t)x
+\end{equation}
+gleichmäßig für alle $t$ auf Kompakta konvergent.
+\end{fsatz}
+
+% \begin{proof}
+% \par 
+% Sei ohne Einschränkung $\omega =0$. 
+
+% \par
+% Zu (1): 
+% \end{proof}
+
+% \begin{fsatz}[Banach-Steinhaus]
+
+% \end{fsatz}
+
+\begin{prop}
+Angenommen, für alle $x\in X$ ist 
+\begin{equation}
+\lim_{\lambda\to\infty}\lambda R(\lambda, A_n)x=x
+\end{equation}
+gleichmäßig konvergent in $n$. Dann ist $R(\lambda)$ Resolvente eines dicht definierten abgeschlossenen Operator in $X$.
+\end{prop}
+
+% \begin{satz}
+%   Sei $A\colon X\to Y$ ein linearer Operator. Dann sind äquivalent:
+%   \begin{enumerate}
+%       \item $A$ ist stetig.
+%       \item $A$ ist stetig für ein $x\in X$.
+%       \item $\sup_{\|x\|=1}\|Ax\|<\infty$.
+%       \item $A$ ist beschränkt.
+%   \end{enumerate}
+% \end{satz}
+
+\begin{prop}
+  Seien $X,Y,Z$ normierte Räume und  $A\in\mathcal L(X,Y)$, $B\in\mathcal L(Y,Z)$ zwei beschränkte lineare Operatoren. Dann ist die \textbf{Komposition} $BA(x):=B(Ax)$ ebenfalls  ein beschränkter linearer Operator mit $\|BA\|\leq \|B\|\cdot\|A\|$.
+\end{prop}
+
+\begin{prop}
+  Seien $X,Y$ Banachräume, $x\colon[a,b]\to X$ eine stetige Abbildung und $A\in\mathcal L (X,Y)$ beschränkter linearer Operator. Dann gilt $$A\int_a^b x(t)\text dt=\int_a^b Ax(t)\text dt.$$
+\end{prop}
+
+\begin{defi}[Normkonvergenz]
+  Eine Folge $(A_n)_{n\in \N}$ in $\mathcal L(X,Y)$ heißt \textbf{(norm-)konvergent}, falls es $A\in\mathcal L(X,Y)$ gibt mit $\lim_{n\to\infty}\|A_n-A\|=0$.
+\end{defi}
+
+\begin{prop}
+  Seien $(A_n)_{n\in \N}$ und $(B_n)_{n\in \N}$ zwei konvergente Folgen  in $\mathcal L(X,Y)$. Dann konvergiert $(A_n\cdot B_n)_{n\in\mathbb N}$ mit $\lim_{n\to\infty}A_n B_n = A\cdot B$.
+\end{prop}
+
+\begin{defi}[Starke Konvergenz]
+  Eine Folge $(A_n)_{n\in\N}$ in $\mathcal L(X,Y)$ heißt \textbf{stark konvergent}, falls es $A\in\mathcal L(X,Y)$ gibt mit $\lim_{n\to\infty} A_nx = Ax$ für alle $x\in X$.
+\end{defi}
+
+% \begin{prop}
+%   Sei $(A_n)_{n\in \N}$ eine Folge in $\mathcal L(X,Y)$. Ist $(A_n)_{n\in\mathbb N}$ konvergent, so gilt bereits starke Konvergenz. Die Umkehrung gilt im Allgemeinen nicht. 
+% \end{prop}
+
+% \begin{folg}
+%   Sei $X$ Banachraum sowie $A\in\mathcal L(X)$. Gilt $\|A-I\|< 1$, dann ist $A$ invertierbar. 
+% \end{folg}
+
+\begin{defi}[Halbgruppe von Operatoren]
+Eine Familie $\{T(t); t\geq0\}$ in $\mathcal L(X)$  heißt \textbf{$C_0$-Halbgruppe}, in Zeichen $(T(t))_{t\geq0}$, falls gilt:
+\begin{enumerate}
+\item $(T(t))_{t\geq0}$ ist Monoid, d. h. $T(0)=I$ und $T(t+s)=T(t)\cdot T(s)$.
+\item $(T(t))_{t\geq0}$ ist stark stetig, d. h. für alle  $x\in X$ gilt $\lim_{t\downarrow 0}T(t)x=x$. 
+\end{enumerate}
+\end{defi}
+
+\begin{defi}[Positive Halbgruppe]
+Sei $X$ Banachverband. Dann bezeichne eine Halbgruppe $\big(T(t)\big)_{t\geq0}$ auf $X$ als \textbf{positiv}, wenn für alle $x\in X_+$ und $t\geq0$ die Abschätzung 
+\begin{equation}\label{eq:}
+T(t)x\geq0
+\end{equation}
+gilt. Weiter bezeichne einen Operator $(A,D(A))$ als \textbf{resolventenpositiv}, falls es $\omega$ gibt derart, dass $(\omega, \infty)\in\varrho(A)$ und $R(\lambda, A)\geq0$ für alle $\lambda >\omega$ ist.
+\end{defi}
+
+\begin{prop}\cite{banasiak_arlotti_2006}\label{Integraldarstellung der Resolvente}
+Sei $\big(T(t)\big)_{t\geq0}$ positive Halbgruppe auf einem Banachverband $X$ und es sei $A$ zugehöriger Generator. Dann ist die Identität
+\begin{equation}\label{eq:}
+R(\lambda, A)x=\int_0^\infty \exp(-\lambda t)T(t)x\textnormal dt
+\end{equation}
+für alle $\lambda\in \mathbb C$ mit $\textnormal{Re}(\lambda)> s(A)$ erfüllt.
+\end{prop}
+
+\begin{prop}\cite{}\label{Hintereinanderausführung von Halbgruppen}
+Sind $S, T$ zwei $C_0$-Halbgruppen, dann ist deren Hintereinanderausführung $S\cdot Q$ ebenfalls $C_0$-Halbgruppe.
+\end{prop}
+
+% \begin{proof}
+% Sei $(x_n)_{n\in \N}$ konvergente Folge in $\R$ und sei $x\in X$. Definiere $y_n:=T(x_n)(v)$ und $y:=T(t)(v)$ sowie $A_n:= S(x_n)$ und $A:=S(x)$. Dann konvergieren $y_n\to  y$ sowie $A_n\to A$ punktweise. Dann folgt
+% \begin{align}
+% (S T)(x_n)(x)&=S(x_n)(T(x_n)(x))=A(y_n)\\
+% &\to A(y)=S(T(t)(x))=(S T)(x).
+% \end{align}
+% \end{proof}
+
+\begin{prop}\cite{}\label{Gleichmäßige Stetigkeit von Halbgruppen auf Kompakta}
+Sei $\big(T(t)\big)_{t\geq0}$ $C_0$-Halbgruppe. Dann gilt für alle Kompakta $K\subseteq \mathbb R_{\geq0}$, dass die Einschränkung $\big(T(t)\big)|_K$ gleichmäßig beschränkt ist.
+\end{prop}
+
+% \begin{proof}
+% Wegen $T$ stark stetig ist $T(X)v\subseteq\mathcal L(X)$ für alle $x\in X$ kompakt, also beschränkt. Damit ist die Menge $\{T(t); t\in K\}$ punktweise beschränkt. Dann folgt die Behauptung mit dem \textbf{PGB}.
+% \end{proof}
+
+\begin{prop}\cite{}\label{Charakterisierung der starken Stetigkeit}
+Sei $\big(T(t)\big)_{t\geq0}$ $C_0$-Halbgruppe. Dann sind äquivalent:
+\begin{enumerate}
+\item $T$ ist stark stetig.
+\item Für $t\downarrow 0$ und $x\in X$ gilt $T(t)x\to x$.
+\item $T$ ist auf einem Kompaktum $[0,\delta]$ beschränkt und es gibt eine dichte Teilmenge $U\subseteq X$ derart, dass $T(t)x\to x$ für alle $x\in U$.
+\end{enumerate}
+\end{prop}
+
+\begin{defi}[Beschränktheit]
+Sei $\big(T(t)\big)_{t\geq0}$ $C_0$-Halbgruppe. 
+\begin{enumerate}
+\item $T$ heißt \textbf{beschränkt}, falls $\|T(t)\|< \|x\|$ für alle $x\in X$ gilt.
+\item $T$ heißt \textbf{kontraktiv}, falls $\|T(t)x\|\leq 1$ für alle $x\in X$ gilt.
+\end{enumerate}
+\end{defi}
+
+\begin{defi}[Generator]
+Sei $\big(T(t)\big)_{t\geq0}$ $C_0$-Halbgruppe. Dann ist  der zugehörigen \textbf{Generator} $G$ von $T$ ein Operator definiert durch 
+\begin{equation}\label{eq:}
+G\subseteq X\times X,\quad D(G)\ni x\mapsto \lim_{h\downarrow 0}\frac{T(h)x - x}{h}.
+\end{equation}
+Dabei  ist $D(G)\subseteq X$ linearer Teilraum.
+\end{defi}
+
+\begin{prop}\cite{}\label{Charakterisierung von Generatoren}
+Ist $A$ Generator einer $C_0$-Halbgruppe, so ist $A$ abgeschlossen und $D(A)\subseteq X$ liegt dicht.
+\end{prop}
+
+\begin{prop}\cite{}\label{Eindeutigkeit der Halbgruppen identischer Generatoren}
+Seien $S$ und $T$ $C_0$-Halbgruppen mit Generatoren $A$ bzw. $B$. Ist $A=B$, dann gilt $S = T$.
+\end{prop}
+
+\begin{fsatz}[Hille-Yosida]\cite{banasiak_arlotti_2006}\label{Satz von Hille-Yosida}
+Sei $\big(A, D(A)\big)$ Operator auf $X$. Dann sind äquivalent:
+\begin{enumerate}
+\item $A$ ist Generator einer stark stetigen Kontraktionshalbgruppe.
+\item $A$ ist abgeschlossen, dicht definiert mit $s(A)\leq 0$ sowie $\|R(\lambda, A)\|\leq \textnormal{Re}(\lambda)^{-1}$ für alle alle $\lambda\in \mathbb C$ mit $\textnormal{Re}(\lambda) > 0$.
+\end{enumerate}
+\end{fsatz}

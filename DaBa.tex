@@ -1,0 +1,60 @@
+\documentclass[bachelor,german]{hgbthesis}
+
+\usepackage{imakeidx}
+\makeindex[columns=2, title=Alphabetischer Index, intoc]
+%%------------------------------------------------------------
+
+\bibliography{Your bibliography}  
+
+%%--------------------------------------------------------------
+
+\input{maths_main}
+
+\numberwithin{equation}{satz}
+
+
+%%%----------------------------------------------------------
+\begin{document}
+%%%----------------------------------------------------------
+
+% Einträge für ALLE Arbeiten: --------------------------------
+\title{Lorem ispur datur}
+\author{Jörg Schwartz}
+\studiengang{Mathematik}
+\studienort{Tübingen}
+\abgabedatum{2017}{9}{1}	% {YYYY}{MM}{DD}
+
+%%% zusätzlich für eine Bachelorarbeit: ---------------------
+\nummer{3610471}   % XX...X = Stud-ID, z.B. 0310238045-A  
+                        % (A = 1. Bachelorarbeit)
+\semester{Sommersemester 2017} 
+\gegenstand{der Operatorentheorie} 
+\betreuer{Prof. Dr. Rainer Nagel} % oder \betreuerin{..}
+
+%%%----------------------------------------------------------
+%\frontmatter
+%\maketitle
+\tableofcontents
+
+%%%----------------------------------------------------------
+
+%\include{kurzfassung}		
+
+%%%----------------------------------------------------------
+\mainmatter         % Hauptteil (ab hier arab. Seitenzahlen)
+%%%----------------------------------------------------------
+
+\include{main}
+
+%%%----------------------------------------------------------
+%%%Anhang
+%\appendix
+%\include{anhang}
+%\include{seminar}
+%%%----------------------------------------------------------
+\MakeBibliography
+\printindex
+%%%----------------------------------------------------------
+
+
+\end{document}
