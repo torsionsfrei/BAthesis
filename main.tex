@@ -14,7 +14,7 @@ x_n' &= -a_nx_n + d_{n+1}x_{n+1} + b_{n-1}x_{n-1}  \\
 \par 
 In diesem Falle ist bezeichnet $x_n$ die \textbf{Wahrscheinlichkeit}, mit der die Population zu einem gewissen Zeitpunkt $t$ aus $n$ Individuen besteht. Mithilfe eines (nicht spezifizierten) Mechanismus kann sich der Zustand des Systems zu $k+1$, vermöge der 'Geburt' eines Individuums, oder analog zu $k-1$, vermöge des 'Todes' eines Individuums, ändern; bezeichnen die Wahrscheinlichkeit, mit der eine Zustandsänderung $k\mapsto k+1$ auftritt mit  $b_k$ und analog $d_k$ für $k\mapsto k-1$; mit $a_n=d_n+b_n$ bezeichnet man obiges System auch als klassischen GTP.
 
-In \cite{kato_1954} zeigt Kato die Existenz einer $C_0$-Halbgruppe, welche obiges Kolmogorov'sche Differentialsystem für alle absolut summierbaren Folgen $\textbf{x}\in l_1$ löst. Das Ergebnis wurde  in \cite{} auf AL-Räume verallgemeinert, welche die Räume $l_1$ und $L_1$ umfassen. In diesem Text stellen wir das Ergebnis von Banasiak et al.  \cite{banasiak_lachowicz_2007} vor, welches die Existenz für Operatoren in KB-Räumen verallgemeinert. Diese umfassen neben den AL-Räumen auch reflexive Banachräume. 
+In \cite{kato_1954} zeigt Kato die Existenz einer $C_0$-Halbgruppe, welche obiges Kolmogorov'sche Differentialsystem für alle absolut summierbaren Folgen $\textbf{x}\in \ell_1$ löst. Das Ergebnis wurde  in \cite{} auf AL-Räume verallgemeinert, welche die Räume $\ell_1$ und $\ell_1$ umfassen. In diesem Text stellen wir das Ergebnis von Banasiak et al.  \cite{banasiak_lachowicz_2007} vor, welches die Existenz für Operatoren in KB-Räumen verallgemeinert. Diese umfassen neben den AL-Räumen auch reflexive Banachräume. 
 
 
 
@@ -41,46 +41,7 @@ In \cite{kato_1954} zeigt Kato die Existenz einer $C_0$-Halbgruppe, welche obige
 % Abschließend, da $b_n,d_n$ sind die Raten von Austausch von Zuständen in der POpulation, für jede Lösung $\textbf{u}(t)$, die Quantität
 
 
-% \section{Operatoren von Markovketten}
 
-% \begin{prop}\cite{kato_1954}\label{Eigenschaften von Übergangswahrscheinlichkeiten einer ZHMK}
-% Sei $P(t)=(p_{jk}(t))_{t\geq 0}$ eine Familie von Matrizen von Übergangswahrscheinlichkeiten einer zeitlich homogenen Markovkette mit abzählbarem Zustandsraum. Dann gilt:
-% \begin{enumerate}
-% \item Für alle Einträge ist  $p_{jk}(t)\geq 0$ mit $t\geq 0$. 
-% \item $\sum_{k=1}^\infty p_{jk}(t) = 1$ mit $t\geq 0$.
-% \item Für alle Einträge ist $p_{ik}(s+t) = \sum_{j=1}^\infty p_{ij}(s)p_{jk}(t)$ mit $s,t\geq 0$.
-% \end{enumerate}
-% \end{prop}
-
-% \section{Kolmogorov Matrizen}
-
-% \begin{fsatz}\cite{kato_1954}\label{Differentialgleichungen ZHMK}
-% Sei $(p_{jk}(t))_{t\geq 0}$ eine Matrix von Übergangswahrscheinlichkeiten einer zeitlich homogenen Markovkette mit abzählbarem Zustandsraum. Dann gibt es Konstanten $q_{jk}$ so, dass gilt:
-% \begin{enumerate}
-% \item Für $j\neq k$ ist $q_{jk}\geq 0$ und $q_{jj}=:q_j\geq 0 $ sonst.
-% \item Es gilt $\sum_{k=1}^\infty q_{jk}=0$, insbesondere $\sum_{k\neq j} q_{jk}=q_j$.
-% \end{enumerate}
-% Die Einträge $p_{jk}(t)$ erfüllen dann die sog. \index{Kolmogorov'sche Diff'Gleichung}\textbf{Kolmogorov'schen Differentialgleichungen} vermöge
-% \begin{align}
-% \frac{\textnormal d }{\textnormal dt}p_{jk}(t) &= \sum_{j=1}^\infty p_{ij}(t) q_{jk},\\
-% \frac{\textnormal d }{\textnormal dt}p_{ik}(t) &= \sum_{j=1}^\infty q_{ij}p_{jk}(t),
-% \end{align}
-% zusammen  mit der Anfangsbedingung
-% \begin{align}
-% \lim_{t\downarrow0} p_{jk}(t)=p_{jk}(0) = \delta_{jk}:= 
-% \begin{cases}1\quad \text{falls } j=k,\\ 0\quad\text{sonst.}
-% \end{cases}
-% \end{align}
-% \end{fsatz}
-
-% \begin{defi}
-% Eine Matrix $Q=(q_{ij})_{ij}$ heißt  \index{Kolmogorov-Matrix}\textbf{Kolmogorov-Matrix}, falls gilt:
-% \begin{enumerate}
-% \item Für alle $i\in \N$ ist $0\leq -q_{ii}< \infty$.
-% \item Für alle $i\neq j$ ist $q_{ij}\geq0$.
-% \item Für alle $i\in\N$ ist $\sum_{j=1}^\infty q_{ij}=0$.
-% \end{enumerate}
-% \end{defi}
 
 % \begin{prop}
 % Sei $\mathbb I$ endlich. Dann ist die Matrix $Q=\lim_{h\downarrow 0}\frac{1}{h}\big(P(h)-I\big)$ einer zeitlich-homogenen Markovkette mit Zustandsraum $\mathbb I$  eine Kolmogorov Matrix.
@@ -147,7 +108,68 @@ In \cite{kato_1954} zeigt Kato die Existenz einer $C_0$-Halbgruppe, welche obige
 % wegen $BR(\lambda, A)\geq0$, dass $BR(\lambda, A)-BR(\mu, A)\geq0$, also $BR(\mu, A)\leq BR(\lambda, A)$.
 % \end{proof}
 
-\section{Störungstheorem nach Kato}
+% \section{Störungstheorem nach Kato}
+
+
+% \begin{prop}\cite{kato_1954}\label{Eigenschaften von Übergangswahrscheinlichkeiten einer ZHMK}
+% Sei $P(t)=(p_{jk}(t))_{t\geq 0}$ eine Familie von Matrizen von Übergangswahrscheinlichkeiten einer zeitlich homogenen Markovkette mit abzählbarem Zustandsraum. Dann gilt:
+% \begin{enumerate}
+% \item Für alle Einträge ist  $p_{jk}(t)\geq 0$ mit $t\geq 0$. 
+% \item $\sum_{k=1}^\infty p_{jk}(t) = 1$ mit $t\geq 0$.
+% \item Für alle Einträge ist $p_{ik}(s+t) = \sum_{j=1}^\infty p_{ij}(s)p_{jk}(t)$ mit $s,t\geq 0$.
+% \end{enumerate}
+% \end{prop}
+
+% \begin{proof}
+% Siehe \cite{}.
+% \end{proof}
+
+% \begin{fsatz}\cite{kato_1954}\label{Differentialgleichungen ZHMK}
+% Sei $(p_{jk}(t))_{t\geq 0}$ eine Matrix von Übergangswahrscheinlichkeiten einer zeitlich homogenen Markovkette mit abzählbarem Zustandsraum. Dann gibt es Konstanten $q_{jk}$ so, dass gilt:
+% \begin{enumerate}
+% \item Für $j\neq k$ ist $q_{jk}\geq 0$ und $q_{jj}=:q_j\geq 0 $ sonst.
+% \item Es gilt $\sum_{k=1}^\infty q_{jk}=0$, insbesondere $\sum_{k\neq j} q_{jk}=q_j$.
+% \end{enumerate}
+% Die Einträge $p_{jk}(t)$ erfüllen dann die sog. \index{Kolmogorov'sche Diff'Gleichung}\textbf{Kolmogorov'schen Differentialgleichungen} vermöge
+% \begin{align*}
+% \frac{\textnormal d }{\textnormal dt}p_{jk}(t) &= \sum_{j=1}^\infty p_{ij}(t) q_{jk},\\
+% \frac{\textnormal d }{\textnormal dt}p_{ik}(t) &= \sum_{j=1}^\infty q_{ij}p_{jk}(t),
+% \end{align*}
+% zusammen  mit der Anfangsbedingung
+% \begin{align*}
+% \lim_{t\downarrow0} p_{jk}(t)=p_{jk}(0) = \delta_{jk}:= 
+% \begin{cases}1\quad \text{falls } j=k,\\ 0\quad\text{sonst.}
+% \end{cases}
+% \end{align*}
+% \end{fsatz}
+
+% \begin{proof}
+% Siehe \cite{}.
+% \end{proof}
+
+% \begin{defi}
+% Eine Matrix $Q=(q_{ij})_{ij}$ heißt  \index{Kolmogorov-Matrix}\textbf{Kolmogorov-Matrix}, falls gilt:
+% \begin{enumerate}
+% \item Für alle $i\in \N$ ist $0\leq -q_{ii}< \infty$.
+% \item Für alle $i\neq j$ ist $q_{ij}\geq0$.
+% \item Für alle $i\in\N$ ist $\sum_{j=1}^\infty q_{ij}=0$.
+% \end{enumerate}
+% \end{defi}
+
+% \begin{konstr}
+% Sei $Q=(q_{i,j})_{i,j\in\mathbb I}$ Kolmogorov Matrix und $e_n=(\delta_{n,i})_{i\in\mathbb I}$ Folge in $\ell^1$. Dann erhalten wir einen linearen Operator $(Q_0, D(Q_0))$ mit Definitionsbereich durch $$D(Q_0)=\text{Lin}(e_n;n\in\mathbb N),\quad Q_0e_i:=(q_{i,j})_{j\in\mathbb I},\quad \forall i\in\mathbb N.$$
+% \end{konstr}
+
+
+
+% \begin{fsatz}[Störungstheorem]
+% Sei $(Q_0, D(Q_0))$ Operator einer Kolmogorov Matrix $Q$. Dann gibt es eine Fortsetzung von $(Q_0, D(Q_0))$, welche Generator einer stark stetigen Kontraktionshalbgruppe ist.
+% \end{fsatz}
+
+% \begin{proof}
+% Siehe \cite{}.
+% \end{proof}
+
 
 \chapter{Mathematische Grundlagen}
 
@@ -156,6 +178,8 @@ Wir führen die in diesem Text gebräuchliche Notation ein und wiederholen einig
 
 
 \section{Etwas Funktionalanalysis}
+
+\cite{werner_2007}
 
 \begin{fsatz}[Neumann'sche Reihe]\label{Satz von der Neumann'schen Reihe}\index{Neumann'sche Reihe}
 Für alle $A\in \mathcal L(X)$ mit $\|A\| < 1$ ist $I-A$ invertierbar und gegeben durch $(I-A)^{-1}=\sum_{k=0}^\infty A^k$.
@@ -190,7 +214,7 @@ mit $\|x_+^*\|\leq \|x^*\|\leq 1$, da $x_+^*\leq |x^*|$. Folglich ist $\langle x
 \end{proof}
 
 
-Da $\mathcal L(X, Y)$ mithilfe der Operatornorm zu einem normierten Raum gemacht werden kann, können wir eine Folge von Operatoren $(A_n)_{n\in\N}$ in $\mathcal L(X,Y)$ als \index{Operator!uniform  konvergent}\textbf{gleichmäßig konvergent} bezeichnen, falls diese bezüglich der kanonischen Norm konvergent ist, falls also ein Operator $A$ existiert so, dass für alle $\epsilon> 0$ ein $N\in\N$ gibt mit $\|A_n-A\|< \epsilon $ für alle $n\geq N$. Weiter nenne eine Folge $(A_n)_{n\in\N}$  \index{Operator!stark konvergent}\textbf{stark konvergent}, wenn für alle $x\in X$ die Folge $(A_nx)_{n\in\N}$ konvergiert. Für eine beliebige Teilmenge $B\subseteq\mathcal L(X,Y)$ definiere die Begriffe der uniformen und starken Konvergenz analog.
+Da $\mathcal L(X, Y)$ mithilfe der Operatornorm zu einem normierten Raum gemacht werden kann, können wir eine Folge von Operatoren $(A_n)_{n\in\N}$ in $\mathcal L(X,Y)$ als \index{Operator!gleichmäßig  konvergent}\textbf{gleichmäßig konvergent} bezeichnen, falls diese bezüglich der kanonischen Norm konvergent ist, falls also ein Operator $A$ existiert so, dass für alle $\epsilon> 0$ ein $N\in\N$ gibt mit $\|A_n-A\|< \epsilon $ für alle $n\geq N$. Weiter nenne eine Folge $(A_n)_{n\in\N}$  \index{Operator!stark konvergent}\textbf{stark konvergent}, wenn für alle $x\in X$ die Folge $(A_nx)_{n\in\N}$ konvergiert. 
 
 \begin{fsatz}[Banach-Steinhaus]\index{Banach-Steinhaus}
 Sei $X$ Banachraum sowie $Y$ normierter Raum. Dann ist eine Teilmenge $B\subseteq \mathcal L(X, Y)$ genau dann gleichmäßig beschränkt, wenn sie stark beschränkt ist.
@@ -223,7 +247,15 @@ Seien $A$ abgeschlossener Operator und $B$ abschließbar. Ist $D(A)\subseteq D(B
 \section{Banachverbände, AL- und KB-Räume}
 
 \par
-Sei  $(X, \|\cdot\|,\leq)$ ein reeller \index{Banachverband}\textbf{Banachverband}, d. h. in $X$ ist jede Cauchy-Folge (norm-)konvergent, es existiert eine bzgl. der Addition und Skalarmultiplikation verträgliche \index{Banachverband!Ordnung}\textbf{Ordnung} $\geq$ auf $X$ und weiter genügt $\|\cdot\|$ der Implikation $|x|\leq |y|\Rightarrow \|x\|\leq \|y\|$ für alle $x,y\in X$. Bezeichne mit $X_+ := \{x\in X; x\geq0\}$ den \index{Banachverband!positiver Kegel}\textbf{positiven Kegel} in $X$ und analog für eine beliebige Teilmenge $Z\subseteq X$  mit $Z_+$ den positiven Teil von $Z$, also die Menge aller $z\in Z$ mit $z\geq0$. 
+Sei  $(X, \|\cdot\|,\leq)$ ein reeller \index{Banachverband}\textbf{Banachverband}, es existiert eine bzgl. der Addition und Skalarmultiplikation verträgliche \index{Banachverband!Ordnung}\textbf{Ordnung} $\geq$ auf $X$ und weiter genügt $\|\cdot\|$ der Implikation $|x|\leq |y|\Rightarrow \|x\|\leq \|y\|$ für alle $x,y\in X$. Bezeichne mit $X_+ := \{x\in X; x\geq0\}$ den \index{Banachverband!positiver Kegel}\textbf{positiven Kegel} in $X$ und analog für eine beliebige Teilmenge $Z\subseteq X$  mit $Z_+$ den positiven Teil von $Z$, also die Menge aller $z\in Z$ mit $z\geq0$. 
+
+\begin{def}
+Norm
+\end{def}
+
+\begin{bsp}
+Beispiel zu Banachverband
+\end{bsp}
 
 % Abgeschlossenheit des positiven Kegels?\\
 
@@ -234,12 +266,18 @@ Sei  $(X, \|\cdot\|,\leq)$ ein reeller \index{Banachverband}\textbf{Banachverban
 \end{enumerate}
 \end{defi}
 
+\begin{bsp}
+AL RAUM, KB RAUM
+\end{bsp}
+
+
+
 \begin{fsatz}
 Jeder $AL$-Raum ist bereits $KB$-Raum.
 \end{fsatz}
 
 \begin{proof}
-Sei $(x_n)_{n\in\N}$ eine nicht-fallende und normbeschränkte Folge. Für $0\leq x_n\leq x_m$ ist
+Sei $(x_n)_{n\in\N}$ eine nicht-fallende und normbeschränkte Folge. Für $0\leq x_n\leq x_m$ mit $n\geq m$ ist
 \begin{equation*}
 \|x_m\| = \|x_m - x_n\| + \|x_n\|
 \end{equation*}
@@ -254,7 +292,7 @@ Da nach Annahme $(\|x_n \|)_{n\in\N}$ monoton und beschränkt ist, folglich also
 Für parametrisierte Folgen  ist nachfolgende Aussage eine analoge Version der Sätze der dominierten bzw. monotonen Konvergenz in Banachverbänden.
 
 \begin{fsatz}\label{Majorisierte Konvergenz in Banachverbänden}
-Sei $(x_n(t))_{n\in\N}$ eine Familie positiver Folgen in einem Banachverband $X$ mit Parametern $t\in T\subseteq \R$. Angenommen, es gilt eine der Aussagen:
+\hl{Sei $(x_n(t))_{n\in\N}$ eine Familie positiver Folgen in einem Banachverband $X$ mit Parametern $t\in T\subseteq \R$. Angenommen, es gilt eine der Aussagen:}
 \begin{enumerate}
 \item Für alle $n\in\N$ ist die Abbildung $t\mapsto x_n(t)$ monoton steigend und $\lim_{t\uparrow t_0}x_n(t) =  x_n$ konvergent.
 \item Für alle $n\in\N$ ist $\lim_{t\to t_0} x_n(t)= x_n$ konvergent und es existiert eine Folge $(a_n)_{n\in\N}$ in $X$ mit $\sum_{n=0}^\infty \|a_n \|<\infty$ und $x_n(t)\leq a_n$ für alle $t\in T$ und $n\in \N$.
@@ -320,7 +358,7 @@ Siehe \cite{banasiak_arlotti_2006}, Aussage 2.91.
 % \end{proof}
 
 % \par
-% Charakterisierung $AL$-Räume isometrisch isomorph zu $L_1$-Raum,
+% Charakterisierung $AL$-Räume isometrisch isomorph zu $\ell_1$-Raum,
 % \Cref{}.
 % Charakterisierung $KB$-Räume, insb. ist jeder $AL$-Raum bereits $KB$-Raum.
 % Version von satz  \Cref{} für $KB$-Räume
@@ -336,17 +374,17 @@ Seien $X, Y$ Banachverbände. Ist $D(A)\subseteq X$ ein linearer Unterraum, so h
 
 % Die Menge  $\text{Bild}(A) = \{y\in Y; \exists x\in D(A): Ax = y\}$ heißt \index{}\textbf{Bild} und $\text{Kern}(A)=\{x\in D(A); Ax=0\}$ \index{Operator!Kern}\textbf{Kern} von $A$. 
 
-Ist $A$ auf ganz $X$ definiert, also $D(A)=X$, so schreibe $A\in L(X, Y)$, bzw. $L(X):= L(X,Y)$ für $Y=X$; analog $\mathcal L(X,Y)$, falls $A$ zudem \index{Operator!beschränkt}\textbf{beschränkt} ist, wenn also $A$ bezüglich der \index{Operator!Operatornorm}\textbf{Operatornorm} 
-\begin{equation*}\label{eq:}
-\|A\|:=\sup\big\{\|Ax\|;\|x\|\leq 1\big\}
-\end{equation*}
-endlich ist. 
+Ist $A$ auf ganz $X$ definiert, also $D(A)=X$, so schreibe $A\in L(X, Y)$, bzw. $L(X):= L(X,Y)$ für $Y=X$; analog $\mathcal L(X,Y)$, falls $A$ zudem \index{Operator!beschränkt}\textbf{beschränkt} ist, wenn also $A$ bezüglich der \index{Operator!Operatornorm}\textbf{Operatornorm} $ \|A\|:=\sup\big\{\|Ax\|;\|x\|\leq 1\big\}<\infty $ endlich ist. 
 
 \par
 Für jeden linearen Teilraum $D\subseteq D(A)$ ist die \index{Operator!Einschränkung}\textbf{Einschränkung} von $(A, D(A))$ auf $D$, welche wir mit $A|_D$ bezeichnen, vermöge der Zuordnung $A|_D x:= Ax$ für alle $x\in D$. Für zwei Operatoren $A,B$ schreibe $A\subseteq B$, falls $D(A)\subseteq D(B)$  und $B|_{D(A)}=A$ gilt; in diesem Falle bezeichne $B$ auch als \index{Operator!Fortsetzung}\textbf{Fortsetzung} von $A$. 
 
 \par
-Ein Operator $A$ auf einem Banachverband $X$ heißt \index{Operator!positiv}\textbf{positiv}, falls $Ax\geq0$ für alle $x\in D(A)_+:= D(A)\cap X_+$ gilt; in diesem Fall schreibe auch $A\geq0$. Sind $A$, $B$ zwei positive Operatoren, so schreibe $A\leq B$ falls $B-A\geq0$. Weiter ist $A$ genau dann positiv, wenn die Abschätzung $\|Ax\|\leq A\|x\|$ für alle $x\in X$ erfüllt ist. Darüber hinaus ist die Operatornorm positiver Operatoren bereits auf den positiven Kegel definiert, d. h. $\|A\|:=\sup\big\{\|Ax\|;x\in  X_+ \text{ mit }\|x\|\leq 1\big\}$.
+Ein Operator $A$ auf einem Banachverband $X$ heißt \index{Operator!positiv}\textbf{positiv}, falls $Ax\geq0$ für alle $x\in D(A)_+$ gilt; in diesem Fall schreibe auch $A\geq0$. Sind $A$, $B$ zwei positive Operatoren, so schreibe $A\leq B$ falls $B-A\geq0$. 
+
+% Weiter ist $A$ genau dann positiv, wenn die Abschätzung $\|Ax\|\leq A\|x\|$ für alle $x\in X$ erfüllt ist. 
+
+Darüber hinaus ist die Operatornorm positiver Operatoren bereits auf den positiven Kegel definiert, d. h. $\|A\|:=\sup\big\{\|Ax\|;x\in  X_+ \text{ mit }\|x\|\leq 1\big\}$.
 
 % Insbesondere impliziert $0\leq A\leq B$, dass $\|A\|\leq \|B\|$ gilt \Cref{}.\\
 
@@ -356,7 +394,7 @@ Ein Operator $A$ auf einem Banachverband $X$ heißt \index{Operator!positiv}\tex
 %  ist die Eigenschaft eines Operators $A$, \index{}\textbf{additiv} zu sein, notwendig, d. h. falls [...]
 
 \begin{fsatz}\label{Fortsetzung positiver Operatoren}
-Sei $X$ Banachverband,  $A\colon X_+\to Y_+$ positiver Operator. Ist $A$ additiv, dann 
+Sei $X$ Banachverband,  $A\colon X_+\to Y_+$ positive Abbildung. Ist $A$ additiv, dann 
 existiert eine eindeutig bestimmte Fortsetzung $\widetilde{A}$ von $A$ auf ganz $X$ mit $\widetilde{A}x=Ax_+ - Ax_-$. 
 \end{fsatz}
 
@@ -405,7 +443,7 @@ Der Operator  $A\colon D(A)\to Y$ ist bzgl. der Graphennorm stets beschränkt; A
 
 
 \par 
-Die \index{Resolvente}\textbf{Resolvente} eines Operators $A$ ist gegeben durch $R(\lambda, A):=(\lambda I- A)^{-1}$, wobei $\lambda\in \varrho(A):=\{\mu \in \mathbb C; R(\mu, A)\text{ existiert}\}$ die zugehörige \index{Resolvente!Resolventenmenge}\textbf{Resolventenmenge} sei. Das \index{Resolvente!Spektrum}\textbf{Spektrum} von $A$ ist das Komplement $\sigma(A):=\mathbb C\setminus \varrho(A)$ und $r_\sigma(A)=\sup\{\mathfrak R(\lambda); \lambda\in \sigma(A)\}$ der zugehörige \index{Resolvente!Spektralradius}\textbf{Spektralradius}. 
+Die \index{Resolvente}\textbf{Resolvente} eines Operators $A$ ist gegeben durch $R(\lambda, A):=(\lambda I- A)^{-1}$, wobei $\lambda\in \varrho(A):=\{\mu \in \mathbb C; R(\mu, A)\text{ existiert und ist beschränkt}\}$ die zugehörige \index{Resolvente!Resolventenmenge}\textbf{Resolventenmenge} sei. Das \index{Resolvente!Spektrum}\textbf{Spektrum} von $A$ ist das Komplement $\sigma(A):=\mathbb C\setminus \varrho(A)$ und $r_\sigma(A)=\sup\{\mathfrak R(\lambda); \lambda\in \sigma(A)\}$ der zugehörige \index{Resolvente!Spektralradius}\textbf{Spektralradius}. 
 
 \par
 Ein Operator $(A, D(A))$ heißt \index{Operator!resolventenpositiv}\textbf{resolventenpositiv}, falls es $\omega\in\R$ gibt mit $(\omega, \infty)\subseteq\varrho (A)$ und $R(\lambda, A)\geq0$ für alle $\lambda > \omega$.
@@ -435,7 +473,7 @@ Siehe  \cite{pazy_1983}, Aussage 4.2.
 % \end{proof}
 
 
-Eine wichtige Rolle in Funktionalanalysis wir gespielt bei dem Oeprator welcher den Adjugnierten Operator als Argument nimmt. Wenn $A\in\mathcal L(X,Y)$, dann ist der adjungierte Operator $A^*$ definiert durch
+\hl{Eine wichtige Rolle in Funktionalanalysis wir gespielt bei dem Operator welcher den Adjungnierten Operator als Argument nimmt. Wenn $A\in\mathcal L(X,Y)$, dann ist der adjungierte Operator $A^*$ definiert durch}
 \begin{equation*}
 \langle y^*, Ax\rangle =\langle A^*y*, x\rangle
 \end{equation*}
@@ -454,32 +492,34 @@ Eine Familie von Operatoren $\{G(t); t\geq0\}$ in $\mathcal L(X)$  heißt \index
 \item $G(t+s)=G(t)G(s)$ für alle $t,s\geq0$.
 \item $\lim_{t\downarrow 0}G(t)x=x$ für alle $x\in X$.
 \end{enumerate}
-Wir bezeichnen die Halbgruppe dann mit  $\big(G(t)\big)_{t\geq0}$. Der zugehörige \index{Operatorhalbgruppe!Generator}\textbf{Generator} einer Halbgruppe ist der Operator $(A, D(A))$ definiert durch \begin{equation*}
+\hl{Wir bezeichnen die Halbgruppe dann mit  $\big(G(t)\big)_{t\geq0}$. Der zugehörige \index{Operatorhalbgruppe!Generator}\textbf{Generator} einer Halbgruppe ist der Operator $(A, D(A))$ definiert durch} \begin{equation*}
 D(A)\ni x\mapsto Ax:=\lim_{h\downarrow 0}\frac{G(h)x - x}{h}.
 \end{equation*}
-Wir bezeichnen eine Halbgruppe, welche von einem Operator $A$ erzeugt wurde, auch mit $(G_A(t))_{t\geq0}$. 
+Wir bezeichnen eine Halbgruppe, welche von einem Operator $A$ erzeugt wurde, auch mit $(T_A(t))_{t\geq0}$. 
 % Generatoren von Halbgruppen sind abgeschlossen und dicht definiert \Cref{}.
 % , d. h. für den \index{}\textbf{Abschluss} von $D(A)$ gilt $\overline{D(A)}=X$.
 
 \par
-Weiter ist, falls $A$ Generator einer positiven Halbgruppe $(G_A(t))_{t\geq0}$ auf einem Banachverband $X$ ist, dass $\lambda\in\varrho(A)$ für alle $\mathfrak R(\lambda)> \sigma(A)$ und es gilt die \index{Resolvente!Integraldarstellung}\textbf{Integraldarstellung der Resolvente} (siehe \cite{banasiak_arlotti_2006}, Aussage 3.34) mit
+Weiter ist, falls $A$ Generator einer positiven Halbgruppe $(T_A(t))_{t\geq0}$ auf einem Banachverband $X$ ist, dass $\lambda\in\varrho(A)$ für alle $\mathfrak R(\lambda)> \sigma(A)$ und es gilt die \index{Resolvente!Integraldarstellung}\textbf{Integraldarstellung der Resolvente} (siehe \cite{banasiak_arlotti_2006}, Aussage 3.34) mit
 \begin{equation*}\label{eq:}
-R(\lambda, A)x=\int_0^\infty \exp(-\lambda t)G_A(t)x\textnormal dt,\quad \forall x\in X
+R(\lambda, A)x=\int_0^\infty \exp(-\lambda t)T_A(t)x\textnormal dt,\quad \forall x\in X
 \end{equation*}
-Ebenso ist (siehe \cite{pazy_1983}, Aussage 1.4.3), falls $A$ Generator ist,  eine Darstellung der Halbgruppe $(G_A(t))_{t\geq0}$ vermöge
+Ebenso ist (siehe \cite{pazy_1983}, Aussage 1.4.3), falls $A$ Generator ist,  eine Darstellung der Halbgruppe $(T_A(t))_{t\geq0}$ vermöge
 \begin{equation*}\label{Darstellung der Gruppe mithilfe der Resolvente}
-G_A(t)x = \lim_{n\to\infty}\Big(I- \frac t n A\Big)^{-n}x = \lim_{n\to\infty} \Big(\frac n t R\Big(\frac n t, A\Big)\Big)^n x
+T_A(t)x = \lim_{n\to\infty}\Big(I- \frac t n A\Big)^{-n}x = \lim_{n\to\infty} \Big(\frac n t R\Big(\frac n t, A\Big)\Big)^n x
 \end{equation*}
 für alle $x\in X$.
 
 \par
-Eine Halbgruppe heißt \index{Operatorhalbgruppe!positiv}\textbf{positiv}, falls  $G(t)x\geq0$ für alle $x\in X_+$ und $t\geq0$ ist. Insbesondere zeigt obige Darstellung, falls $R(\lambda, A)\geq0$ für hinreichend großes $\lambda$, dass $(G_A(t))_{t\geq0}$ genau dann eine positive Halbgruppe ist, wenn die $A$ resolventenpositiv ist.
+Eine Halbgruppe heißt \index{Operatorhalbgruppe!positiv}\textbf{positiv}, falls  $G(t)x\geq0$ für alle $x\in X_+$ und $t\geq0$ ist. Insbesondere zeigt obige Darstellung, falls $R(\lambda, A)\geq0$ für hinreichend großes $\lambda$, dass $(T_A(t))_{t\geq0}$ genau dann eine positive Halbgruppe ist, wenn die $A$ resolventenpositiv ist.
 
 \par
-Für einen Generator $A$ einer Halbgruppe $\big(G(t)\big)_{t\geq0}$ gibt es stets Konstanten $M\geq0$ sowie $\omega\in R$ mit $\|G(t)\|\leq M\exp(\omega, t)$. In diesem Falle schreibe abkürzend  $A\in\mathcal G(M, \omega)$.
+Für einen Generator $A$ einer Halbgruppe $\big(G(t)\big)_{t\geq0}$ gibt es stets Konstanten $M\geq0$ sowie $\omega\in R$ mit $\|G(t)\|\leq M\exp(\omega, t)$. 
 
-\begin{fsatz}[Hille-Yosida]\index{Hille-Yosida}
-Es ist $A\in \mathcal G(M,\omega)$ genau dann, wenn gilt:
+% In diesem Falle schreibe abkürzend  $A\in\mathcal G(M, \omega)$.
+
+\begin{fsatz}[Hille-Yosida]\label{Hille-Yosida}\index{Hille-Yosida}
+\hl{Es ist $A\in \mathcal G(M,\omega)$ genau dann, wenn gilt}:
 \begin{enumerate}
 \item $A$ ist abgeschlossen und dicht definiert.
 \item Es gibt $M> 0, \omega \in\mathbb R$ so, dass $(\omega, \infty)\subseteq \varrho(A)$ und für alle $n\in\N$ und $\lambda > \omega$ gilt $\|(\lambda I- A)^{-n}\|\leq M (\lambda - \omega)^{-n}$.
@@ -502,7 +542,7 @@ Mithilfe des Satzes von \textbf{Hille-Yosida}, können wir Generatoren \index{Op
 % \end{defi}
 
 \begin{fsatz}[Trotter-Kato]\label{Trotter-Kato}\index{Trotter-Kato}
-Sei $A_n\in \mathcal G(M,\omega)$ Folge von Generatoren. Angenommen, es gebe $\lambda_0$ mit $\mathfrak R(\lambda_0) >\omega$ mit gilt:
+\hl{Sei $A_n\in \mathcal G(M,\omega)$ Folge von Generatoren}. Angenommen, es gebe $\lambda_0$ mit $\mathfrak R(\lambda_0) >\omega$ mit gilt:
 \begin{enumerate}
 \item $\lim_{n\to\infty}R(\lambda_0, A_n)x =:R(\lambda_0)x$ für alle $x\in X$.
 \item $\textnormal{Bild}(R(\lambda_0))$ liegt dicht in $X$.
@@ -536,7 +576,7 @@ Siehe \cite{banasiak_arlotti_2006}, Aussage  3.43.
 % also konvergiert die Reihe für alle $\lambda$ mit $|\lambda-\mu|
 % \end{proof}
 
-Nach \Cref{} ist folgende Behauptung hinreichend für Bedingung (2)in \textbf{Trotter-Kato}:
+\hl{Nach ist folgende Behauptung hinreichend für Bedingung (2)in \textbf{Trotter-Kato}:}
 
 \begin{prop}\label{Hinreichende Bedingung für Trotter-Kato}
 Angenommen, für alle $x\in X$ ist 
@@ -691,15 +731,9 @@ Siehe \cite{banasiak_arlotti_2006}, Aussage 3.44.
 % \end{align}
 % \end{proof}
 
-\chapter{Störungstheorem}
+\chapter{Störungstheorem nach Kato}
 
-\hl{Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac consectetur odio. Fusce iaculis lectus ut scelerisque iaculis. Integer imperdiet turpis posuere, volutpat justo sit amet, mattis erat. Aenean semper ultricies pretium.}
-
-
-
-\section{Existenz einer Fortsetzung für reelle KB-Räume}
-
-\hl{Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac consectetur odio. Fusce iaculis lectus ut scelerisque iaculis. Integer imperdiet turpis posuere, volutpat justo sit amet, mattis erat. Aenean semper ultricies pretium.}
+\section{Existenz einer Fortsetzung $K$}
 
 % \begin{lem}\cite{kato_1954}\label{Konstruktion von Q_0}
 % $(Q_0, D(Q_0))$
@@ -709,7 +743,7 @@ Siehe \cite{banasiak_arlotti_2006}, Aussage 3.44.
 \begin{fsatz}\cite{banasiak_lachowicz_2007}\label{Hauptaussage}
 Sei $X$ ein reeller $KB$-Raum sowie $(A, D(A))$ und $(B, D(B))$ Operatoren in $X$ mit $D(A)\subseteq D(B)$. Angenommen, es gilt:
 \begin{enumerate}
-\item[\textnormal{(A1)}] $A$ ist Generator einer positiven Kontraktionshalbgruppe.
+\item[\textnormal{(A1)}] $A$ ist Generator einer positiven Kontraktionshalbgruppe  $(T_A(t))_{t\geq0}$.
 \item[\textnormal{(A2)}] \hl{Es gibt $\lambda >0$ mit $r_\sigma(BR(\lambda, A))\leq1$. }
 \item[\textnormal{(A3)}] $Bx\geq0$ für alle $x\in D(A)_+$.
 \item[\textnormal{(A4)}] Für alle $x\in D(A)_+$ gibt es $x^*\in X^*_+$ mit  
@@ -717,97 +751,94 @@ Sei $X$ ein reeller $KB$-Raum sowie $(A, D(A))$ und $(B, D(B))$ Operatoren in $X
     \langle x^*, x\rangle = \|x\|\quad\text{und}\quad \langle x^*, (A+B)x\rangle\leq 0.
 \end{align*}
 \end{enumerate}
-Dann existiert eine Fortsetzung $(K, D(K))$ von $\big(A+B, D(A)\big)$, welche Generator einer positiven Kontraktionshalbgruppe $(G_K(t))_{t\geq0}$ in $X$ ist. 
-
-\par 
-Für alle $\lambda >0$ ist $\lambda\in\varrho(K)$ und $R(\lambda, K)$ ist gegeben durch
+Dann existiert eine Fortsetzung $(K, D(K))$ von $\big(A+B, D(A)\big)$, welche Generator einer positiven Kontraktionshalbgruppe $(T_K(t))_{t\geq0}$ in $X$ ist. Für alle $\lambda >0$ ist $\lambda\in\varrho(K)$ und $R(\lambda, K)$ ist gegeben durch
 \begin{align*}\label{Darstellung der Resolvente von K}
 R(\lambda, K)x
-&= \lim_{n\to\infty} R(\lambda, A)\sum_{k=0}^n (BR(\lambda, A))^k x\\
+%&= \lim_{n\to\infty} R(\lambda, A)\sum_{k=0}^n (BR(\lambda, A))^k x\\
 &=\sum_{k=0}^\infty R(\lambda, A)(BR(\lambda, A))^kx,\quad \forall x\in X.
 \end{align*}
 \end{fsatz}
 
 \begin{bem}\label{stärkere Annahme (A2)}
-Ist $-A$ positiver Operator, dann kann (A2) durch die Annahme
+Ist $-A$ positiver Operator, dann kann die Voraussetzungen (A2) ersetzt werden durch 
 \begin{equation*}
-\text{(A2')} \quad \|Bx\|\leq \|Ax\|,\quad \forall x\in D(A)_+
+\text{(A2')} \quad \|Bx\|\leq \|Ax\|,\quad \forall x\in D(A)_+.
 \end{equation*}
-ersetzt werden. 
 \end{bem}
 
 \begin{proof}
 \par
-Sei $\lambda >0$. Dann ist mit
+Für $\lambda >0$ gilt
 \begin{equation*}
-0\leq -AR(\lambda, A)=I-\lambda R(\lambda, A)\leq I
+0\leq -AR(\lambda, A)=I-\lambda R(\lambda, A)\leq I,
 \end{equation*}
-\hl{die Abschätzung $\|AR(\lambda, A)y\|\leq \|y\|$ für alle $y\in X_+$ erfüllt, und mit $-AR(\lambda, A)\geq0$ bereits auf ganz $X$. Sei $y\in X_+$. Mit $x:=R(\lambda, A)y\in D(A)_+$ ist  $\|Ax\|\leq \|(\lambda I- A)x\|$ und mit (A2') auch $\|Bx\|\leq \|(\lambda I-A)x\|$. Also $\|BR(\lambda, A)y\|\leq \|y\|$ für alle $y\in X_+$, und mit $BR(\lambda, A)\geq0$ nach (A3) gilt dies auf ganz $X$.}
+also $\|AR(\lambda, A)y\|\leq\|y\|$. Sei $y\in X_+$ und setze $x:=R(\lambda, A)y$. Dann ist $x\in D(A)_+$ und somit \begin{equation*}
+\|Bx\|\leq \|Ax\|\leq \|(\lambda I-A)x\|.    
+\end{equation*}
+Wir erhalten $\|BR(\lambda, A)y\|\leq \|y\|$ und mit $BR(\lambda, A)\geq0$ gilt dies bereits für alle $y\in X$. 
 \end{proof}
 
 \begin{bem}\label{BR(lambda, A) fallend}
-Ist (A2) für ein $\lambda_0>0$ erfüllt, so gilt die Aussage bereits für alle $\lambda > \lambda_0$. 
+Ist die Voraussetzung (A2) für ein $\lambda_0>0$ erfüllt, so gilt $r_\sigma(BR(\lambda, A))\leq1$ bereits für alle $\lambda > \lambda_0$. 
 \end{bem}
 
 \begin{proof}
 \par
-Es gebe $\lambda_0$ mit (A2) und sei $\lambda > \lambda_0$. Mit der \index{}\textbf{Resolventengleichung} ist
+Sei $\lambda > \lambda_0$. Mit der \index{}\textbf{Resolventengleichung} ist
 \begin{equation*}
 BR(\lambda, A)-BR(\lambda_0, A)=(\lambda_0 - \lambda)BR(\lambda_0, A)R(\lambda, A).
 \end{equation*}
-Dann folgt mit $BR(\lambda_0, A)$, $R(\lambda,A)$ positiv sowie \Cref{Fortsetzung positiver Operatoren}, dass $BR(\lambda_0, A)\geq BR(\lambda,A)$ für alle $\lambda >\lambda_0$; also ist $r_\sigma(BR(\lambda, A))\leq 1$.
+Da $BR(\lambda_0, A)$ und $R(\lambda,A)$ positiv sind, gilt mit  \Cref{Fortsetzung positiver Operatoren} 
+\begin{equation*}
+BR(\lambda_0, A)\geq BR(\lambda,A).
+\end{equation*}
 \end{proof}
 
 \begin{proof}[Beweis des Satzes]
 \par
-Für $0\leq r < 1$ definiere den Operator $(K_r, D(K_r))$ mit Definitionsbereich $D(K_r)=D(A)$ durch
-\begin{equation}
+Für $0\leq r < 1$ definiere den Operator $(K_r, D(K_r))$ mit Definitionsbereich $D(K_r):=D(A)$ durch
+\begin{equation*}
 K_r:= A+rB.
-\end{equation}
+\end{equation*}
 
 \par
-Zeige mithilfe von \textbf{Hille-Yosida}, dass $K_r$ Erzeuger einer positiven Kontraktionshalbgruppe ist und mit  $r\uparrow 1$ die gesuchte Fortsetzung von $A+B$ liefert.
-
+Zeige mithilfe von \textbf{Hille-Yosida}, dass $(K_r, D(K_r))$ Erzeuger einer positiven Kontraktionshalbgruppe ist:
 \par 
 Nach (A1) ist $A$ Generator, also ist $K_r$ nach Konstruktion dicht definiert. 
 
 \par 
 Zur Existenz und Positivität von $R(\lambda, K_r)$: Für $\lambda>0$ ist
 \begin{equation*}
-\lambda- (A+rB)=(I-rBR(\lambda, A))(\lambda I-A).
+\lambda I - K_r = \lambda I- (A+rB)=(I-rBR(\lambda, A))(\lambda I-A).
 \end{equation*}
-Wegen $r_\sigma(rBR(\lambda, A))\leq r< 1$ ist $I-rBR(\lambda, A)$ nach \Cref{Satz von der Neumann'schen Reihe} invertierbar mit $(I-rBR(\lambda, A))^{-1}=\sum_{k=0}^\infty r^k (BR(\lambda, A))^k$. Somit ist $\lambda I - K_r$ invertierbar mit
+Wegen $r_\sigma(rBR(\lambda, A))\leq r< 1$ist $I-rBR(\lambda, A)$ nach invertierbar und die zugehörige Inverse gegeben durch die \textbf{Neumann'sche Reihe} 
+\begin{equation*}
+(I-rBR(\lambda, A))^{-1}=\sum_{k=0}^\infty r^k (BR(\lambda, A))^k.
+\end{equation*}
+Damit ist $\lambda\in\varrho(K_r)$ für alle $\lambda>0$ und wir erhalten $R(\lambda, K_r)$ mit
 \begin{align*}
 R(\lambda, K_r)
 &=\big((I-rBR(\lambda, A))(\lambda I-A)\big)^{-1}\\
 &=R(\lambda, A)(I-rBR(\lambda, A))^{-1}\\
 &=R(\lambda, A)\sum_{k=0}^\infty r^k (BR(\lambda, A))^k.
 \end{align*}
-Wegen $R(\lambda, A)x\in D(A)_+$ für alle $x\in X_+$ sowie (A2) ist jeder Term positiv, also auch $R(\lambda, K_r)\geq0$. 
+Sei $x\in X_+$. Mit (A1) ist für $\lambda>0$ hinreichend groß  $R(\lambda, A)x\in D(A)_+$. Nach (A3) gilt zudem $BR(\lambda,A)x\geq0$, und damit ist $R(\lambda, K_r)$ positiver Operator auf $X_+$. Mit \Cref{Fortsetzung positiver Operatoren} ist $R(\lambda, K_r)$ bereits auf ganz $X$ definiert.
 
 \par 
-Zur Beschränktheit von $R(\lambda,K_r)$: Sei $x\in D(A)_+$. 
-
-% Mit \mbox{\Cref{Lemma nach Hahn-Banach}} gibt es $x^*\geq0$ mit $\langle x^*, x\rangle = \|x\|$.
-
-Nach (A4) ist $\langle x^*, (A+B)x\rangle\leq 0$ und wegen $Bx\geq0$ auch $\langle x^*, Bx\rangle \geq0$. Damit folgt
+Zur Beschränktheit von $R(\lambda,K_r)$: Sei $x\in D(A)_+$. % Mit \mbox{\Cref{Lemma nach Hahn-Banach}} gibt es $x^*\geq0$ mit $\langle x^*, x\rangle = \|x\|$. 
+Dann gibt es $x^*\in X_+^*$ mit $\langle x^*, (A+B)x\rangle\leq 0$. Wegen $Bx\geq0$ ist $\langle x^*, Bx\rangle \geq0$. Damit folgt
 \begin{equation*}
-\langle x^*, (A+rB)x\rangle = \langle x^*, (A+B)x\rangle + (r-1)\langle x^*, Bx\rangle \leq  0,
+\langle x^*, (A+rB)x\rangle = \langle x^*, (A+B)x\rangle + (r-1)\langle x^*, Bx\rangle \leq  0.
 \end{equation*}
-$K_r$ ist also dissipativ.
-
-\par
-Für alle $x\in D(A)=K_r)$ ist mit \Cref{Charakterisierung der Dissipativität} dies äquivalent zu 
+Nach \Cref{} ist $K_r=A+rB$ dissipativ. Mit \Cref{Charakterisierung der Dissipativität} ist dies äquivalent zu 
 \begin{equation*}\label{equation1}
-\|(\lambda I - K_r)x\|
-%\geq \langle x^*, (\lambda I- K_r)x\rangle = \lambda\langle x^*, x\rangle - \langle x^*, K_rx\rangle 
-\geq \lambda \|x\|.
+\|(\lambda I - K_r)x\|\geq \lambda \|x\|.
 \end{equation*}
-Sei nun $y\in X_+$ und setze $x:=R(\lambda, K_r)y$. Dann ist $x\in D(A)_+$, also
+Sei nun $y\in X_+$ und setze $x:=R(\lambda, K_r)y\in D(A)_+$. Mit obiger Abschätzung erhalten wir
 \begin{equation}\label{Resolvente von K_r ist relativ beschränkt}
-\|R(\lambda, K_r)y\|\leq \lambda^{-1}\|y\|.
+\|R(\lambda, K_r)y\|\leq \lambda^{-1}\|y\|
 \end{equation}
-Mit \Cref{Fortsetzung positiver Operatoren} können wir wegen  $R(\lambda, K_r)$ positiv gilt dies bereits auf ganz $X$.
+und nach \Cref{Fortsetzung positiver Operatoren} gilt dies mit $R(\lambda, K_r)\geq0$  bereits für alle $y\in X$.
 
 % \par
 % Zur Abgeschlossenheit von $K_r$: Sei $x_n\in D(K_r)$ mit $x_n\to x$ und $K_rx_n\to y$. Da $R(\lambda, K_r)$ beschränkt ist, ist
@@ -821,132 +852,127 @@ Mit \Cref{Fortsetzung positiver Operatoren} können wir wegen  $R(\lambda, K_r)$
 
 
 \par
-Die Voraussetzungen für \textbf{Hille-Yosida} sind somit erfüllt und  $(K_r, D(K_r))$ ist für alle $0\leq r< 1$ Generator einer positiven Kontraktionshalbgruppe; bezeichne diese jeweils mit  $(G_r(t))_{t\geq0}$.
+Somit ist  der Operator  $(K_r, D(K_r))$ mit \textbf{Hille-Yosida} (siehe \Cref{Hille-Yosida}) Generator einer Kontraktionshalbgruppe $(T_r(t))_{t\geq0}$ in $X$, die zudem positiv ist.
 
 \par
-Zeige, dass die Voraussetzungen von \textbf{Trotter-Kato} für die Familie von Generatoren $K_r$ erfüllt sind.
+Zeige mithilfe von \textbf{Trotter-Kato} (siehe \Cref{Trotter-Kato}), dass der starke Limes von $K_r$ in $r\uparrow 1$ ebenfalls Generator einer Kontraktionshalbgruppe in $X$ ist.
 
 \par
-Zu (1): Sei $x\in X_+$ sowie  $\lambda >0$. Dann ist $R(\lambda, K_r)x$ für $r\uparrow 1$ nicht-fallend. Mit $\|R(\lambda, K_r)x\|\leq \lambda^{-1}\|x\|$ ist $(\|R(\lambda, K_r)x\|)_{0\leq r<1}$ gleichmäßig beschränkt in $r$. Mit $X$ KB-Raum existiert demnach für alle $x\in X_+$ und $\lambda >0$ ein Element $y_{\lambda, x}\in X_+$ mit
+Zu (1) in \Cref{Trotter-Kato}: Sei $x\in X_+$. Für alle  $\lambda >0$ ist
+\begin{equation*}
+R(\lambda, K_r)x=R(\lambda, A)\sum_{k=0}^\infty r^k (BR(\lambda, A))^kx.
+\end{equation*}
+für $r\uparrow 1$ monoton steigend. Weiter zeigt $\|R(\lambda, K_r)x\|\leq \lambda^{-1}\|x\|$, dass $(\|R(\lambda, K_r)x\|)_{0\leq r<1}$ gleichmäßig beschränkt in $r$ ist. Da $X$ KB-Raum ist, existiert für alle $x\in X_+$ und $\lambda >0$ ein Element $y_{\lambda, x}\in X_+$ derart, dass
 \begin{equation}\label{Grenzwert der Resolventen}
-\lim_{r\uparrow 1}R(\lambda, K_r)x = y_{\lambda, x}.
+\lim_{r\uparrow 1}R(\lambda, K_r)x = y_{\lambda, x}
 \end{equation}
-Mit der Linearität des Limes kann das Ergebnis auf ganz $X$ fortgesetzt werden. Bezeichne die hierdurch definierte Abbildung mit $R(\lambda)$. Mit der Monotonie sowie Linearität des Limes ist $R(\lambda)$ positiver Operator auf $X$.
+gilt. Mit der Linearität des Limes kann das Ergebnis auf ganz $X$ fortgesetzt werden. Sei $R(\lambda)\colon x\mapsto y_{\lambda,x}$ die hierdurch punktweise definierte Abbildung auf $X_+$. Mithilfe der Monotonie und Linearität des Limes ist $R(\lambda)$ bereits auf ganz $X$ positiver Operator.
 
 \par
-Zu (2): Wir möchten zeigen, dass das Bild von $R(\lambda_0)$ dicht in $X$ liegt.  Nach Proposition \Cref{Hinreichende Bedingung für Trotter-Kato} genügt es, zu zeigen, dass für alle $x\in X$ der Ausdruck $\lambda R(\lambda, K_r)x$ mit $\lambda\to\infty$ gleichmäßig konvergiert mit $\lim_{\lambda\to\infty}\lambda R(\lambda, K_r)x = x$. 
-
-\par
-Sei $x\in D(A)$. Mit $K_r R(\lambda, K_r)=\lambda R(\lambda, K_r)-I$ ist 
+Zu (2) in \Cref{Trotter-Kato}: Nach \Cref{Hinreichende Bedingung für Trotter-Kato} genügt es, zu zeigen, dass $\lambda R(\lambda, K_r)x\to x$ mit $\lambda\to\infty$ gleichmäßig für alle $x\in X$ konvergiert. Betrachte hierzu
+\begin{equation*}
+K_r R(\lambda, K_r)=\lambda R(\lambda, K_r)-I.
+\end{equation*}
+Sei $x\in D(A)$. Für alle $\lambda>0$ ist 
 \begin{align*}
 \|\lambda R(\lambda, K_r)x -x\|
 &=\|K_r R(\lambda, K_r)x\|\\
 &=\|R(\lambda, K_r)K_rx\|\\
 &\leq \lambda^{-1}\|(A+rB)x\|\\
-&\leq \lambda^{-1}(\|Ax\| + \|Bx\|).
+&\leq \lambda^{-1}(\|Ax\| + \|Bx\|)
 \end{align*}
-Mit $\lambda \to \infty$ folgt die gleichmäßige Konvergenz für alle $x\in D(A)$. Sie nun $\epsilon >0$. Für beliebiges $y\in X$ gibt es wegen $\overline{D(A)}= X$ ein $x\in D(A)$ mit $\|y - x\|< \epsilon$. Obige Ungleichung liefert in diesem Falle
+und damit   $\lim_{\lambda\to\infty}\lambda R(\lambda, K_r)x \to x$ gleichmäßig für alle $x\in D(A)$. Für $y\in X$ beliebig  sei $\epsilon >0$. Wegen $\overline{D(A)}= X$ gibt es ein $x\in D(A)$ mit $\|y - x\|< \epsilon$. Obige Abschätzung liefert 
 \begin{align*}
 \|\lambda R(\lambda, K_r)y - y\|
 &\leq \lambda \|R(\lambda, K_r)(y-x)\| + \|y-x\| + \|\lambda R(\lambda, K_r)x -x\|\\
-&\leq 2\epsilon + \lambda^{-1}(\|Ax\| + \|Bx\|).
+&\leq 2\epsilon + \lambda^{-1}(\|Ax\| + \|Bx\|)
 \end{align*}
-Da $\epsilon$ beliebig gewählt war, folgt gleichmäßige Konvergenz auf ganz $X$. 
+und wir erhalten gleichmäßige Konvergenz auf ganz $X$.
 
 \par
-Mi \textbf{Trotter-Kato} existiert demnach ein eindeutig bestimmter Operator $K$, welcher Generator einer Kontraktionshalbgruppe $(G_K(t))_{t\geq0}$ ist und für $\lambda>0$ ist $\lambda\in\varrho(K)$ mit $R(\lambda, K)=R(\lambda)$. Weiter
+Mit \textbf{Trotter-Kato} existiert ein eindeutig bestimmter Operator $(K, D(K))$, welcher Generator einer Kontraktionshalbgruppe $(T_K(t))_{t\geq0}$ in $X$ ist. Für $\lambda>0$ ist $\lambda\in\varrho(K)$ und es gilt $R(\lambda, K)=R(\lambda)$. Weiter erhalten wir für alle $x\in X$ die Identität
 \begin{equation*}
-\lim_{r\uparrow 1} G_r(t)x = G_K(t)x, \quad \forall x\in X,
+\lim_{r\uparrow 1} T_r(t)x = T_K(t)x,\quad\forall t\geq0.
 \end{equation*}
-und $G_K\geq0$ ist insbesondere positiv.
+Insbesondere ist mit der Monotonie des Limes $(T_K(t))_{t\geq0}$ positiv.
 
 \par
-Zur Darstellung von $R(\lambda, K)$: Sei $x\in X_+$. Wegen $\lim_{r\uparrow 1}R(\lambda, K_r)=R(\lambda, K)$ stark ist
+Zur Darstellung von $R(\lambda, K)$: Mit \textbf{Trotter-Kato} ist
 \begin{align*}
-R(\lambda, K)
-&=\lim_{r\uparrow 1}\sum_{k=0}^\infty r^k R(\lambda, A)(BR(\lambda, A))^k.
+R(\lambda, K)=\lim_{r\uparrow1}R(\lambda, K_r)=\lim_{r\uparrow 1}\sum_{k=0}^\infty r^k R(\lambda, A)(BR(\lambda, A))^k.
 \end{align*}
-Da $X$ KB-Raum und $\lim_{r\uparrow 1}\sum_{k=0}^\infty r^k R(\lambda, A)(BR(\lambda, A))^kx\in X$ folgt nach \Cref{Monotone Konvergenz in KB-Raum} die Konvergenz der Reihe $\sum_{k=0}^\infty R(\lambda, A)(BR(\lambda, A))^kx$ mit
+Sei $x\in X_+$. Dann ist $\lim_{r\uparrow 1}\sum_{k=0}^\infty r^k R(\lambda, A)(BR(\lambda, A))^k x\in X$. Mit der Monotonie von $R(\lambda, K_r)$ liefert \Cref{}, dass  
 \begin{align*}
-R(\lambda, K)
-&=\sum_{k=0}^\infty R(\lambda, A)(BR(\lambda, A))^kx\\
-&= \lim_{n\to\infty } R(\lambda, A)\sum_{k=0}^n (BR(\lambda, A))^kx,
+R(\lambda, K)x=\sum_{k=0}^\infty R(\lambda, A)(BR(\lambda, A))^kx
 \end{align*}
-wegen Positivität sowie Linearität gilt für alle $x\in X$.
+gilt. Mit der Positivität von $R(\lambda, K)$ gilt dies bereits für alle $x\in X$.
 
 \par
-Zu $K\supseteq A+B$: Sei $x\in D(A)$. Für $n\in \mathbb N$ setze
+Zu $K\supseteq A+B$: Für $\lambda>0$ und  $n\in \mathbb N$ setze
 \begin{equation*}
 R^{(n)}(\lambda) := \sum_{k=0}^n R(\lambda, A)(BR(\lambda, A))^k.
 \end{equation*}
-Dies lässt sich umformulieren zu
+Dies lässt sich umschreiben zu
 \begin{align*}
 R^{(n)}(\lambda) 
 &= R(\lambda, A) + \Bigg(\sum_{k=0}^{n-1}R(\lambda, A) (BR(\lambda, A))^k\Bigg) BR(\lambda,  A)\\
-&= R(\lambda, A) + R^{(n-1)}(\lambda) B R(\lambda, A),
+&= R(\lambda, A) + R^{(n-1)}(\lambda) B R(\lambda, A).
 \end{align*}
-also
+Sei $x\in D(A)$. Dann gilt
 \begin{equation*}
-R^{(n)}(\lambda)(\lambda I -A)x = x + R^{(n-1)}(\lambda)Bx, \quad \forall x\in X.
+R^{(n)}(\lambda)(\lambda I -A)x = x + R^{(n-1)}(\lambda)Bx.
 \end{equation*}
-Für $n\to \infty$ ist 
+Für $n\to \infty$ erhalten wir $R(\lambda, K)(\lambda I- A)x=x+R(\lambda, K)Bx$, also
 \begin{equation*}
-R(\lambda, K)(\lambda I -A-B)x=x
+R(\lambda, K)(\lambda I -A-B)x=x.
 \end{equation*}
-und damit $x\in D(K)$ mit $(\lambda I -K)x = (\lambda I -A-B)x$.
+Damit ist $x\in D(K)$ mit $(\lambda I -K)x = (\lambda I -A-B)x$.
 \end{proof}
 
-% \begin{lem}\cite{kato_1954}\label{Eigenschaften von G_K(t)}
+% \begin{lem}\cite{kato_1954}\label{Eigenschaften von T_K(t)}
 % Sei $x\in X_+$. Dann gilt:
 % \begin{enumerate}
-% \item $\|G_K(t)x\|$ ist  fallende Funktion in $t$.
-% \item Es gilt $\lim_{t\to\infty} \|G_K(t)x\| = \|x\| - \lim_{\lambda\downarrow 0} \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|$.
+% \item $\|T_K(t)x\|$ ist  fallende Funktion in $t$.
+% \item Es gilt $\lim_{t\to\infty} \|T_K(t)x\| = \|x\| - \lim_{\lambda\downarrow 0} \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|$.
 % \item Für $0\neq x$ ist $\lambda^{-1}(\|x\| - \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|)$ eine strikt positive, fallende Funktion in $\lambda$ mit
 % \begin{equation*}
-% \int_0^\infty \|G_K(t)x\|\textnormal dt = \lim_{\lambda\downarrow 0} \lambda^{-1}(\|x\| - \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|)
+% \int_0^\infty \|T_K(t)x\|\textnormal dt = \lim_{\lambda\downarrow 0} \lambda^{-1}(\|x\| - \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|)
 % \end{equation*}
 % \end{enumerate}
 % \end{lem}
 
-
-\section{Existenz einer Fortsetzung für komplexe KB-Räume}
-
-\par
-\hl{Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac consectetur odio. Fusce iaculis lectus ut scelerisque iaculis. Integer imperdiet turpis posuere, volutpat justo sit amet, mattis erat. Aenean semper ultricies pretium.}
-
-\par
-Insbesondere gilt \Cref{Hauptaussage} damit für \hl{die Räume $l_p$, $L_p(\Omega)$ für $p\in [1,\infty)$ sowie $C(\Omega)$. }
-
-
-
-\begin{fsatz}
-Sei $X_C$ die Komplexifizierung eines $KB$-Raumes $X$ mit Norm \Cref{}. Sind die Annahmen von \Cref{Hauptaussage} für Operatoren $(A, D(A))$, $(B, D(B)$ mit $D(A)\subseteq D(B)$ gegeben, dann existiert eine Komplexifizierung $K_C$ nach \Cref{} von $K$, welche Generator einer positiven Kontraktionshalbgruppe $(G_{K_C}(t))_{t\geq0}$ auf  $X_C$ ist. Dabei ist $(G_{K_C}(t))_{t\geq0}$ die Komplexifizierung von $(G_K(t))_{t\geq0}$.
+\begin{fsatz}\label{Hauptaussage im Komplexen}
+Sei $X_C$ die Komplexifizierung eines $KB$-Raumes $X$. Sind die Voraussetzungen in  \Cref{Hauptaussage} gegeben, dann existiert eine Komplexifizierung $K_C$ von $K$, welche Generator einer positiven Kontraktionshalbgruppe $(T_{K_C}(t))_{t\geq0}$ in  $X_C$ ist.
 \end{fsatz}
 
 \begin{proof}
 Siehe [...]
 \end{proof}
 
+
+\par
+\begin{bem}
+Sei $p\in[1,\infty)$. Dann gilt \Cref{Hauptaussage} nach \Cref{} insbesondere für die Räume $\ell_p$ und  $L_p(\Omega, \mu)$.
+\end{bem}
+
 \section{Störungstheorem für AL-Räume}
-
-\hl{Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac consectetur odio. Fusce iaculis lectus ut scelerisque iaculis. Integer imperdiet turpis posuere, volutpat justo sit amet, mattis erat. Aenean semper ultricies pretium.}
-
 
 % Sei $X$ AL-Raum. Wegen \cite{aliprantis_burkinshaw_2006}, \Cref{} können wir ohne Einschränkung $X=L_1(\Omega,\mu)$ fordern. \Cref{Hauptaussage} lässt sich in diesem Falle wie folgt schreiben:
 
-\begin{fsatz}
+\begin{fsatz}\label{Hauptaussage in AL}
 Seien $(A, D(A))$ und $(B, D(B))$ Operatoren in  $L_1(\Omega, \mu)$ mit $D(A)\subseteq D(B)$. Angenommen, es gilt:
 \begin{enumerate}
-\item[\textnormal{(B1)}] $A$ ist Generator einer positiven Kontraktionshalbgruppe.
+\item[\textnormal{(B1)}] $A$ ist Generator einer positiven Kontraktionshalbgruppe $(T_A(t))_{t\geq0}$.
 \item[\textnormal{(B2)}] $Bf\geq0$ für alle $f\in D(A)_+$.
 \item[\textnormal{(B3)}] Für alle $f\in D(A)_+$ ist $\int_\Omega (Af+Bf)\textnormal d\mu\leq 0$.
 \end{enumerate}
-Dann sind die Voraussetzungen in \Cref{Hauptaussage} erfüllt, es existiert also eine Fortsetzung $(K, D(K))$ von $(A+B, D(A))$, welche Generator einer positiven Kontraktionshalbgruppe in $L_1(\Omega, \mu)$ ist.
+Dann sind die Voraussetzungen in \Cref{Hauptaussage} erfüllt.
+%, es existiert also eine Fortsetzung $(K, D(K))$ von $(A+B, D(A))$, welche Generator einer positiven Kontraktionshalbgruppe $(T_K(t))_{t\geq0}$ in $L_1(\Omega, \mu)$ ist.
 \end{fsatz}
 
 \begin{proof}
 \par
-Wir zeigen, dass die Annahmen (A3) und (A4) in \Cref{Hauptaussage} erfüllt sind. 
+Wir müssen zeigen, dass die Voraussetzungen (A3) und (A4) in \Cref{Hauptaussage} erfüllt sind. 
 
 
 \par
@@ -954,27 +980,30 @@ Zu (A3): Sei $f\in L_1(\Omega,\mu)_+$. Dann ist $R(\lambda, A)f\in D(A)_+$. Betr
 \begin{equation*}
 (A+B)R(\lambda, A)f=-If+BR(\lambda, A)f+\lambda R(\lambda, A)f.
 \end{equation*}
-Mit (B3) erhalten wir
+Mit $\int_\Omega (Af+Bf)\textnormal d\mu\leq 0$ für alle $f\in D(A)_+$ erhalten wir
 \begin{equation*}
--\int_\Omega If\textnormal d\mu + \int_\Omega BR(\lambda, A)f\textnormal d\mu + \lambda \int_\Omega R(\lambda, A)f\textnormal d\mu\leq 0,
+-\int_\Omega If\textnormal d\mu + \int_\Omega BR(\lambda, A)f\textnormal d\mu + \lambda \int_\Omega R(\lambda, A)f\textnormal d\mu\leq 0.
 \end{equation*}
-mit der kanonischen Norm in $L_1(\Omega, \mu)$ also
+Mithilfe der kanonischen Norm in $L_1(\Omega, \mu)$ lässt sich dies umschreiben zu
 \begin{equation*}
 \lambda \|R(\lambda, A)f\| + \|BR(\lambda, A)f\| - \|f\|\leq 0.
 \end{equation*}
-Wegen $\|R(\lambda, A)f\|\leq \lambda^{-1}\|f\|$ nach  (B1) ist damit 
+Da $\|R(\lambda, A)f\|\leq \lambda^{-1}\|f\|$ wird dies zu
 \begin{align*}
-\|BR(\lambda, A)f\|\leq\|f\| - \lambda\|R(\lambda, A)f\|\leq \|f\|
+\|BR(\lambda, A)f\|\leq\|f\| - \lambda\|R(\lambda, A)f\|\leq \|f\|.
 \end{align*}
-und mit \Cref{} gilt dies bereits für alle $f\in L_1(\Omega,\mu)$.
+mit \Cref{} ist dies bereits für alle $f\in L_1(\Omega,\mu)$ erfüllt.
 
 \par
-Zu (A4): Sei $f\in D(A)_+$.  Mit \Cref{Lemma nach Hahn-Banach} gibt es $f^*\geq0$ mit $\langle f^*, f\rangle=\|f\|$ und \hl{mit $\int_\Omega (Af+Bf)\textnormal d\mu\leq 0$} ist $\langle f^*, (A+B)f\rangle\leq 0$. 
+\hl{Zu (A4)}: Sei $f\in D(A)_+$.  Mit \Cref{Lemma nach Hahn-Banach} gibt es $f^*\geq0$ mit $\langle f^*, f\rangle=\|f\|$. Damit erhalten wir 
+\begin{equation*}
+\langle f^*, (A+B)f\rangle=\int_\Omega (Af+Bf)\textnormal d\mu\leq 0.
+\end{equation*}
 
 \end{proof}
 
 
-% \section{Kato's Theorem in $L_1$}
+% \section{Kato's Theorem in $\ell_1$}
 
 
 
@@ -984,7 +1013,7 @@ Zu (A4): Sei $f\in D(A)_+$.  Mit \Cref{Lemma nach Hahn-Banach} gibt es $f^*\geq0
 % \item Für alle $\lambda >0$ existiert  $R(\lambda, K_r)$  mit $\|R(\lambda, K_r)\|\leq\lambda^{-1}$.
 % \item $R(\lambda, K_r)$ ist positiv.
 % \end{enumerate}
-% Weiter ist $K_r$  Generator einer positiven Kontraktionshalbgruppe $(G_r(t))_{t\geq0}$.
+% Weiter ist $K_r$  Generator einer positiven Kontraktionshalbgruppe $(T_r(t))_{t\geq0}$.
 % \end{lem}
 
 % \begin{proof}
@@ -1019,7 +1048,7 @@ Zu (A4): Sei $f\in D(A)_+$.  Mit \Cref{Lemma nach Hahn-Banach} gibt es $f^*\geq0
 % \end{proof}
 
 % \begin{lem}\cite{kato_1954}\label{K_r ist Generator}
-% Sei $0\leq r< 1$. Dann ist  $(G_r(t))_{r\in[0,1)}$ mit $r\uparrow 1$ für alle $t\geq0$ stark und auf allen Kompakta $t\in[0, s]$ gleichmäßig konvergent. Der Grenzwert $\lim_{r\uparrow 1}G_r(t)=:G_K(t)$ ist positive Kontraktionshalbgruppe und es gilt:
+% Sei $0\leq r< 1$. Dann ist  $(T_r(t))_{r\in[0,1)}$ mit $r\uparrow 1$ für alle $t\geq0$ stark und auf allen Kompakta $t\in[0, s]$ gleichmäßig konvergent. Der Grenzwert $\lim_{r\uparrow 1}T_r(t)=:T_K(t)$ ist positive Kontraktionshalbgruppe und es gilt:
 % \begin{enumerate}
 % \item $R(\lambda, K)$ existiert mit $\|R(\lambda, K)\|\leq \lambda^{-1}$.
 % \item Für alle $r\in[0, 1)$ gilt  $0\leq R(\lambda, K_r)\leq R(\lambda, K)$.
@@ -1033,10 +1062,10 @@ Zu (A4): Sei $f\in D(A)_+$.  Mit \Cref{Lemma nach Hahn-Banach} gibt es $f^*\geq0
 
 % \begin{proof}
 % \par
-% Zu (1): Sei $t\geq0$. Dann ist für alle $0\leq r< 1$ der Ausdruck $G_r(t)$ wegen \Cref{} beschränkt. Die Monotonie liefert dann den punktweisen Grenzwert $\lim_{r\uparrow 1}G_r(t)=:G_K(t)$.
+% Zu (1): Sei $t\geq0$. Dann ist für alle $0\leq r< 1$ der Ausdruck $T_r(t)$ wegen \Cref{} beschränkt. Die Monotonie liefert dann den punktweisen Grenzwert $\lim_{r\uparrow 1}T_r(t)=:T_K(t)$.
 
 % \par
-% Zu (2): Beweis durch Widerspruch. Angenommen, es gibt $x\in X_+$ sowie $t\geq0$ so, dass $G_r(t)x\to G_K(t)x$ nicht gleichmäßig konvergiert. Dann gibt es konvergente Folgen $(t_n)_{n\in\mathbb N}$ sowie $(r_n)_{n\in\mathbb N}$ mit $t_n\to t_0$ und $r_n\uparrow 1$ mit $\|T(t_n)x - T_{r_n}(t_n)x\|\geq \epsilon$ für ein $\epsilon >0$. Wegen der Positivität der Summanden ist mit \Cref{}, dass 
+% Zu (2): Beweis durch Widerspruch. Angenommen, es gibt $x\in X_+$ sowie $t\geq0$ so, dass $T_r(t)x\to T_K(t)x$ nicht gleichmäßig konvergiert. Dann gibt es konvergente Folgen $(t_n)_{n\in\mathbb N}$ sowie $(r_n)_{n\in\mathbb N}$ mit $t_n\to t_0$ und $r_n\uparrow 1$ mit $\|T(t_n)x - T_{r_n}(t_n)x\|\geq \epsilon$ für ein $\epsilon >0$. Wegen der Positivität der Summanden ist mit \Cref{}, dass 
 % $\|T(t_n)x\| - \|T_{r_n}(t_n)x\| = \|T(t_n)x - T_{r_n}(t_n)x\|\geq \epsilon$.
 
 % \par
@@ -1046,9 +1075,9 @@ Zu (A4): Sei $f\in D(A)_+$.  Mit \Cref{Lemma nach Hahn-Banach} gibt es $f^*\geq0
 % \end{equation}
 % Mit der der starken Stetigkeit aus Aussage (1) ist für alle $m$ fest gewählt mit $n\to \infty$
 % \begin{equation}
-% \|T_{r_m}(t_0)x\|\leq\|G_K(t_0)x\| - \epsilon.
+% \|T_{r_m}(t_0)x\|\leq\|T_K(t_0)x\| - \epsilon.
 % \end{equation} 
-% Es gilt aber $G_r(t_0)x\to G_K(t_0)x$. \index{}\textbf{Widerspruch}.
+% Es gilt aber $T_r(t_0)x\to T_K(t_0)x$. \index{}\textbf{Widerspruch}.
 % \end{proof}
 
  
@@ -1056,19 +1085,19 @@ Zu (A4): Sei $f\in D(A)_+$.  Mit \Cref{Lemma nach Hahn-Banach} gibt es $f^*\geq0
 % Die Eigenschaften der Positivität, Konktraktivität und Halbgruppeneigenschaft bleiben nach dem Grenzübergang erhalten.
 
 % \par 
-% Zur starken Stetigkeit: wegen \Cref{} ist nur Stetigkeit in $t=0$ zu zeigen. Sei $\epsilon >0$, $x\in X_+$. Da nach \Cref{} $G_r(t)$ stark stetig in $t=0$ für $r=0$ ist, gibt es $\delta >0$ mit $\|T_0(t)x -x\|< \epsilon / 2$ für alle $t\in[0,\delta)$. Für derartige $t$ sowie alle $r<1 $ ist  
+% Zur starken Stetigkeit: wegen \Cref{} ist nur Stetigkeit in $t=0$ zu zeigen. Sei $\epsilon >0$, $x\in X_+$. Da nach \Cref{} $T_r(t)$ stark stetig in $t=0$ für $r=0$ ist, gibt es $\delta >0$ mit $\|T_0(t)x -x\|< \epsilon / 2$ für alle $t\in[0,\delta)$. Für derartige $t$ sowie alle $r<1 $ ist  
 % \begin{align}
-% \|G_r(t)x - T_0(t)x\| 
-% &= \|G_r(t)x\| - \|T_0(t) x\|\\
+% \|T_r(t)x - T_0(t)x\| 
+% &= \|T_r(t)x\| - \|T_0(t) x\|\\
 % &\leq \|x\| - \|T_0(t) x\|\\
 % &\leq \|x - T_0(t)x\|\\
 % &<\epsilon / 2,
 % \end{align}
-% wobei wir \Cref{} wegen $G_0(t)x\geq 0$ sowie $G_r(t)x - T_0(t)x\geq 0$ nutzen dürfen. Damit
+% wobei wir \Cref{} wegen $G_0(t)x\geq 0$ sowie $T_r(t)x - T_0(t)x\geq 0$ nutzen dürfen. Damit
 % \begin{equation}
-% \|G_r(t)x - x\|\leq \|G_r(t)x - T_0(t)x\| + \|T_0(t)x-x\| <\epsilon,
+% \|T_r(t)x - x\|\leq \|T_r(t)x - T_0(t)x\| + \|T_0(t)x-x\| <\epsilon,
 % \end{equation}
-% und nach Grenzübergang für $r\uparrow 1$ für alle $t\in[0\delta)$  ist $\|G_K(t)x-x\| <\epsilon$. Damit ist $G_K(t)x\to x$ für $t\downarrow 0$ für alle $x\in X_+$, also auch für alle $x\in X$.
+% und nach Grenzübergang für $r\uparrow 1$ für alle $t\in[0\delta)$  ist $\|T_K(t)x-x\| <\epsilon$. Damit ist $T_K(t)x\to x$ für $t\downarrow 0$ für alle $x\in X_+$, also auch für alle $x\in X$.
 % \end{proof}
 
 % \begin{proof}
@@ -1078,12 +1107,12 @@ Zu (A4): Sei $f\in D(A)_+$.  Mit \Cref{Lemma nach Hahn-Banach} gibt es $f^*\geq0
 % \par
 % Zu (2): Sei $x\in X$. Dann können wir mit \Cref{} die Differenz $R(\lambda, K)x- R(\lambda, K_r)$ darstellen als
 % \begin{equation}\label{Integraldarstellung der Differenz der Resolventen}
-% R(\lambda, K)x- R(\lambda, K_r)x=\int_0^\infty \exp (-\lambda t)(G_K(t)x - G_r(t)x)\textnormal dt
+% R(\lambda, K)x- R(\lambda, K_r)x=\int_0^\infty \exp (-\lambda t)(T_K(t)x - T_r(t)x)\textnormal dt
 % \end{equation}
-% und wegen $G_r(t)\leq G_K(t)$ \Cref{} ist $0\leq R(\lambda, K_r)\leq R(\lambda, K)$.
+% und wegen $T_r(t)\leq T_K(t)$ \Cref{} ist $0\leq R(\lambda, K_r)\leq R(\lambda, K)$.
 
 % \par
-% Zu (3): zerlege das uneigentliche Integral obiger Darstellung der Differenz durch $\int_0^s + \int_s ^\infty$. Für hinreichend großes $s\geq0$ folgt dann wegen der uniformen Konvergenz \Cref{} sowie der Beschränktheit \Cref{} für alle $t\in[0,s]$ die starke Konvergenz von  $R(\lambda, K_r)\to R(\lambda, K)$.
+% Zu (3): zerlege das uneigentliche Integral obiger Darstellung der Differenz durch $\int_0^s + \int_s ^\infty$. Für hinreichend großes $s\geq0$ folgt wegen der uniformen Konvergenz \Cref{} sowie der Beschränktheit \Cref{} für alle $t\in[0,s]$ die starke Konvergenz von  $R(\lambda, K_r)\to R(\lambda, K)$.
 % \end{proof}
 
 % \begin{proof}
@@ -1130,11 +1159,11 @@ Zu (A4): Sei $f\in D(A)_+$.  Mit \Cref{Lemma nach Hahn-Banach} gibt es $f^*\geq0
 % und nach Grenzübergang für $n\to \infty$ ist mit \Cref{} $R(\lambda, K)(\lambda I -A-B)x=x$. Damit ist $(\lambda I -G)x = (\lambda I -A-B)x$ für alle $x\in D(A)$ und weiter ist damit $x\in D(K)$.
 % \end{proof}
 
-% \begin{prop}\cite{kato_1954}\label{G_K(t) ist minimal}
-% Sei  $\widetilde G$ Generator einer Kontraktionshalbgruppe $(\widetilde G_K(t))_{t\geq 0}$  mit $Q_0\subseteq \widetilde G$. Dann gilt:
+% \begin{prop}\cite{kato_1954}\label{T_K(t) ist minimal}
+% Sei  $\widetilde G$ Generator einer Kontraktionshalbgruppe $(\widetilde T_K(t))_{t\geq 0}$  mit $Q_0\subseteq \widetilde G$. Dann gilt:
 % \begin{enumerate}
 % \item $\widetilde G$ ist abgeschlossene Fortsetzung von $A + B$.
-% \item Für alle $t\geq 0$ ist $G_K(t)\leq \widetilde G_K(t)$.
+% \item Für alle $t\geq 0$ ist $T_K(t)\leq \widetilde T_K(t)$.
 % \end{enumerate}
 % \end{prop}
 
@@ -1154,46 +1183,48 @@ Zu (A4): Sei $f\in D(A)_+$.  Mit \Cref{Lemma nach Hahn-Banach} gibt es $f^*\geq0
 % \begin{equation}
 % R(\lambda, \widetilde G) - R(\lambda, K_r) = (1-r)R(\lambda, \widetilde G)BR(\lambda, K_r).
 % \end{equation}
-% Da alle Faktoren der rechten Seite positiv sind, ist $R(\lambda, K_r)\leq R(\lambda, \widetilde G)$ und mit der \index{}\textbf{Inversionsformel} \Cref{} ist $G_K(t)\leq \widetilde G_K(t)$.
+% Da alle Faktoren der rechten Seite positiv sind, ist $R(\lambda, K_r)\leq R(\lambda, \widetilde G)$ und mit der \index{}\textbf{Inversionsformel} \Cref{} ist $T_K(t)\leq \widetilde T_K(t)$.
 % \end{proof}
 
 
 \section{Minimalität der Fortsetzung $K$}
 
-\par
-Eine wichtige Eigenschaft des in \Cref{Hauptaussage} konstruierten Operators $(K, D(K))$ ist, dass dieser unter allen positiven Kontraktionshalbgruppen, deren Generatoren Fortsetzungen von $A+B$ sind, stets die \hl{kleinste Halbgruppe dieser Art} erzeugt. 
+% \par
+% Eine wichtige Eigenschaft des in \Cref{Hauptaussage} konstruierten Operators $(K, D(K))$ ist, dass dieser unter allen positiven Kontraktionshalbgruppen, deren Generatoren Fortsetzungen von $A+B$ sind, stets die \hl{kleinste Halbgruppe dieser Art} erzeugt. 
 
-\par
-\hl{Dabei genügt es, Fortsetzungen von $(A+B, D)$ mit $D$ Kern von $A+B$ zu betrachten.}
+% \par
+% \hl{Dabei genügt es, Fortsetzungen von $(A+B, D)$ mit $D$ Kern von $A+B$ zu betrachten.}
 
 \begin{fsatz}\cite{banasiak_arlotti_2006}\label{Minimalität von K}
-Sei $X$ KB-Raum und für die Operatoren $(A, D(A))$ und $(B, D(B))$ in $X$ mit $D(A)\subseteq D(B)$ die Voraussetzungen in \Cref{Hauptaussage} erfüllt. Ist $D$ Kern von $A$ und $(K', D(K'))$ eine Fortsetzung von $(A+B, D)$, welche Generator positiven Kontraktionshalbgruppe $(G'(t))_{t\geq0}$ erzeugt, dann gilt:
+Es seien  die Voraussetzungen in \Cref{Hauptaussage} gegeben. Ist $D$ Gen von $A$ und $(K', D(K'))$ eine weitere Fortsetzung von $(A+B, D)$, welche Generator einer  positiven Kontraktionshalbgruppe $(T(t))_{t\geq0}$ in $X$ ist, dann gilt:
 \begin{equation*}
-G'(t)\geq G_K(t),\quad \forall t\geq0.
+T(t)\geq T_K(t),\quad \forall t\geq0.
 \end{equation*}
 \end{fsatz}
 
 \begin{proof}
 \par 
-Zeige, dass $K'$ ebenfalls Fortsetzung von $(A+B, D(A))$ ist: 
-\par
-Sei  $x\in D(A)$. Dann gibt es eine Folge $(x_n)_{n\in\N}$ in $D$ mit $x_n \to x$ und $Ax_n\to Ax$. Wegen $D(A)\subseteq D(B)$ sowie $r_\sigma(BR(\lambda, A))\leq 1$ nach (A1) ist $B$ stetig auf $D(A)$, also $Bx_n\to Bx$. Insgesamt $(A+B)x_n\to (A+B)x$. Da $K'$ abgeschlossen ist und für alle $x_n\in D$ gilt $K'x_n  = (A+B)x_n$, folgt $x\in D(K')$ und  $K'x=(A+B)x$.
+Zeige, dass $(K', D(K'))$ bereits Fortsetzung von $(A+B, D(A))$ ist: Sei  $x\in D(A)$. Dann gibt es eine Folge $(x_n)_{n\in\N}$ in $D$ mit $x_n \to x$ und $Ax_n\to Ax$.\hl{ Wegen $D(A)\subseteq D(B)$ sowie $r_\sigma(BR(\lambda, A))\leq 1$ ist $B$ stetig auf $D(A)$, also $Bx_n\to Bx$}. Wir erhalten somit $(A+B)x_n\to (A+B)x$. Da $K'$ abgeschlossen ist mit $K'x_n  = (A+B)x_n$, folgt $x\in D(K')$ mit  $K'x=(A+B)x$
 
 \par
-Zu $G'(t)\geq G_K(t)$: Sei $0\leq r <1$. Es existiert $R(\lambda, K')$ und wegen $G'$ positiv ist die Resolvente für hinreichend großes $\lambda>0$  ebenfalls positiv. Wegen $D(A)\subseteq D(K')$ und $K'x = (A+B)x$ für alle $x\in D(A)$ gilt
+Zu $T(t)\geq T_K(t)$: Für $\lambda >0$ ist $\lambda\in \varrho(K')$, wobei $R(\lambda, K')$ ist für hinreichend großes $\lambda$ positiv ist. Für alle $0\leq r <1$ gilt dann
 \begin{align*}
 R(\lambda, K') - R(\lambda, K_r)
-&= (R(\lambda, K')(\lambda I- K_r)-I)R(\lambda, K_r)\\
+&= \big(R(\lambda, K')(\lambda I- K_r)-I\big)R(\lambda, K_r)\\
 &= R(\lambda, K')(\lambda I- K_r - \lambda I+  K')R(\lambda, K_r)\\
 &= R(\lambda, K')(K' - K_r)R(\lambda, K_r)\\
 &= R(\lambda, K')(A+B - A - rB)R(\lambda, K_r)\\
 &= (1-r)R(\lambda, K')BR(\lambda,  K_r).
 \end{align*}
-Dies liefert mit der Positivität aller beteiligten Terme
+Da alle beteiligten Terme positiv sind, erhalten wir
 \begin{equation*}
-R(\lambda, K')\geq R(\lambda, K_r)
+R(\lambda, K')\geq R(\lambda, K_r).
 \end{equation*}
-und mit $\lim_{r\uparrow1}R(\lambda, K_r)=R(\lambda, K)$ nach \Cref{Hauptaussage} ist $R(\lambda, K')\geq R(\lambda, K)$. Nach \Cref{Darstellung der Gruppe mithilfe der Resolvente} ist damit $G'(t)\geq G_K(t)$.
+Mit der Monotonie des Limes wird dies zu
+\begin{equation*}
+R(\lambda, K')\geq R(\lambda, K) = \lim_{r\uparrow 1}R(\lambda, K_r).
+\end{equation*}
+\Cref{Darstellung der Gruppe mithilfe der Resolvente} liefert dann $T(t)\geq T_K(t)$ für alle $t\geq0$.
 \end{proof}
 
 
@@ -1234,15 +1265,13 @@ und mit $\lim_{r\uparrow1}R(\lambda, K_r)=R(\lambda, K)$ nach \Cref{Hauptaussage
 % Zu (2): mit \Cref{} ist die Minimalität und Eindeutigkeit der von $K$ erzeugten Kontraktionshalbgruppe.
 % \end{proof}
 
-\section{Charakterisierung der Normiertheit von $(G_K(t))_{t\geq0}$}
+\section{Isometrieeigenschaft von $(T_K(t))_{t\geq0}$}
 
-\hl{Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac consectetur odio. Fusce iaculis lectus ut scelerisque iaculis. Integer imperdiet turpis posuere, volutpat justo sit amet, mattis erat. Aenean semper ultricies pretium.}
-
-\begin{fsatz}\cite{kato_1954}\label{Charakterisierung der Normiertheit von G_K(t)}
-Sei $X$ KB-Raum und für die Operatoren $(A, D(A))$ und $(B, D(B))$ in $X$ mit $D(A)\subseteq D(B)$ die Voraussetzungen in \Cref{Hauptaussage} erfüllt. Ist $(K, D(K))$ Fortsetzung von $(A+B, D(A))$, dann sind äquivalent:
+\begin{fsatz}\cite{kato_1954}\label{Charakterisierung der Normiertheit von T_K(t)}
+Es seien die Voraussetzungen in \Cref{Hauptaussage in AL} für Operatoren $(A, D(A))$ und $(B, D(B))$ in $X$ AL-Raum mit $D(A)\subseteq D(B)$ gegeben. Ist der Operator $-A$ positiv, dann sind äquivalent:
 \begin{enumerate}
-\item Die von $K$ erzeugte positive Kontraktionshalbgruppe $(G_K(t))_{t\geq0}$ ist normiert.
-\item Für alle $\lambda >0$ ist $(BR(\lambda, A))^n$ für $n\to\infty$ eine stark stetig Nullfolge. 
+\item $(T_K(t))_{t\geq0}$ ist eine Isometrie.
+\item Für alle $\lambda >0$ ist $\big((BR(\lambda, A))^n \big)_{n\in\N}$ eine stark konvergente Nullfolge. 
 \end{enumerate}
 \end{fsatz}
 
@@ -1261,50 +1290,53 @@ Sei $X$ KB-Raum und für die Operatoren $(A, D(A))$ und $(B, D(B))$ in $X$ mit $
 \begin{proof}
 
 \par 
-Zu Hinreichtung: Sei $(G_K(t))_{t\geq0}$ normiert. Für 
-\begin{equation}
-R^{(n)}(\lambda) = \sum_{k=0}^n R(\lambda, A)(BR(\lambda, A))^k
-\end{equation}
-betrachte 
-\begin{align*}
- \sum_{k=0}^{n+1} (BR(\lambda, A))^k=I +BR^{(n)}(\lambda)=(\lambda I -A)R^{(n)}(\lambda) + (BR(\lambda, A))^{n+1}.
-\end{align*} 
-Da jeder beteiligte Term positiv ist, ist mit $x\in X_+$ wegen $X$ AL-Raum dann
+Zu Hinreichtung: Für $\lambda >0$ und $n\in \N$ betrachte erneut
+\begin{equation*}
+R^{(n)}(\lambda) = \sum_{k=0}^n R(\lambda, A)(BR(\lambda, A))^k.
+\end{equation*}
+Dann gilt 
+\begin{equation*}\label{eq2}
+%\sum_{k=0}^{n+1} (BR(\lambda, A))^k
+ I +BR^{(n)}(\lambda)=(\lambda I -A)R^{(n)}(\lambda) + (BR(\lambda, A))^{n+1}.
+\end{equation*} 
+Sei $x\in X_+$. Mit $-A\geq0$ sind alle beteiligten Terme positiv und da $X$ AL-Raum ist, erhalten wir
 \begin{align*}
 \|x\| + \|BR^{(n)}(\lambda)x\|= \lambda\| R^{(n)}(\lambda) x\| + \|AR^{(n)} (\lambda) x\|+\|(BR(\lambda, A))^{n+1}x\|.
 \end{align*}
-Mit $R^{(n)}x\in D(A)_+$ weiter ist $\|BR^{(n)}(\lambda)x\|=\|AR^{(n)}(\lambda) x\|$ und damit
+\hl{Mit $R^{(n)}(\lambda)x\in D(A)_+$ ist $\|BR^{(n)}(\lambda)x\|=\|AR^{(n)}(\lambda) x\|$} und damit
 \begin{equation*}
 \|x\|=\lambda \|R^{(n)}(\lambda)x\| + \|(BR(\lambda, A))^{n+1}x\|.
 \end{equation*}
-Wegen der starken Konvergenz $R^{(n)}(\lambda)\to R(\lambda, K)$ ist
+Mit $\lim_{n\to\infty}R^{(n)}(\lambda)x= R(\lambda, K)x$ wird dies zu
 \begin{align*}
-\|x\|
-&=\lambda\|R(\lambda, K)x\|+\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|.
+\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|=\|x\|- \lambda\|R(\lambda, K)x\|
 \end{align*}
-Damit ist der Grenzwert von $\|(BR(\lambda, A))^n x\|$ für $n\to\infty$ existent und mithilfe der  \index{}\textbf{Integraldarstellung der Resolvente} können wir schreiben 
+Mithilfe der  \index{}\textbf{Integraldarstellung der Resolvente} können wir dies umformulieren zu
 \begin{align*}
-\|x\| - \lim_{n\to\infty}\|(BR(\lambda, A))^n x\| = \lambda\int_0^\infty \exp(-\lambda t)\|G_K(t)x\|\textnormal dt
+\lim_{n\to\infty}\|(BR(\lambda, A))^n x\| = \|x\|- \lambda\int_0^\infty \exp(-\lambda t)\|T_K(t)x\|\textnormal dt.
 \end{align*}
-\hl{Folglich}
+Da $(T_K(t))_{t\geq0}$ normiert ist, wird dies zu
 \begin{equation*}
-\lim_{n\to\infty}\|(BR(\lambda, A))^n x\| =\lambda \int_0^\infty \exp(-\lambda t)(\|x\|-\|G_K(t)x\|)\textnormal dt.
+\lim_{n\to\infty}\|(BR(\lambda, A))^n x\| =\lambda \int_0^\infty \exp(-\lambda t)(\|x\|-\|T_K(t)x\|)\textnormal dt=0
 \end{equation*}
-Wegen $\|G_K(t)x\| = \|x\|$ für alle $t\geq0$ ist $\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|=0$ und damit  $(BR(\lambda, A))^n$ stark konvergente Nullfolge.
+Folglich ist  $(BR(\lambda, A))^n$ stark konvergent mit $\lim_{n\to\infty}(BR(\lambda, A))^{n}x=0$.
 
 \par
-Zur  Rückrichtung: Sei $(BR(\lambda, A))^n\to 0$ stark konvergent und es sei $x\in X_+$. Zeige $\|G_K(t)x\|\geq\|x\|$: Analog zur Hinrichtung betrachte
+Zur  Rückrichtung: Sei $x\in X_+$. Betrachte erneut
 \begin{equation*}
-\|x\| - \lim_{n\to\infty}\|(BR(\lambda, A))^n x\| = \lambda\int_0^\infty \exp(-\lambda t)\|G_K(t)x\|\textnormal dt
+\|x\| - \lim_{n\to\infty}\|(BR(\lambda, A))^n x\| = \lambda\int_0^\infty \exp(-\lambda t)\|T_K(t)x\|\textnormal dt\geq0.
 \end{equation*} 
-Mit $0\leq \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|\leq \|x\|$ beschränkt sowie monoton fallend in $\lambda$ nach Bemerkung \Cref{BR(lambda, A) fallend} ist $\lim_{\lambda\downarrow 0} \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|$ existent. \hl{Damit ist}
-\begin{align}\label{Grenzwert für G(t)}
-\lim_{t\to\infty} \|G_K(t)x\| = \|x\| - \lim_{\lambda\downarrow0}\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|=\|x\|
-\end{align}
-und da $(G_K(t))_{t\geq0}$  wegen $\|G_K(t+s)x\|=\|G_K(s)G_K(t)x\|\leq \|G_K(t)x\|$ monoton fallend in $t$ ist, liefert dies $\|G_K(t)x\|\geq\|x\|$.
-
+Wegen $0\leq \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|\leq \|x\|$ ist die Folge $(BR(\lambda, A))^n$  punktweise beschränkt. Da $BR(\lambda, A)$ für  $\lambda\to 0$ monoton fallend ist, existiert $\lim_{\lambda\downarrow 0} \lim_{n\to\infty}\|(BR(\lambda, A))^n\|$ punktweise \hl{und es gilt}
+\begin{equation*}
+\|x\| - \lim_{\lambda\downarrow0}\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|=\lim_{t\to\infty} \|T_K(t)x\|.
+\end{equation*}
+Wegen $\lim_{n\to\infty}\|(BR(\lambda, A))^n x\| =0$ erhalten wir 
+\begin{equation*}
+\lim_{t\to\infty} \|T_K(t)x\| = \|x\|.
+\end{equation*}
+Wegen $\|T_K(t+s)x\|=\|T_K(s)T_K(t)x\|\leq \|T_K(t)x\|$ ist $(T_K(t))_{t\geq0}$ für $t\to\infty$ monoton fallend. Dann liefert $\lim_{t\to\infty}\|T_K(t)\|\geq \|x\|$, dass $\|T_K(t)x\|\geq\|x\|$ für alle $t\geq0$ gilt. 
 \par
-% Zu (3): Sei $0\neq x\in X_+$. Dann ist die Funktion $\lambda^{-1}(\|x\|-\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|)$ strikt positiv. Wegen $k(\lambda, x)$ fallend ist diese Funktion ebenfalls fallend in $\lambda$. Die Aussage folgt dann mit Grenzübergang $\lambda \downarrow 0$.
+% Zu (3): Sei $0\neq x\in X_+$. Dann ist die Funktion $\lambda^{-1}(\|x\|-\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|)$ strikt positiv. Wegen $k(\lambda, x)$ fallend ist diese Funktion ebenfalls fallend in $\lambda$. Die Aussage folgt mit Grenzübergang $\lambda \downarrow 0$.
 
 
 
@@ -1321,10 +1353,10 @@ und da $(G_K(t))_{t\geq0}$  wegen $\|G_K(t+s)x\|=\|G_K(s)G_K(t)x\|\leq \|G_K(t)x
 
 \end{proof}
 
-% \begin{fsatz}\cite{kato_1954}\label{Vollständige Charakterisierung der Normiertheit von G_K(t)}
+% \begin{fsatz}\cite{kato_1954}\label{Vollständige Charakterisierung der Normiertheit von T_K(t)}
 % Es sind äquivalent:
 % \begin{enumerate}
-% \item Für alle $x\in X_+$ sowie $t\geq 0$ gilt $\|G_K(t)x\| = \|x\|$.
+% \item Für alle $x\in X_+$ sowie $t\geq 0$ gilt $\|T_K(t)x\| = \|x\|$.
 % \item Für alle $\lambda >0$ ist $(BR(\lambda, A))^n\to 0$ stark konvergent.
 % \item Für alle $\lambda >0$ besitzt $A^*_0 x^* = \lambda x^*$ mit $0\neq x^*\in X^*$ keine Lösung.
 % \item Für alle  $\lambda >0$ liegt  $(\lambda I - Q_0)$ dicht in $X$.
@@ -1375,10 +1407,10 @@ und da $(G_K(t))_{t\geq0}$  wegen $\|G_K(t+s)x\|=\|G_K(s)G_K(t)x\|\leq \|G_K(t)x
 % \end{proof}
 
 % \begin{fsatz}\cite{kato_1954}\label{Hinreichende Bedingung für Eindeutigkeit}
-% Sei $K$ Generator einer Kontraktionshalbgruppe $(G_K(t))_{t\geq 0}$ mit $Q_0\subseteq K$. Dann sind äquivalent:
+% Sei $K$ Generator einer Kontraktionshalbgruppe $(T_K(t))_{t\geq 0}$ mit $Q_0\subseteq K$. Dann sind äquivalent:
 % \begin{enumerate}
-% \item  $(G_K(t))_{t\geq 0}$ ist normiert.
-% \item  $(G_K(t))_{t\geq 0}$ ist eindeutig bestimmt.
+% \item  $(T_K(t))_{t\geq 0}$ ist normiert.
+% \item  $(T_K(t))_{t\geq 0}$ ist eindeutig bestimmt.
 % \end{enumerate}
 % \end{fsatz}
 
@@ -1390,9 +1422,7 @@ und da $(G_K(t))_{t\geq0}$  wegen $\|G_K(t+s)x\|=\|G_K(s)G_K(t)x\|\leq \|G_K(t)x
 % Da aber nach \Cref{4} die Menge $(\lambda I - Q_0)$ dicht in $X$ liegt, muss $(\lambda I -K)^{-1}$ bereits eindeutig bestimmt sein. Damit ist aber auch der Generator $K$ eindeutig bestimmt, und die Behauptung folgt.
 % \end{proof}
 
-\chapter{Anwendung auf GTP}
-
-\hl{Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac consectetur odio. Fusce iaculis lectus ut scelerisque iaculis. Integer imperdiet turpis posuere, volutpat justo sit amet, mattis erat. Aenean semper ultricies pretium.}
+\chapter{Anwendung}
 
 % Gegeben sei ein klassischer Geburts- und Todesprozess
 % \begin{align*}
@@ -1401,10 +1431,10 @@ und da $(G_K(t))_{t\geq0}$  wegen $\|G_K(t+s)x\|=\|G_K(s)G_K(t)x\|\leq \|G_K(t)x
 % x_n' &= -a_nx_n + d_{n+1}x_{n+1} + b_{n-1}x_{n-1}  \\
 % &\;\;\vdots
 % \end{align*}
-% Wir bezeichnen mit fett gedruckten Lettern die zugehörigen Folgen an Koeffizienten, etwa $\textbf{x}=(x_0, x_1,\dots, x_n,\dots)$; ohne Einschränkung können wir $b_{-1}=d_0=0$ setzen (vgl. \cite{}). Weiter seien die Folgen $\textbf{d}, \textbf{b}$ und $\textbf{a}$ alle nicht-negativ. Wir das System für alle Elemente im Raum $X=l_p$ aller $p$-fach  summierbaren Folgen betrachten.
+% Wir bezeichnen mit fett gedruckten Lettern die zugehörigen Folgen an Koeffizienten, etwa $\textbf{x}=(x_0, x_1,\dots, x_n,\dots)$; ohne Einschränkung können wir $b_{-1}=d_0=0$ setzen (vgl. \cite{}). Weiter seien die Folgen $\textbf{d}, \textbf{b}$ und $\textbf{a}$ alle nicht-negativ. Wir das System für alle Elemente im Raum $X=\ell_p$ aller $p$-fach  summierbaren Folgen betrachten.
 
 % \begin{konstr}
-% Setzte $\mathcal K$ für die Koeffizientenmatrix aller Einträge der rechten Seite obigen Systems. Für alle Folgen $\textbf{x}\in l_p$ ist 
+% Setzte $\mathcal K$ für die Koeffizientenmatrix aller Einträge der rechten Seite obigen Systems. Für alle Folgen $\textbf{x}\in \ell_p$ ist 
 % \begin{equation*}
 % \mathcal K\textnormal{\textbf{x}}:=\{b_{n-1}x_{n-1} - a_nx_n + d_{n+1}x_{n+1}\}_{n\in\N_0},
 % \end{equation*}
@@ -1436,62 +1466,71 @@ und da $(G_K(t))_{t\geq0}$  wegen $\|G_K(t+s)x\|=\|G_K(s)G_K(t)x\|\leq \|G_K(t)x
 
 % Wir möchten die Existenz einer Familie von Operatoren zeigen, welche das Kolmogorov'sche Differentialsystem "löst". [...]
 
-\section{Störungstheorem für GTP in $l_p$}
+\section{Störungstheorem für GTP in $\ell_p$}
 
 \begin{konstr}
-Sei $\mathcal K$ Operator eines GTP mit $
-\mathcal K\textnormal{\textbf{x}}=\{b_{n-1}x_{n-1} -a_nx_n + d_{n+1}x_{n+1}\}_{n\in\N_0}.$ Für alle $p\in[1,\infty)$ bezeichne $(K_p, D(K_p))$ die \textbf{maximale Fortsetzung} von $\mathcal K$ in $l_p$ mit
+Gegeben sei der formale Operator  $\mathbb  K$ eines GTP, d. h. für die nicht-negativen Folgen $\textbf{b},\textbf{a}$ und $\textbf{d}$ mit von Koeffizienten setze
 \begin{equation*}
-K_p\textnormal{\textbf{x}}:= \mathcal K\textnormal{\textbf{x}},\quad \textbf{x}\in D(K_p):=\{\textnormal{\textbf{x}}\in l_p; \mathcal K\textnormal{\textbf{x}} \in l_p\}.
+(\mathbb K\textnormal{\textbf{x}})_n:=b_{n-1}x_{n-1} -a_nx_n + d_{n+1}x_{n+1},\quad \forall n\in\N,\forall\textbf{x}\in \ell.
+\end{equation*}
+Dabei sei stets $b_{-1}=d_0=0$. Dann bezeichne für $p\in[1,\infty)$ mit $(\mathcal K_p, D(\mathcal K_p))$ die \textbf{maximale Realisierung} von $\mathbb K$ in $\ell_p$, gegeben durch
+\begin{equation*}
+\mathcal K_p\textnormal{\textbf{x}}:= \mathbb K\textnormal{\textbf{x}},\quad \textbf{x}\in D(\mathcal K_p):=\{\textnormal{\textbf{x}}\in \ell_p; \mathbb K\textnormal{\textbf{x}} \in \ell_p\}.
 \end{equation*}
 \end{konstr}
 
-\begin{lem}\label{Abgeschlossenheit des maximalen Operators K_p}
-Für alle $p\in[1,\infty)$ ist $K_p$ abgeschlossen.
-\end{lem}
+\begin{prop}\label{Abgeschlossenheit des maximalen Operators K_p}
+Für alle $p\in[1,\infty)$ ist $(\mathcal K_p, D(\mathcal K_p))$ abgeschlossener Operator.
+\end{prop}
 
 \begin{proof}
-Sei $(\textnormal{\textbf{x}}^{(n)})_{n\in\N}$ Folge in $l_p$ mit $\textnormal{\textbf{x}}^{(n)}\to \textnormal{\textbf{x}}$ und $K_p\textnormal{\textbf{x}}^{(n)}\to\textnormal{\index{}\textbf y}$. Dann ist $(\textnormal{\textbf{x}}^{(n)})_{n\in\N}$ insbesondere punktweise konvergent, also $x_k^{(n)}\to x_k$ für alle $k\in \N$. \hl{Nach Definition von $K_p$ also $y_k = b_{k-1}x_{k-1} -a_k x_k + d_{k+1} x_{k+1}$, also auch $K_p\textnormal{\textbf{x}} = \textnormal{\index{}\textbf y}$.}
+Sei $(\textnormal{\textbf{x}}^{(n)})_{n\in\N}$ eine konvergente Folge in $\ell_p$ mit $\textnormal{\textbf{x}}^{(n)}\to \textnormal{\textbf{x}}$ und $\mathcal  K_p\textnormal{\textbf{x}}^{(n)}\to\textnormal{\index{}\textbf y}$. Dann ist $(\textnormal{\textbf{x}}^{(n)})_{n\in\N}$ punktweise konvergent, für alle $k\in\N$ ist also $x_k^{(n)}\to x_k$. \hl{Nach Definition von $\mathcal  K_p$ also $y_k = b_{k-1}x_{k-1} -a_k x_k + d_{k+1} x_{k+1}$, also auch $\mathcal  K_p\textnormal{\textbf{x}} = \textnormal{\index{}\textbf y}$.}
 \end{proof}
 
+
+
 \begin{konstr}
-Sei $\mathcal A$ Operator eines GTP mit $\mathcal A\textbf{x}=\{-a_nx_n\}_{n\in\N_0}$. Für alle $p\in[1,\infty)$ bezeichne $(\mathcal A_p, D(A_p))$  die Einschränkung von $\mathcal A$ auf $D(A_p)$ mit
+Gegeben seien die formalen Operatoren $\mathbb A$ und $\mathbb B$ eines GTP, d. h. für eine beliebige  Folgen $\textbf{x}\in \ell$ setze
 \begin{equation*}
-A_p\textbf{x} := \mathcal A\textbf{x}, \quad \textbf{x}\in D(A_p):= \{\textnormal{\textbf{x}}\in l_p; \mathcal A\textnormal{\textbf{x}}\in l_p\}=\Big\{\textnormal{\textbf{x}}\in l_p; \sum_{n=0}^\infty a_n^p |x_n|^p < \infty \Big\}.
+(\mathbb A\textbf{x})_n:=-a_nx_n\quad\text{ und }\quad (\mathbb B\textbf{x})_n:=b_{n-1}x_{n-1} + d_{n+1}x_{n+1},\quad\forall n\in\N.
 \end{equation*}
-Analog für alle $p\in[1,\infty)$ bezeichne $(B_p, D(B_p))$ die Einschränkung von $\mathcal B$ auf $D(A_p)$.
+Dann bezeichne für  $p\in[1,\infty)$ der Operator $(A_p, D(A_p))$  die Einschränkung von $\mathbb A$ auf $D(A_p)$, gegeben durch
+\begin{equation*}
+A_p\textbf{x} := \mathbb A\textbf{x}, \quad \textbf{x}\in D(A_p):= \{\textnormal{\textbf{x}}\in \ell_p; \mathbb A\textnormal{\textbf{x}}\in \ell_p\}=\Big\{\textnormal{\textbf{x}}\in \ell_p; \sum_{n=0}^\infty a_n^p |x_n|^p < \infty \Big\}.
+\end{equation*}
+Weiter bezeichne der Operator $(B_p, D(B_p))$ die Einschränkung $\mathbb B|_{D(A_p)}$.
 \end{konstr}
 
-\begin{lem}\label{A_p Generator einer Kontraktionshalbgruppe}
-Für alle $p\in[1,\infty)$ ist $(A_p, D(A_p))$ Generator einer positiven Kontraktionshalbgruppe in $l_p$.
-\end{lem}
+\begin{prop}\label{A_p Generator einer Kontraktionshalbgruppe}
+Für alle $p\in[1,\infty)$ ist $(A_p, D(A_p))$ Generator einer positiven Kontraktionshalbgruppe in $\ell_p$.
+\end{prop}
 
 \begin{proof}
 \par 
-\hl{Nach Konstruktion ist $A_p$ abgeschlossen und dicht definiert.}
+Nach Konstruktion ist $A_p$ dicht definiert. 
 
 \par
-Sei  $\lambda>0$. Für alle $\textbf{y}\in l_p$ ist $R(\lambda, A_p)\textbf{y}$ gegeben durch
+Sei $\lambda>0$. Dann ist $\lambda\in \varrho(A_p)$ und $R(\lambda, A_p)$ ist für alle $\textbf{y}\in\ell_p$ gegeben durch
 \begin{equation*}
-(R(\lambda, A_p)\textnormal{\index{}\textbf y})_n = \frac{y_n}{\lambda + a_n},\quad n\in\N_0,
+(R(\lambda, A_p)\textnormal{\index{}\textbf y})_n = \frac{y_n}{\lambda + a_n},\quad \forall n\in\N_0.
 \end{equation*}
-% Damit ist
-% \begin{equation*}
-% \|A_pR(\lambda, A_p)\textnormal{\index{}\textbf y}\|_p^p = \sum_{n=0}^\infty \frac{a_n^p}{(\lambda +  a_n)^p}|y_n|^p\leq\sum_{n=0}^\infty |y_n|^p=\|\textbf{y}\|_p^p.
-% \end{equation*}
-und mit $a_n\geq0$ ist $R(\lambda, A_p)$ positiv. Weiter gilt
+Die Beschränktheit von $A_p$ erhalten wir mit
 \begin{equation*}
-\|R(\lambda, A_p)\textnormal{\index{}\textbf y}\|_p^p = \sum_{n=0}^\infty \frac{1}{(\lambda + a_n)^p}|y_n|^p \leq \frac{1}{\lambda^p}\|\textnormal{\index{}\textbf y}\|_p^p
+\|A_pR(\lambda, A_p)\textnormal{\index{}\textbf y}\|_p^p = \sum_{n=0}^\infty \frac{a_n^p}{(\lambda +  a_n)^p}|y_n|^p\leq\sum_{n=0}^\infty |y_n|^p=\|\textbf{y}\|_p^p,
 \end{equation*}
-und die Behauptung folgt mit \textbf{Hille-Yosida}.
+Schließlich ist
+\begin{equation*}
+\|R(\lambda, A_p)\textnormal{\index{}\textbf y}\|_p^p = \sum_{n=0}^\infty \frac{1}{(\lambda + a_n)^p}|y_n|^p \leq \frac{1}{\lambda^p}\|\textnormal{\index{}\textbf y}\|_p^p.
+\end{equation*}
+Mit \textbf{Hille-Yosida} ist somit $(A_p, D(A_p))$ Generator einer Kontraktionshalbgruppe $(T_{A_p}(t))_{t\geq0}$ in $\ell_p$. Mit $R(\lambda, A_p)\geq0$ ist $(T_{A_p}(t))_{t\geq0}$ positiv.
 \end{proof}
 
 \begin{fsatz}\cite{banasiak_lachowicz_2007}\label{Fortsetzung von K_p}
-Sei $p\in[1,\infty)$. Sind die Folgen $\textnormal{\textbf{a}}, \textnormal{\textbf{b}}\in l_p$ der Operatoren $(A_p, D(A_p))$, $(B_p, D(B_p))$ eines GTP nicht-fallend und es gibt $\alpha\in[0,1]$ mit 
+Sei $p\in(1,\infty)$ und die  Operatoren $(A_p, D(A_p))$ und  $(B_p, D(B_p))$ in $\ell_p$ gegeben. Sind die Koeffizientenfolgen $\textnormal{\textbf{d}}, \textnormal{\textbf{b}}\in \ell_p$ nicht-fallend und es gibt $\alpha\in[0,1]$ mit 
 \begin{equation*}\label{Annahme für Abschätzung}
-0\leq b_n\leq \alpha a_n,\quad 0\leq d_{n+1}\leq (1-\alpha)a_n, \quad n\in \N_0,
+0\leq b_n\leq \alpha a_n,\quad 0\leq d_{n+1}\leq (1-\alpha)a_n, \quad \forall n\in \N_0,
 \end{equation*}
-dann existiert eine Fortsetzung $K_p$ von $(A_p + B_p, D(A_p))$, welche Generator einer positiven Kontraktionshalbgruppe in $l_p$ ist.
+dann existiert eine Fortsetzung $(K_p, D(K_p))$ des Operators $(A_p + B_p, D(A_p))$, welche Generator einer positiven Kontraktionshalbgruppe $(T_{K_p}(t))_{t\geq0}$ in $\ell_p$ ist.
 \end{fsatz}
 
 \begin{proof}
@@ -1499,79 +1538,104 @@ dann existiert eine Fortsetzung $K_p$ von $(A_p + B_p, D(A_p))$, welche Generato
 Zeige, dass die Voraussetzungen für \Cref{Hauptaussage} erfüllt sind.
 
 \par
-Zu (A1): Entspricht \Cref{A_p Generator einer Kontraktionshalbgruppe}.
+Zu (A1): Dies entspricht der Behauptung in \Cref{A_p Generator einer Kontraktionshalbgruppe}.
 
 \par
-Zu (A2): Sei $\textbf{x}\in D(A_p)$. Da $-A$ positiv ist, reicht es nach  \Cref{stärkere Annahme (A2)},  $\|B_p\textbf{x}\|_p\leq\|A_p\textbf{x}\|_p$ zu zeigen. Mit $b_{-1}=d_0=0$ ist
+Zu (A2): Sei $\textbf{x}\in D(A_p)_+$. Da $-A_p$ positiv ist, reicht es zu zeigen, dass  $\|B_p\textbf{x}\|_p\leq\|A_p\textbf{x}\|_p$ gilt (siehe  \Cref{stärkere Annahme (A2)}). Mit $b_{-1}=d_0=0$ ist
 \begin{align*}
 \|B_p\textnormal{\textbf{x}}\|_p
 &= \Big(\sum_{n=0}^\infty |b_{n-1}x_{n-1} + d_{n+1}x_{n+1}|^p\Big)^{1/p}\\
 &\leq \Big(\sum_{n=0}^\infty b_{n-1}^p |x_{n-1}|^p\Big)^{1/p} + \Big(\sum_{n=0}^\infty d_{n+1}^p |x_{n+1}|^p\Big)^{1/p}\\
 &\leq \Big(\sum_{n=0}^\infty b_n^p|x_n|^p\Big)^{1/p} + \Big(\sum_{n=0}^\infty d_n^p |x_n|^p\Big)^{1/p}.
 \end{align*}
-Mit $b_n\leq \alpha a_n$, $d_{n+1}\leq (1-\alpha)a_n$ folgt dann
-\begin{equation*}
-\|B_p\textnormal{\textbf{x}}\|_p\leq \Big(\sum_{n=0}^\infty a_n^p |x_n|^p\Big)^{1/p} = \|A_p \textnormal{\textbf{x}}\|_p.
-\end{equation*}
+Mit der Monotonie von $\textbf{d}$ ist $d_{n}\leq d_{n+1}\leq (1-\alpha)a_n$ und damit
+\begin{align*}
+\|B_p\textnormal{\textbf{x}}\|_p
+&\leq \Big(\sum_{n=0}^\infty \alpha a_n^p|x_n|^p\Big)^{1/p} + \Big(\sum_{n=0}^\infty a_n^p |x_n|^p\Big)^{1/p} - \Big(\sum_{n=0}^\infty \alpha a_n^p |x_n|^p\Big)^{1/p}\\
+&= \Big(\sum_{n=0}^\infty a_n^p |x_n|^p\Big)^{1/p}= \|A_p \textnormal{\textbf{x}}\|_p.
+\end{align*}
+Da $B_p$ mit $\textbf{b},\textbf{d}\geq0$ positiver Operator ist, gilt dies bereits für alle $\textbf{x}\in D(A)$. Somit ist $r_\sigma(B_p(R(\lambda, A_p))\leq 1$ für alle $\lambda>0$.
 
 \par
-Zu (A3): Klar nach Konstruktion.
+Zu (A3): Klar, da $(B_p\textbf{x})_n=b_{n-1}x_{n-1}+d_{n+1}x_{n+1}$ für alle $n\in\N_0$ und $\textbf{b},\textbf{d}\geq0$ gilt.
 
 \par
-Zu (A4): Sei $\textnormal{\textbf{x}}\in D(A_p)_+$ und definiere $\tilde{\textnormal{\textbf{x}}} = (\tilde x_n)_{n\in\N}$ mit
+Zu (A4): Sei $\textnormal{\textbf{x}}\in D(A_p)_+$. Definiere $\tilde{\textnormal{\textbf{x}}} = (\tilde x_n)_{n\in\N}$ durch
 \begin{equation*}
 \tilde x_n := 
 \begin{cases}
 0\quad&\text{falls }x_n=0,\\
-x_n^{p^{-1}}&\text{sonst.}
+x_n^{p-1}&\text{sonst.}
 \end{cases}
 \end{equation*}
-\hl{Dann ist $\tilde{\textnormal{\textbf{x}}}\in l_q$, wobei $1/p + 1/q = 1$}. Ohne Einschränkung sei $x_n\neq 0$ für alle $n\in\N$.  Wegen $a_n\geq b_n + d_{n+1}$ ist
-\begin{align*}
-\langle K_p\textnormal{\textbf{x}}, \tilde{\textnormal{\textbf{x}}}\rangle
-&= \sum_{n=0}^\infty (K_p \textnormal{\textbf{x}})_n x_n^{p-1}\\
-&= -\sum_{n=0}^\infty a_n x_n^p + \sum_{n=0}^\infty b_{n-1} x_{n-1} x_n^{p-1} + \sum_{n=0}^\infty d_{n+1} x_{n+1}x_n^{p-1}\\
-&\leq -\sum_{n=0}^\infty b_n x_n^p - \sum_{n=0}^\infty d_{n+1}x_n^p + \sum_{n=0}^\infty b_{n-1} x_{n-1} x_n^{p-1}\\
-&\quad + \sum_{n=0}^\infty d_{n+1}x_{n+1} x_n^{p-1},
-\end{align*}
-\hl{wobei Konvergenz für alle beteiligten Terme folgt}. Dann liefert die \index{}\textbf{Hölder-Ungleichung} \Cref{}, dass
-\begin{align*}
-\langle K_p \textnormal{\textbf{x}}, \tilde x\rangle 
-\leq &\Big(\sum_{n=0}^\infty b_n x_n^p\Big)^{1/p}\Big(\sum_{n=0}^\infty b_n x_{n+1}^p\Big)^{1/p} - \sum_{n=0}^\infty b_n x_n^p\\
-& + \Big(\sum_{n=0}^\infty d_n x_n^p \Big)^{1/p}\Big(\sum_{n=0}^\infty d_{n+1}x_n^p\Big)^{1/q} - \sum_{n=0}^\infty d_{n+1} x_n^p,
-\end{align*}
-\hl{wobei mit $b_n\leq b_{n+1}$ sowie $d_n\leq d_{n+1}$ dann $\langle K_p\textnormal{\textbf{x}}, \tilde{\textnormal{\textbf{x}}}\rangle \leq 0$ folgt}. 
+Sei $q\in(1,\infty)$ mit $1/p + 1/q=1$. Dann ist $\tilde{\textnormal{\textbf{x}}}\in \ell_q=\ell_p^*$. \hl{Damit gilt  Multiplizieren wir $\tilde{\textbf{x}}$ mit dem Faktor $\|\textbf{x}\|_p^{1-p}$, so erhalten wir  $\langle \tilde{\textbf{x}},\textbf{x}\rangle = \|\textbf{x}\|$. }
 
 \par
-Also gibt es eine Fortsetzung $K_p$ von $(A_p + B_p, D(A_p))$, welche Generator einer positiven Kontraktionshalbgruppe in $l_p$ ist.
+Für alle $n\in\N$ sei ohne Einschränkung $x_n\neq 0$. Weiter können wir  $\tilde{\textbf{x}}$ ohne die Multiplikation des Faktors $\|\textbf{x}\|_p^{1-p}$ für den Beweis der Abschätzung $\langle(A_p+B_p)\textbf{x} ,\tilde{\textbf{x}} \rangle\leq0$ annehmen. Da $a_n\geq (b_n + d_{n+1})$ für alle $n\in\N_0$ ist, gilt
+\begin{align*}
+\langle &(A_p+B_p)\textnormal{\textbf{x}}, \tilde{\textnormal{\textbf{x}}}\rangle\\
+&= \sum_{n=0}^\infty (A_p\textnormal{\textbf{x}}+B_p\textnormal{\textbf{x}})_n x_n^{p-1}\\
+&= -\sum_{n=0}^\infty a_n x_n^{p} + \sum_{n=0}^\infty b_{n-1} x_{n-1} x_n^{p-1} + \sum_{n=0}^\infty d_{n+1} x_{n+1}x_n^{p-1}\\
+&\leq -\sum_{n=0}^\infty b_n x_n^p - \sum_{n=0}^\infty d_{n+1}x_n^p +\sum_{n=0}^\infty b_{n-1} x_{n-1} x_n^{p-1} + \sum_{n=0}^\infty d_{n+1}x_{n+1} x_n^{p-1}.
+\end{align*}
+Mit der \index{}\textbf{Hölder-Ungleichung} erhalten wir
+\begin{align*}
+\langle (A_p+B_p)\textnormal{\textbf{x}}, \tilde{\textbf{x}}\rangle 
+\leq &\Big(\sum_{n=0}^\infty b_n x_n^p\Big)^{1/p}\Big(\sum_{n=0}^\infty b_n x_{n+1}^p\Big)^{1/p} - \sum_{n=0}^\infty b_n x_n^p\\
+& + \Big(\sum_{n=0}^\infty d_n x_n^p \Big)^{1/p}\Big(\sum_{n=0}^\infty d_{n+1}x_n^p\Big)^{1/q} - \sum_{n=0}^\infty d_{n+1} x_n^p.
+\end{align*}
+Wegen $b_n\leq b_{n+1}$ und  $d_n\leq d_{n+1}$ können wir somit  $\langle (A_p+B_p)\textnormal{\textbf{x}}, \tilde{\textnormal{\textbf{x}}}\rangle \leq 0$ folgern.
 \end{proof}
+
+\section{Störungstheorem für GTP in $\ell_1$}
+
+\begin{fsatz}
+Es seien die Operatoren  $(A_1, D(A_1))$ und  $(B_1, D(B_1))$ in $\ell_1$ gegeben. Sind $\textbf{\textnormal{b}},\textbf{\textnormal{d}}\in \ell_1$ nicht-negativ und für alle $n\in\N$ gilt 
+\begin{equation*}
+a_n\geq (b_n + d_n),
+\end{equation*}
+dann existiert eine Fortsetzung $(K_1, D(K_1))$ von $(A_1+B_1, D(A_1))$, welche Generator einer positiven Kontraktionshalbgruppe $(T_{K_1}(t))_{t\geq0}$ in $\ell_1$ ist.
+\end{fsatz}
+
+\begin{proof}
+\par
+Wir wollen \Cref{Hauptaussage in AL} anwenden.
+
+\par
+Zu (B1), (B2): Analgo zum Beweis von (A1) und (A2) in \Cref{Fortsetzung von K_p} sind die Aussagen (B1) und (B2)  erfüllt.
+
+\par
+Zu (B3): Sei $\textbf{x}\in D(A_1)_+$. Mit der Konvention $b_{-1}=d_0=0$ erhalten wir
+\begin{align*}
+\sum_{n=0}^\infty ((A_1+B_1)\textbf{x})_n
+&= -\sum_{n=0}^\infty a_n x_n \sum_{n=0}^\infty b_{n-1}x_{n-1}+\sum_{n=0}^\infty d_{n+1}x_{n+1}\\
+&=-\sum_{n=0}^\infty a_n x_n + \sum_{n=0}^\infty b_n x_n+\sum_{n=0}^\infty d_n x_n\leq 0.
+\end{align*}
+\end{proof}
+
 
 
 \section{Charakterisierung der Fortsetzung $K_p$}
 
-
-\hl{Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac consectetur odio. Fusce iaculis lectus ut scelerisque iaculis. Integer imperdiet turpis posuere, volutpat justo sit amet, mattis erat. Aenean semper ultricies pretium.}
-
-
-\begin{fsatz}
+\begin{fsatz}\label{toller satz}
 Sei $X$ Banachraum sowie  $(A, D(A))$ und $(B, D(B))$ Operatoren in $X$ mit $D(A)\subseteq D(B)$. Angenommen, es gilt:
 \begin{enumerate}
-\item[\textnormal{(A1)}] $A$ Generator einer Halbgruppe von Kontraktionen.
-\item[\textnormal{(A2)}] Für alle $t\in[0, 1]$ ist  $A+tB$ dissipativ.
-\item[\textnormal{(A3)}] Es gibt $0\leq\alpha\leq 1 $ und $\beta\geq0$ mit
-\begin{equation}
-\|Bx\|\leq \alpha\|Ax\| + \beta\|x\|,\quad \forall x\in D(A).
-\end{equation}
+\item[\textnormal{(C1)}] $A$ ist Generator einer Kontraktionshalbgruppe  $(T_A(t))_{t\geq0}$.
+\item[\textnormal{(C2)}] Für alle $t\in[0, 1]$ ist  $A+tB$ dissipativ.
+\item[\textnormal{(C3)}] Es gibt $0\leq\alpha\leq 1 $ und $\beta\geq0$ derart, dass für alle $x\in D(A)$ gilt
+\begin{equation*}
+\|Bx\|\leq \alpha\|Ax\| + \beta\|x\|.
+\end{equation*}
 \end{enumerate}
-Dann gilt:
+Dann folgt:
 \begin{enumerate}
-\item Ist $\alpha < 1$, dann ist $A+B$ Generator einer Kontraktionshalbgruppe in $X$.
-\item Ist $\alpha =1$ und zudem $B^*$ in $X^*$ dicht definiert, dann ist $\overline{A+B}$ Generator einer Kontraktionshalbgruppe in $X$.
+\item Für $\alpha < 1$ ist $A+B$ Generator einer Kontraktionshalbgruppe.
+\item Ist zudem $B^*$  in $X^*$ dicht definiert, dann ist für $\alpha =1$ der Abschluss $\overline{A+B}$ Generator einer Kontraktionshalbgruppe.
 \end{enumerate}
 \end{fsatz}
 
 \begin{bem}
-\hl{Insbesondere ist die Annahme in (2) erfüllt, falls $X$ reflexiv und $B$ abschließbar ist.}
+\hl{Es seien die Voraussetzungen in \mbox{\Cref{toller satz}} gegeben. Ist $X$ reflexiv und $B$ abschließbar, dann liegt $D(B^*)$ dicht in $X^*$.}
 \end{bem}
 
 \begin{proof}[Beweis des Satzes]
@@ -1580,75 +1644,48 @@ Siehe \cite{}.
 
 
 
-\begin{prop}
+\begin{fsatz}
 Sei $p\in(1,\infty)$. Dann gilt $K_p=\overline{A_p + B_p}$.
-\end{prop}
+\end{fsatz}
 
 \begin{proof}
-\par
-Zeige, dass $\mathcal B$ abgeschlossen ist.
-
-\par
-Daraus folgt, dass $B_p$ abschließbar ist.
-
-\par
-Wende Aussage 3.6 an.
-
+Die Voraussetzungen in \Cref{toller satz} sind für die Operatoren $A_p$ und $B_p$ erfüllt. Mit  $p\in (1,\infty)$ ist $\ell_p$ reflexiv (vgl. \cite{}). Analog zu \Cref{Abgeschlossenheit des maximalen Operators K_p} können wir zeigen, dass $\mathcal B$ abgeschlossen ist. Dann ist  $B_p$ abschließbar und nach \Cref{toller satz} also  $\overline{A_p + B_p}$ Generator einer Kontraktionshalbgruppe. \hl{Da $K_p$ nach \mbox{\Cref{Minimalität von K}} minimal ist, erhalten wir $K_p=\overline{A_p + B_p}$.}
 \end{proof}
 
+
+
 \begin{bem}
-$p=1$ dann $\neq$?
+\hl{Für den Fall $p=1$ sehen wir mit \mbox{\Cite{banasiak_2004}}, dass $K_1\neq\overline{A_1+B_1}$ gilt.}
 \end{bem}
 
 
-\begin{fsatz}
-Sei $p\in[1,\infty)$. Dann gilt $K_p\subseteq \mathcal K_p$.
-\end{fsatz}
+% \begin{fsatz}
+% Sei $p\in[1,\infty)$. Dann gilt $K_p\subseteq \mathcal K_p$.
+% \end{fsatz}
 
 
-\begin{proof}
-Sei $\textbf{x}^r\to\textbf{x}$ mit $r\uparrow 1$ in $l_p$. Dann gilt für alle $n\in\N$
-\begin{align}
-\lim_{r\to1}((I-\mathcal K_p)\textbf{x}^r)_n
-&=\lim_{r\to 1}x_n^r + a_nx_n^r - b_{n-1}x_{n-1}^r - d_{n+1}x_{n+1}^r\\
-&=x_n+a_nx_n - b_{n-1}x_{n-1} - d_{n+1}x_{n+1}\\
-&=((I-\mathcal K_p)\textbf{x})_n.
-\end{align}
-Setze $\textbf{x}^r:=R(1, A+rB)\textbf{y}$ für $\textbf{y}\in l_p$. Wir wissen $\textbf{x}^r\to R(1, K_p)\textbf{y}$ mit $r\to 1$. Da $R(1, A+rB)$ die Resolvente von $(A+RB), D(A))$ ist, welche eine Einschränkung der maximalen Realisierung von $\mathcal -A+r\mathcal B$ ist, erhalten wir
-\begin{align}
-((I-\mathcal K_p)\textbf{x}^r)_n
-&= x_n^r + a_nx_n^r - rb_{n-1}x_{n-1}^r - rd_{n+1}x_{n+1}^r\\
-&\quad -(1-r)(b_{n-1}x_{n-1}^r + d_{n+1}x_{n+1}^r)\\
-&=y_n - (1-r)(b_{n-1}^r + d_{n+1}x_{n+1}^r).
-\end{align}
-Da $n$ fest gewählt war, geht der letzte Term gegen Null und mit \Cref{} erhalten wir $((I-\mathcal K_p)\textbf{x})_n=y_n$, also
-\begin{equation}
-(I-\mathcal K_p)R(1, K_p)\textbf{y}=\textbf{y}.
-\end{equation}
-\end{proof}
+% \begin{proof}
+% Sei $\textbf{x}^r\to\textbf{x}$ für $r\uparrow 1$ in $\ell_p$. Dann gilt für alle $n\in\N$
+% \begin{align*}
+% \lim_{r\to1}((I-\mathcal K_p)\textbf{x}^r)_n
+% &=\lim_{r\to 1}x_n^r + a_nx_n^r - b_{n-1}x_{n-1}^r - d_{n+1}x_{n+1}^r\\
+% &=x_n+a_nx_n - b_{n-1}x_{n-1} - d_{n+1}x_{n+1}\\
+% &=((I-\mathcal K_p)\textbf{x})_n.
+% \end{align*}
+% Sei $\textbf{y}\in \ell_p$. Für  $\textbf{x}^r:=R(1, A+rB)\textbf{y}$ gilt mit \Cref{}
+% \begin{equation*}
+% \lim_{r\uparrow 1}\textbf{x}^r=\lim_{r\uparrow1}R(1, A+rB)\textbf{y}= R(1, K_p)\textbf{y}.
+% \end{equation*}
+% \hl{Da $R(1, A+rB)$ die Resolvente von $(A+rB, D(A))$ ist, welche eine Einschränkung der maximalen Realisierung von $\mathcal -\mathcal A+r\mathcal B$ ist, erhalten wir} für alle $n\in\N$
+% \begin{align*}
+% ((I-\mathcal K_p)\textbf{x}^r)_n
+% &= x_n^r + a_nx_n^r - rb_{n-1}x_{n-1}^r - rd_{n+1}x_{n+1}^r\\
+% &\quad -(1-r)(b_{n-1}x_{n-1}^r + d_{n+1}x_{n+1}^r)\\
+% &=y_n - (1-r)(b_{n-1}^r + d_{n+1}x_{n+1}^r).
+% \end{align*}
+% Da $n$ fest gewählt ist, geht der letzte Term gegen Null und mit \Cref{} erhalten wir $((I-\mathcal K_p)\textbf{x})_n=y_n$, also $
+% (I-\mathcal K_p)R(1, K_p)\textbf{y}=\textbf{y}$.
+% \end{proof}
 
-\section{Störungstheorem für GTP in $l_1$}
-
-\begin{fsatz}
-Sei $p=1$. Angenommen, die Folgen $\textbf{\textnormal{b}}$ und $\textbf{\textnormal{d}}$ sind nicht-negativ und 
-\begin{equation}
-a_n\geq b_n + d_n.
-\end{equation}
-Dann existiert eine Fortsetzung $K_1$ von $(A_1+B_1, D(A_1))$, welche Generator einer positiven Kontraktionshalbgruppe in $l_1$ ist.
-\end{fsatz}
-
-\begin{proof}
-Es ist
-\begin{equation}
-D(A_1)=\bigg\{\textbf{x}\in l_1;\sum_{n=0}^\infty a_n|x_n|< \infty\bigg\}
-\end{equation}
-und nach Annahme \Cref{}, $0\leq b_n\leq a_n$ und $0\leq d_n\leq a_n$ für $n\in\N$. Folglich ist $B_1$ wohldefiniert und Bedingung $\Cref{}$ gilt mit 
-\begin{align}
-\sum_{n=0}^\infty ((A_1+B_1)^\textbf{x})_n
-&= -\sum_{n=0}^\infty a_n x_n x\sum_{n=0}^\infty b_{n-1}x_{n-1}+\sum_{n=0}^\infty d_{n+1}x_{n+1}\\
-&=-\sum_{n=0}^\infty a_n x_n + \sum_{n=0}^\infty b_n x_n+\sum_{n=0}^\infty d_n x_n\leq 0,
-\end{align}
-mit der Annahme, dass $b_{-1}=d_0=0$. Verwende nun \Cref{}.
-\end{proof}
 
 
