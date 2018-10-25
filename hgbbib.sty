@@ -6,12 +6,12 @@
 
 %utf8-change
 %Note: biblatex with bibtex backend is frozen at version 1.7.
-% \usepackage[style=numeric-comp,backend=biber,bibencoding=auto]{biblatex}[2013/01/10] %utf8-change
+% \usepackage[style=numeric-comp,backend=biber,bibencoding=hyperauto]{biblatex}[2013/01/10] %utf8-change
 
 \usepackage[
 backend=biber,
 style=alphabetic,
-sorting=ynt,
+sorting=nyt,
 bibencoding=auto
 ]{biblatex}
 
@@ -25,7 +25,7 @@ bibencoding=auto
 
 \ifthenelse{\equal{\hgb@MainLanguage}{english}}{%
 	\renewcommand{\@bibtitle}{References}
-	\renewcommand{\@bibtitleLiteratur}{Literature}
+	\renewcommand{\@bibtitleLiteratur}{Literatur}
 	\renewcommand{\@bibtitleAvmedia}{Films and audio-visual media}
 	\renewcommand{\@bibtitleOnline}{Online sources}	
 }{}

@@ -1,7 +1,20 @@
 \documentclass[bachelor,german]{hgbthesis}
 
 \usepackage{imakeidx}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    hyperindex = true,
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 \makeindex[columns=2, title=Alphabetischer Index, intoc]
+
+
+
 %%------------------------------------------------------------
 
 \bibliography{Your bibliography}  
@@ -18,32 +31,32 @@
 %%%----------------------------------------------------------
 
 % Einträge für ALLE Arbeiten: --------------------------------
-\title{Lorem ispur datur}
+\title{Über positive Störungen auf Kantorovich-Banachräumen}
 \author{Jörg Schwartz}
 \studiengang{Mathematik}
-\studienort{Tübingen}
-\abgabedatum{2017}{9}{1}	% {YYYY}{MM}{DD}
+\studienort{\textsc{Eberhard Karls Universität Tübingen}}
+\abgabedatum{2017}{09}{11}	% {YYYY}{MM}{DD}
 
 %%% zusätzlich für eine Bachelorarbeit: ---------------------
 \nummer{3610471}   % XX...X = Stud-ID, z.B. 0310238045-A  
                         % (A = 1. Bachelorarbeit)
 \semester{Sommersemester 2017} 
-\gegenstand{der Operatorentheorie} 
+\gegenstand{zur Operatorentheorie} 
 \betreuer{Prof. Dr. Rainer Nagel} % oder \betreuerin{..}
 
 %%%----------------------------------------------------------
-%\frontmatter
-%\maketitle
+\frontmatter
+\maketitle
 \tableofcontents
 
 %%%----------------------------------------------------------
 
-%\include{kurzfassung}		
+% \include{kurzfassung}		
 
 %%%----------------------------------------------------------
 \mainmatter         % Hauptteil (ab hier arab. Seitenzahlen)
 %%%----------------------------------------------------------
-
+% \include{kurzfassung}	
 \include{main}
 
 %%%----------------------------------------------------------
@@ -52,7 +65,8 @@
 %\include{anhang}
 %\include{seminar}
 %%%----------------------------------------------------------
-\MakeBibliography
+\MakeBibliography[nosplit]
+
 \printindex
 %%%----------------------------------------------------------
 

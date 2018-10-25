@@ -1,3 +1,385 @@
+
+% \section{Kato's Theorem in $l^1$}
+
+% \begin{lem}\cite{kato_1954}\label{Konstruktion von K_r}
+% Sei $0\leq r < 1$. Dann definiert $K_r:=A + rB$ einen Operator mit Definitionsbereich, in Zeichen $(K_r, D(K_r))$, mit $D(K_r) = D(A)$. Für $K_r$ ist:
+% \begin{enumerate}
+% \item Für alle $\lambda >0$ existiert  $R(\lambda, K_r)$  mit $\|R(\lambda, K_r)\|\leq\lambda^{-1}$.
+% \item $R(\lambda, K_r)$ ist positiv.
+% \end{enumerate}
+% Weiter ist $K_r$  Generator einer positiven Kontraktionshalbgruppe $(T_r(t))_{t\geq0}$.
+% \end{lem}
+
+% \begin{proof}
+% Der Ausdruck $K_r$ ist als Linearkombination von Operatoren wieder Operator und es gilt $D(K_r)=D(A)\cap D(B)=D(A)$.
+
+% \par Zu (1): Es ist 
+% \begin{equation}
+% R(\lambda, K_r) = (\lambda I - A - rB)^{-1} = R(\lambda, A) (I-r BR(\lambda, A))^{-1}
+% \end{equation}
+% und wegen $\|rBR(\lambda, A)\|< 1$ ist mit der \index{}\textbf{Neumann'schen Reihe} \Cref{}
+% \begin{equation}
+% (I-rBR(\lambda, A))^{-1}=\sum_{k=0}^\infty ( rBR(\lambda, A))^k ,
+% \end{equation}
+% insgesamt ist $R(\lambda, K_r)$ existent.
+
+% \par Sei nun $x\in X_+$. Mit \Cref{} folgt die Abschätzung
+% \begin{align}
+% \|(\lambda I - K_r)x\| 
+% & =\|(\lambda I -A-rB)x\|\\
+% & \geq\|(\lambda I -A)x\| - r\|Bx\|\\
+% & = \lambda\|x\| - \|Ax\| - r\|Bx\|\\
+% & \geq \lambda \|x\|.
+% \end{align}
+% Demnach ist $\|R(\lambda, K_r)y\|\leq \lambda^{-1}\|y\|$ für alle $y\in X_+$ und mit \Cref{} gilt dies bereits für alle $y\in X$.
+
+% \par 
+% Zu (2): da nach \Cref{}, \Cref{} alle Faktoren der rechten Seite des Ausdrucks
+% \begin{equation}
+%  R(\lambda, K_r) = R(\lambda, A)\sum_{k=0}^\infty (rBR(\lambda, A))^k ,
+% \end{equation}
+% positiv sind, ist $R(\lambda, K_r)$ insgesamt positiv.
+% \end{proof}
+
+% \begin{lem}\cite{kato_1954}\label{K_r ist Generator}
+% Sei $0\leq r< 1$. Dann ist  $(T_r(t))_{r\in[0,1)}$ mit $r\uparrow 1$ für alle $t\geq0$ stark und auf allen Kompakta $t\in[0, s]$ gleichmäßig konvergent. Der Grenzwert $\lim_{r\uparrow 1}T_r(t)=:T_K(t)$ ist positive Kontraktionshalbgruppe und es gilt:
+% \begin{enumerate}
+% \item $R(\lambda, K)$ existiert mit $\|R(\lambda, K)\|\leq \lambda^{-1}$.
+% \item Für alle $r\in[0, 1)$ gilt  $0\leq R(\lambda, K_r)\leq R(\lambda, K)$.
+% \item $R(\lambda, K_r)$ ist stark konvergent mit $\lim_{r\uparrow 1}R(\lambda, K_r)=R(\lambda, K)$.
+% \end{enumerate}
+% Für alle $x$ erfüllt zugehörige Resolvente $R(\lambda, K)$ außerdem
+% \begin{equation}
+% \lim_{n\to\infty}R(\lambda, K)x = R(\lambda, A)\sum_{k=0}^n ((BR(\lambda, A))^kx.
+% \end{equation}
+% \end{lem}
+
+% \begin{proof}
+% \par
+% Zu (1): Sei $t\geq0$. Dann ist für alle $0\leq r< 1$ der Ausdruck $T_r(t)$ wegen \Cref{} beschränkt. Die Monotonie liefert dann den punktweisen Grenzwert $\lim_{r\uparrow 1}T_r(t)=:T_K(t)$.
+
+% \par
+% Zu (2): Beweis durch Widerspruch. Angenommen, es gibt $x\in X_+$ sowie $t\geq0$ so, dass $T_r(t)x\to T_K(t)x$ nicht gleichmäßig konvergiert. Dann gibt es konvergente Folgen $(t_n)_{n\in\mathbb N}$ sowie $(r_n)_{n\in\mathbb N}$ mit $t_n\to t_0$ und $r_n\uparrow 1$ mit $\|T(t_n)x - T_{r_n}(t_n)x\|\geq \epsilon$ für ein $\epsilon >0$. Wegen der Positivität der Summanden ist mit \Cref{}, dass 
+% $\|T(t_n)x\| - \|T_{r_n}(t_n)x\| = \|T(t_n)x - T_{r_n}(t_n)x\|\geq \epsilon$.
+
+% \par
+% Umgekehrt gilt wegen $0\leq T_{r_m}(t_n)x\leq T_{r_n}(t_n)x$ für $m< n$, dass 
+% \begin{equation}
+% \|T_{r_m}(t_n)x\|\leq\|T_{r_n}(t_n)x\|\leq\|T(t_n) x\|-\epsilon.
+% \end{equation}
+% Mit der der starken Stetigkeit aus Aussage (1) ist für alle $m$ fest gewählt mit $n\to \infty$
+% \begin{equation}
+% \|T_{r_m}(t_0)x\|\leq\|T_K(t_0)x\| - \epsilon.
+% \end{equation} 
+% Es gilt aber $T_r(t_0)x\to T_K(t_0)x$. \index{}\textbf{Widerspruch}.
+% \end{proof}
+
+ 
+% \begin{proof}
+% Die Eigenschaften der Positivität, Konktraktivität und Halbgruppeneigenschaft bleiben nach dem Grenzübergang erhalten.
+
+% \par 
+% Zur starken Stetigkeit: wegen \Cref{} ist nur Stetigkeit in $t=0$ zu zeigen. Sei $\epsilon >0$, $x\in X_+$. Da nach \Cref{} $T_r(t)$ stark stetig in $t=0$ für $r=0$ ist, gibt es $\delta >0$ mit $\|T_0(t)x -x\|< \epsilon / 2$ für alle $t\in[0,\delta)$. Für derartige $t$ sowie alle $r<1 $ ist  
+% \begin{align}
+% \|T_r(t)x - T_0(t)x\| 
+% &= \|T_r(t)x\| - \|T_0(t) x\|\\
+% &\leq \|x\| - \|T_0(t) x\|\\
+% &\leq \|x - T_0(t)x\|\\
+% &<\epsilon / 2,
+% \end{align}
+% wobei wir \Cref{} wegen $G_0(t)x\geq 0$ sowie $T_r(t)x - T_0(t)x\geq 0$ nutzen dürfen. Damit
+% \begin{equation}
+% \|T_r(t)x - x\|\leq \|T_r(t)x - T_0(t)x\| + \|T_0(t)x-x\| <\epsilon,
+% \end{equation}
+% und nach Grenzübergang für $r\uparrow 1$ für alle $t\in[0\delta)$  ist $\|T_K(t)x-x\| <\epsilon$. Damit ist $T_K(t)x\to x$ für $t\downarrow 0$ für alle $x\in X_+$, also auch für alle $x\in X$.
+% \end{proof}
+
+% \begin{proof}
+% \par 
+% Zu (1): Existenz sowie Abschätzung von $\|R(\lambda, K)\|$ liefert \textbf{Hille-Yosida}.
+
+% \par
+% Zu (2): Sei $x\in X$. Dann können wir mit \Cref{} die Differenz $R(\lambda, K)x- R(\lambda, K_r)$ darstellen als
+% \begin{equation}\label{Integraldarstellung der Differenz der Resolventen}
+% R(\lambda, K)x- R(\lambda, K_r)x=\int_0^\infty \exp (-\lambda t)(T_K(t)x - T_r(t)x)\textnormal dt
+% \end{equation}
+% und wegen $T_r(t)\leq T_K(t)$ \Cref{} ist $0\leq R(\lambda, K_r)\leq R(\lambda, K)$.
+
+% \par
+% Zu (3): zerlege das uneigentliche Integral obiger Darstellung der Differenz durch $\int_0^s + \int_s ^\infty$. Für hinreichend großes $s\geq0$ folgt wegen der uniformen Konvergenz \Cref{} sowie der Beschränktheit \Cref{} für alle $t\in[0,s]$ die starke Konvergenz von  $R(\lambda, K_r)\to R(\lambda, K)$.
+% \end{proof}
+
+% \begin{proof}
+% Für $r\in[0, 1)$ setze \begin{equation}
+% R_r^{(n)}(\lambda):= R(\lambda, A)\sum_{k=0}^n r^k (BR(\lambda, A))^k.   
+% \end{equation}
+% Mit \Cref{} sowie \Cref{}  ist
+% \begin{equation}
+% 0\leq R_r^{(n)}(\lambda)\leq R(\lambda, K_r)\leq R(\lambda, K). 
+% \end{equation}
+% Nach Grenzübergang mit $r\uparrow 1$ ist $R^{(n)}(\lambda)\leq R(\lambda, K)$. Weiter ist  ist $R^{(n)}(\lambda)$ nicht-fallende Funktion in $n$, also existiert der starke Grenzwert und es gilt
+% \begin{equation}
+% \lim_{n\to\infty} R^{(n)}(\lambda)\leq R(\lambda, K).
+% \end{equation}
+% Andererseits ist 
+% \begin{equation}
+% R_r^{(n)}(\lambda)\leq R^{(n)}(\lambda)\leq \lim_{n\to\infty} R^{(n)}(\lambda),
+% \end{equation}
+% also $R(\lambda, K_r)=\lim_{n\to\infty} R_r^{(n)}(\lambda)\leq \lim_{n\to\infty} R^{(n)}(\lambda)$ und damit auch 
+% \begin{equation}
+% R(\lambda, K)=\lim_{r\uparrow 1} R(\lambda, K_r)\leq \lim_{n\to\infty} R^{(n)}(\lambda).
+% \end{equation}
+% \end{proof}
+
+% \begin{lem}\cite{kato_1954}\label{G ist abgeschlossene Fortsetzung von A + B}
+% $K$ ist abgeschlossene Fortsetzung von $A + B$.
+% \end{lem}
+
+% \begin{proof}
+% \par
+% Als Generator ist $K$ abgeschlossen, \Cref{}.
+
+% \par 
+% Zeige $A +B \subseteq G$. Sei  $x\in D(A) = D(A+B)$. Für $n\in \mathbb N$ können wir mit $BR(\lambda, A)=AR(\lambda, A)$ den Ausdruck $R^{(n)}(\lambda)$ schreiben als
+% \begin{align}
+% R^{(n)}(\lambda) 
+% &= R(\lambda, A) + R(\lambda, A)(\sum_{k=0}^{n-1} (BR(\lambda, A))^k) BR(\lambda,  A)\\
+% &= R(\lambda, A) + R^{(n-1)}(\lambda) B R(\lambda, A),
+% \end{align}
+% also ist
+% \begin{equation}
+% R^{(n)}(\lambda)(\lambda I -A)x = x + R^{(n-1)}(\lambda)Bx
+% \end{equation}
+% und nach Grenzübergang für $n\to \infty$ ist mit \Cref{} $R(\lambda, K)(\lambda I -A-B)x=x$. Damit ist $(\lambda I -G)x = (\lambda I -A-B)x$ für alle $x\in D(A)$ und weiter ist damit $x\in D(K)$.
+% \end{proof}
+
+% \begin{prop}\cite{kato_1954}\label{T_K(t) ist minimal}
+% Sei  $\widetilde G$ Generator einer Kontraktionshalbgruppe $(\widetilde T_K(t))_{t\geq 0}$  mit $Q_0\subseteq \widetilde G$. Dann gilt:
+% \begin{enumerate}
+% \item $\widetilde G$ ist abgeschlossene Fortsetzung von $A + B$.
+% \item Für alle $t\geq 0$ ist $T_K(t)\leq \widetilde T_K(t)$.
+% \end{enumerate}
+% \end{prop}
+
+% \begin{proof}
+
+% \par 
+% Zu (1): wegen \Cref{} ist $\widetilde G$ ebenfalls Fortsetzung von $A+B$. 
+
+% % Da $A$ abgeschlossen ist, \Cref{}, gibt es für alle $z\in D(A)$ eine Folge $(z_n)_{n\in\mathbb N}$ in $D(Q_0)$ mit $z_n\to z$ sowie $Az_n\to Az$. Folglich also auch $\|B(z_n-z)\|\leq \|A(z_n-z)\|\to 0$, d. h. $Q_0 z_n =(A+B)z_n\to (A+B)z$. Da $\widetilde G$ abgeschlossene Fortsetzung von $Q_0$ ist, wissen wir $z\in D[\widetilde G]$ und $\widetilde Gz = (A+B)z$,  d. h. $A+B\subseteq \widetilde G$.
+
+% \par
+% Zu (2): Für hinreichend großes $\lambda>0$ existiert $R(\lambda, \widetilde G)$ und ist abgeschlossener, beschränkter Operator \Cref{}. Wegen $R(\lambda, K_r)X = D(A)\subseteq D(\widetilde G)$ ist wegen ref{}
+% \begin{equation}
+% R(\lambda, \widetilde G) - R(\lambda, K_r) = R(\lambda, \widetilde G)(\widetilde G-K_r) R(\lambda, K_r),
+% \end{equation}
+% und wegen $\widetilde G-K_r = A +B - (A + rB) = (1-r)B$ für alle $x\in D(A)$ ist 
+% \begin{equation}
+% R(\lambda, \widetilde G) - R(\lambda, K_r) = (1-r)R(\lambda, \widetilde G)BR(\lambda, K_r).
+% \end{equation}
+% Da alle Faktoren der rechten Seite positiv sind, ist $R(\lambda, K_r)\leq R(\lambda, \widetilde G)$ und mit der \index{}\textbf{Inversionsformel} \Cref{} ist $T_K(t)\leq \widetilde T_K(t)$.
+% \end{proof}
+
+
+
+
+
+% \begin{prop}\cite{kato_1954}\label{G ist Kontraktion von A}
+% Der Operator $(Q, D(Q))$ ist Fortsetzung des Generators $K$.
+% \end{prop}
+
+% \begin{proof}
+% \par
+% Betrachte die Identität nach \Cref{}
+% \begin{equation}
+% R(\lambda, A)BR^{(n)}(\lambda) = R^{(n+1)}(\lambda) - R(\lambda, A).
+% \end{equation}
+% Für $n\to\infty$  mit \Cref{} ist dann die starke Konvergenz 
+% \begin{equation}
+% R(\lambda, A)BR^{(n)}(\lambda)\to R(\lambda, K)-R(\lambda, A)
+% \end{equation}
+% Sei $y\in X_+$ und setze $x=:R(\lambda, K)y$ sowie $x^{(n)}:=R^{(n)}(\lambda)y$. Dann wissen wir $R(\lambda, A) Bx^{(n)}\to x-R(\lambda, A)y$. Weiter bemerken wir, dass $0\leq x^{(1)}\leq x^{(2)}\leq \dots$ und $x^{(n)}\to x$. Komponentenweise lässt sich dies schreiben als 
+% \begin{equation}
+% (\lambda + q_k)^{-1}\sum_{j\neq k}\xi_j^{(n)}q_{jk}\to \xi_k -(\lambda + q_k)^{-1}\eta_k,
+% \end{equation}
+% was dasselbe ist wie 
+% \begin{equation}
+% \sum_{j\neq k}\xi_j^{(n)} q_{jk}\to(\lambda + q_k)\xi_k -\eta_k,
+% \end{equation}
+% wobei $0\leq \xi_j^{(1)}\leq\xi_j^{(2)}\leq\dots\leq \xi_j^{(n)}\to \xi_j$ wegen \Cref{}. Da $q_{jk}\geq 0$ für $j\neq k$ ist die absolute Konvergenz mit $n\to\infty$ von
+% \begin{equation}
+% \sum_{j\neq k}\xi_j q_{jk}=(\lambda + q_k)\xi_k - \eta_k,
+% \end{equation}
+% also $\sum_j \xi_j (\lambda \delta_{jk}-q_{jk})=\eta_k$. Damit ist also $x\in D(Q)$ und $(\lambda I - Q)x =y$. Wir haben also gezeigt, dass $R(\lambda, Q)y\in D(Q)$ und $(\lambda I - Q)R(\lambda, K)y = y$ für alle $y\in X_+$, folglich also auch für alle $y\in X$ nach \Cref{}. 
+% \end{proof}
+
+% \begin{proof}
+% \par 
+% Zu (1): mit \Cref{}, \Cref{} ist $K$ Generator einer Kontraktionshalbgruppe, welche $Q_0$ mit $Q_0\subseteq A+B\subseteq G$ fortsetzt. 
+
+% \par
+% Zu (2): mit \Cref{} ist die Minimalität und Eindeutigkeit der von $K$ erzeugten Kontraktionshalbgruppe.
+% \end{proof}
+
+% \section{Isometrieeigenschaft von $(T_K(t))_{t\geq0}$}
+
+% \begin{satz}\cite{kato_1954}\label{Charakterisierung der Normiertheit von T_K(t)}
+% Es seien die Voraussetzungen in \Cref{Hauptaussage in AL} für Operatoren $(A, D(A))$ und $(B, D(B))$ in $X$ AL-Raum mit $D(A)\subseteq D(B)$ gegeben. Ist der Operator $-A$ positiv, dann sind äquivalent:
+% \begin{enumerate}
+% \item $(T_K(t))_{t\geq0}$ ist eine Isometrie.
+% \item Für alle $\lambda >0$ ist $\big((BR(\lambda, A))^n \big)_{n\in\N}$ eine stark konvergente Nullfolge. 
+% \end{enumerate}
+% \end{satz}
+
+% % \begin{lem}\cite{kato_1954}\label{Eigenschaften von k}
+% % Sei $x\in X_+$, $\lambda >0$. Dann existiert der Grenzwert
+% % \begin{equation*}
+% % \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|=:\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|
+% % \end{equation*}
+% % und weiter gilt:
+% % \begin{enumerate}
+% % \item Für $\lambda$ fest gewählt ist $\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|$ eine positive, lineare Funktion in $x$.
+% % \item Für $x$ fest gewählt ist $\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|$ entweder die Nullfunktion oder eine strikt positive,  fallende Funktion in $\lambda$.   
+% % \end{enumerate}
+% % \end{lem}
+
+% \begin{proof}
+
+% \par 
+% Zu Hinreichtung: Für $\lambda >0$ und $n\in \N$ betrachte erneut
+% \begin{equation*}
+% R^{(n)}(\lambda) = \sum_{k=0}^n R(\lambda, A)(BR(\lambda, A))^k.
+% \end{equation*}
+% Dann gilt 
+% \begin{equation*}\label{eq2}
+% %\sum_{k=0}^{n+1} (BR(\lambda, A))^k
+%  I +BR^{(n)}(\lambda)=(\lambda I -A)R^{(n)}(\lambda) + (BR(\lambda, A))^{n+1}.
+% \end{equation*} 
+% Sei $x\in X_+$. Mit $-A\geq0$ sind alle beteiligten Terme positiv und da $X$ AL-Raum ist, erhalten wir
+% \begin{align*}
+% \|x\| + \|BR^{(n)}(\lambda)x\|= \lambda\| R^{(n)}(\lambda) x\| + \|AR^{(n)} (\lambda) x\|+\|(BR(\lambda, A))^{n+1}x\|.
+% \end{align*}
+% \hl{Mit $R^{(n)}(\lambda)x\in D(A)_+$ ist $\|BR^{(n)}(\lambda)x\|=\|AR^{(n)}(\lambda) x\|$} und damit
+% \begin{equation*}
+% \|x\|=\lambda \|R^{(n)}(\lambda)x\| + \|(BR(\lambda, A))^{n+1}x\|.
+% \end{equation*}
+% Mit $\lim_{n\to\infty}R^{(n)}(\lambda)x= R(\lambda, K)x$ wird dies zu
+% \begin{align*}
+% \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|=\|x\|- \lambda\|R(\lambda, K)x\|
+% \end{align*}
+% Mithilfe der  \index{}\textbf{Integraldarstellung der Resolvente} können wir dies umformulieren zu
+% \begin{align*}
+% \lim_{n\to\infty}\|(BR(\lambda, A))^n x\| = \|x\|- \lambda\int_0^\infty \exp(-\lambda t)\|T_K(t)x\|\textnormal dt.
+% \end{align*}
+% Da $(T_K(t))_{t\geq0}$ normiert ist, wird dies zu
+% \begin{equation*}
+% \lim_{n\to\infty}\|(BR(\lambda, A))^n x\| =\lambda \int_0^\infty \exp(-\lambda t)(\|x\|-\|T_K(t)x\|)\textnormal dt=0
+% \end{equation*}
+% Folglich ist  $(BR(\lambda, A))^n$ stark konvergent mit $\lim_{n\to\infty}(BR(\lambda, A))^{n}x=0$.
+
+% \par
+% Zur  Rückrichtung: Sei $x\in X_+$. Betrachte erneut
+% \begin{equation*}
+% \|x\| - \lim_{n\to\infty}\|(BR(\lambda, A))^n x\| = \lambda\int_0^\infty \exp(-\lambda t)\|T_K(t)x\|\textnormal dt\geq0.
+% \end{equation*} 
+% Wegen $0\leq \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|\leq \|x\|$ ist die Folge $(BR(\lambda, A))^n$  punktweise beschränkt. Da $BR(\lambda, A)$ für  $\lambda\to 0$ monoton fallend ist, existiert $\lim_{\lambda\downarrow 0} \lim_{n\to\infty}\|(BR(\lambda, A))^n\|$ punktweise \hl{und es gilt}
+% \begin{equation*}
+% \|x\| - \lim_{\lambda\downarrow0}\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|=\lim_{t\to\infty} \|T_K(t)x\|.
+% \end{equation*}
+% Wegen $\lim_{n\to\infty}\|(BR(\lambda, A))^n x\| =0$ erhalten wir 
+% \begin{equation*}
+% \lim_{t\to\infty} \|T_K(t)x\| = \|x\|.
+% \end{equation*}
+% Wegen $\|T_K(t+s)x\|=\|T_K(s)T_K(t)x\|\leq \|T_K(t)x\|$ ist $(T_K(t))_{t\geq0}$ für $t\to\infty$ monoton fallend. Dann liefert $\lim_{t\to\infty}\|T_K(t)\|\geq \|x\|$, dass $\|T_K(t)x\|\geq\|x\|$ für alle $t\geq0$ gilt. 
+
+
+% Zu (3): Sei $0\neq x\in X_+$. Dann ist die Funktion $\lambda^{-1}(\|x\|-\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|)$ strikt positiv. Wegen $k(\lambda, x)$ fallend ist diese Funktion ebenfalls fallend in $\lambda$. Die Aussage folgt mit Grenzübergang $\lambda \downarrow 0$.
+
+
+
+% Damit ist $\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|$ für $\lambda >0$ fest gewählt eine positive, lineare Funktion in $x$.
+
+
+% Wir zeigen, dass $\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|$ monoton fallend ist. Nach Bemerkung \Cref{BR(lambda, A) fallend} ist $0\leq BR(\mu, A)\leq BR(\lambda, A)$ für $\lambda >\mu$ und damit auch
+% \begin{equation*}
+% 0\leq (BR(\mu, A))^n x\leq (BR(\lambda, A))^n x, \quad \forall x\in X_+.
+% \end{equation*}
+% Demnach ist $\lim_{n\to\infty}\|(BR(\mu, A))^n x\|\leq \lim_{n\to\infty}\|(BR(\lambda, A))^n x\|$, d. h. $\lim_{n\to\infty}\|(BR(\lambda, A))^n x\|$ ist fallende Funktion in $\lambda$. 
+
+% \end{proof}
+
+% \begin{satz}\cite{kato_1954}\label{Vollständige Charakterisierung der Normiertheit von T_K(t)}
+% Es sind äquivalent:
+% \begin{enumerate}
+% \item Für alle $x\in X_+$ sowie $t\geq 0$ gilt $\|T_K(t)x\| = \|x\|$.
+% \item Für alle $\lambda >0$ ist $(BR(\lambda, A))^n\to 0$ stark konvergent.
+% \item Für alle $\lambda >0$ besitzt $A^*_0 x^* = \lambda x^*$ mit $0\neq x^*\in X^*$ keine Lösung.
+% \item Für alle  $\lambda >0$ liegt  $(\lambda I - Q_0)$ dicht in $X$.
+% \end{enumerate}
+% \end{satz}
+
+% % \begin{bem}\cite{kato_1954}\label{bem:}
+% % \textcolor{red}{Die Äquivalenz ist weiterhin gültig, falls die Forderung ''Für alle $\lambda >0$'' durch die Forderung ''Es gibt $\lambda >0$'' abgeschwächt wird .}
+% % \end{bem}
+
+% \begin{proof}
+% \par 
+% Zur Äquivalenz von (1), (2): ist klar.
+
+% \par
+% Zur Äquivalenz von (3), (4): [...]
+
+% \par
+% Zur  Äquivalenz von (2), (4): wegen
+% \begin{equation}
+% I +BR^{(n)}(\lambda)=(\lambda I - A)R^{(n)}(\lambda) + (BR(\lambda, A))^{n+1}
+% \end{equation}
+% gilt $(BR(\lambda, A))^n\to 0$ stark genau dann, wenn $\lim_{n\to\infty}(\lambda I -A-B)R^{(n)}(\lambda)= I$ stark konvergiert. 
+
+% \par 
+% Sei  $x\in X$. Wegen $R^{(n)}(\lambda)x\in D(A)$ ist $(\lambda I -A-B)D(A)\subseteq X$ dicht. Zeige, dass $(\lambda I -Q_0)D(Q_0) = (\lambda I -A-B)D(Q_0)$ dicht in $(\lambda I -A-B)D(A)$ liegt. [...]
+
+% \par
+% Sei umgekehrt $(\lambda I - Q_0)D(Q_0)$ dicht in $X$. Wegen 
+% \begin{align}
+% (I-BR(\lambda, A))X
+% &=(I-BR(\lambda, A))(\lambda +A)D(A)\\
+% &= (\lambda I - A - B)D(A)\supseteq (\lambda I -Q_0)D(Q_0)
+% \end{align}
+% ist $(I-BR(\lambda, A))X$ ebenfalls dicht definiert. Setze \begin{equation}
+% K^{(n)}(\lambda):=(n+1)^{-1}(I + BR(\lambda, A)+ \dots + (BR(\lambda, A))^n).
+% \end{equation}
+% Wegen $\|BR(\lambda, A)\|\leq 1$ ist mit $n\to\infty$ für alle $x\in X$ 
+% \begin{equation}
+% K^{(n)}(\lambda)(I-BR(\lambda, A))x = (n+1)^{-1}(I-(BR(\lambda, A))^{n+1})x\to 0.
+% \end{equation}
+% Da $(I-BR(\lambda, A))X$ dicht in $X$ liegt sowie $K^{(n)}(\lambda)$ mit $\|K^{(n)}(\lambda)\|\leq 1$ gleichmäßig beschränkt ist, muss $K^{(n)}(\lambda)\to 0$ stark konvergieren. Zeige $\|K^{(n)}(\lambda)\|\geq \|(BR(\lambda, A))^n x\|$ für $x\in X_+$. Dann  folgt die Behauptung $(BR(\lambda, A))^nx\to 0$ mit der starken Konvergenz von $K^{(n)}(\lambda)\to 0$. Wegen $(BR(\lambda, A))^k\geq 0$ sowie  \begin{align}
+% \|(BR(\lambda, A))^n x\| 
+% &= \|B_\lambda^{n-m} (BR(\lambda, A))^m x\|\\
+% &\leq \|(BR(\lambda, A))^m x\|
+% \end{align} 
+% ist $\|K^{(n)}(\lambda)\| = (n+1)^{-1}\sum_{k=0}^n\|(BR(\lambda, A))^k x\|\geq \|(BR(\lambda, A))^n x\|$ für alle $x\in X_+$. Damit ist $(BR(\lambda, A))^n x\to 0$ für alle $x\in X_+$, also auch $(BR(\lambda, A))^n\to 0$ stark.
+% \end{proof}
+
+% \begin{satz}\cite{kato_1954}\label{Hinreichende Bedingung für Eindeutigkeit}
+% Sei $K$ Generator einer Kontraktionshalbgruppe $(T_K(t))_{t\geq 0}$ mit $Q_0\subseteq K$. Dann sind äquivalent:
+% \begin{enumerate}
+% \item  $(T_K(t))_{t\geq 0}$ ist normiert.
+% \item  $(T_K(t))_{t\geq 0}$ ist eindeutig bestimmt.
+% \end{enumerate}
+% \end{satz}
+
+% \begin{proof}
+% Für hinreichend großes $\lambda >0$ ist  Resolvente $(\lambda I - K)^{-1}$ eine beschränkte Fortsetzung von $(\lambda I -Q_0)^{-1}$, d. h. es ist 
+% \begin{equation}
+% (\lambda I - Q_0)^{-1}\subseteq (\lambda I - K)^{-1}\subseteq X.
+% \end{equation}
+% Da aber nach \Cref{4} die Menge $(\lambda I - Q_0)$ dicht in $X$ liegt, muss $(\lambda I -K)^{-1}$ bereits eindeutig bestimmt sein. Damit ist aber auch der Generator $K$ eindeutig bestimmt, und die Behauptung folgt.
+% \end{proof}
+
+
+
+
 \begin{bem}
 \textbf{DNS} ist ein Molekül, welches das \textbf{genetische Material} in allen Organismen mittels einer Folge von \textbf{Nukleotide} kodiert. Als \textbf{Gen} bezeichnet man den Abschnitt einer DNS, welcher die Information zur Konstruktion eines bestimmten \textbf{Proteins} enthält. Die zugehörige physische Position eines Gens  wird \textbf{Locus} genannt und eine Variante eines Gens an einem Locus heißt  \textbf{Allele}.
 

@@ -528,15 +528,16 @@ keepspaces=true,%
 
 %%% Experimental:
 %\RequirePackage{hyperref}		% ignores \pdfinfo commmands % utf8-change
-\RequirePackage[unicode]{hyperref}	% utf8-change
+%\RequirePackage[unicode]{hyperref}	% utf8-change
 \definecolor{@darkblue}{RGB}{0,0,140}
 \definecolor{@darkgreen}{RGB}{0,100,70}
-\hypersetup{
-  colorlinks   = true, %Colours links instead of ugly boxes
-  urlcolor     = @darkblue, %Colour for external hyperlinks
-  linkcolor    = @darkblue, %Colour of internal links
-  citecolor    = @darkgreen %Colour of citations
-}	%see https://www.tug.org/applications/hyperref/manual.html
+% \hypersetup{
+%   hyperindex   = true,
+%   colorlinks   = true, %Colours links instead of ugly boxes
+%   urlcolor     = @darkblue, %Colour for external hyperlinks
+%   linkcolor    = @darkblue, %Colour of internal links
+%   citecolor    = @darkgreen %Colour of citations
+% }	%see https://www.tug.org/applications/hyperref/manual.html
 
 
 \RequirePackage[all]{hypcap} % fixes hyperref problem with references to float captions

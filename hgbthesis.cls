@@ -149,11 +149,13 @@
     \vskip 8mm%
     {\large\sf Matrikel-Nr.~\@nummer}
     \vskip 8mm%
-    {\large eingereicht am} \vskip 1mm {Bachelorstudiengang}%
+    {\large eingereicht im} \vskip 1mm {Bachelorstudiengang der}%
     \vskip 4mm%
-    {\large\sc\@studiengang}%
+    {\large \sc\@studiengang}%
     \vskip 4mm%
-    {\large in \@studienort}%
+    {\large an der}%
+    \vskip 2mm%
+    {\large \@studienort}%
     \vskip 16mm%
     {\large im \monthname[\value{@abgabemonat}] \arabic{@abgabejahr}}%
 \end{center}\par
@@ -246,7 +248,7 @@
     \vskip 8mm%
     {\large eingereicht am} \vskip 1mm {Fachhochschul-Bachelorstudiengang}%
     \vskip 4mm%
-    {\large\sc\@studiengang}%
+    {\large \sc\@studiengang}%
     \vskip 4mm%
     {\large in \@studienort}%
     \vskip 16mm%
@@ -346,7 +348,7 @@ This work is published under the conditions of the
 \begin{center}
 %
 \vspace{40mm} 
-{Diese Arbeit entstand im Rahmen des Gegenstands}\\
+{Diese Arbeit entstand im Rahmen des Seminars}\\
 \vspace{6mm} 
 {\Large\sf \@gegenstand\\ \mbox{}}\\
 \medskip
@@ -376,7 +378,7 @@ Prüfungsbehörde vorgelegt.
 \par
 \vspace{10mm}
 \noindent
-\@studienort, am \formatdate{\value{@abgabetag}}{\value{@abgabemonat}}{\value{@abgabejahr}}
+Tübingen, am \formatdate{\value{@abgabetag}}{\value{@abgabemonat}}{\value{@abgabejahr}}
 \par
 \vspace{12mm}
 \noindent
